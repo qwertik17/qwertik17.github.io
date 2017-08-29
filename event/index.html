@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	<title>Event</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta property="og:image" content="">
+	<meta property="og:type" content=""/>
+	<meta property="og:url" content= "" />
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<div class="preloader">
+		<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" xml:space="preserve">
+			<path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(85.3552 25 25)">
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform>
+			</path>
+		</svg>
+	</div>
+
+	<header class="header">
+
+		<div class="mask"></div>
+		<div class="heros"></div>
+
+		<div class="container">
+
+			<div class="row align-items-center">			
+				<div class="col-3">
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo.svg" alt="logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-9">
+					<nav class="header-nav">
+						<ul class="nav justify-content-end">
+							<li class="active"><a href="#">О мероприятии</a></li>
+							<li><a href="#">Спикеры</a></li>
+							<li><a href="#">Спонсоры</a></li>
+							<li><a href="#">Планируемые мероприятия</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>					
+				</div>
+			</div>
+
+			<div class="row justify-content-md-center">
+				<div class="col-md-10">
+					<div class="countdown">
+						<div class="row">
+							<div class="col item">
+								<div id="days" class="val"></div>
+								<div class="time">дней</div>
+							</div>
+							<div class="col item">
+								<div id="hours" class="val"></div>
+								<div class="time">часов</div>
+							</div>
+							<div class="col item">
+								<div id="minutes" class="val"></div>
+								<div class="time">минут</div>
+							</div>
+							<div class="col item">
+								<div id="seconds" class="val"></div>
+								<div class="time">секунд</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<section class="welcome">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<h2 class="h2">Добро пожаловать!</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+					<p>Семантика lorem на берегу даль своих щеке лучше, грустный предупредила одна однажды, это города там сбить дал свой ее своих журчит, ему наш ты маленький. Путь пояс вопрос, точках заглавных? От всех деревни жаренные, домах мир последний скатился, семь ее? От всех деревни жаренные, домах мир последний скатился, семь ее?</p>
+				</div>
+				<div class="col-md-5">
+					<div class="signup-form">
+						<form>
+							<h3 class="h3">Регистрация</h3>
+							<input name="firstname"	type="text" placeholder="Имя">
+							<input name="lastname"	type="text" placeholder="Фамилия">
+							<input name="email"	type="email" placeholder="E-mail">
+							<input name="phone"	type="text" placeholder="Телефон">
+							<input name="signup" class="btn btn-def" type="submit" value="Зарегистрироваться">
+							<div class="agreement">
+								<span>*регистрируясь в мероприятии Вы соглашаетесь с</span>
+								<a href="#">пользовательским соглашением</a>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sec-items">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col">
+					<div class="items-img" style="background-image: url(img/item1.png);"></div>
+					<h4 class="h3">Общение</h4>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший безорфографичный родного домах продолжил рукопись, толку возвращайся.</p>
+				</div>
+				<div class="col">
+					<div class="items-img" style="background-image: url(img/item2.png);"></div>
+					<h4 class="h3">Задания</h4>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший безорфографичный родного домах продолжил рукопись, толку возвращайся.</p>
+				</div>
+				<div class="col">
+					<div class="items-img" style="background-image: url(img/item3.png);"></div>
+					<h4 class="h3">Истории</h4>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший безорфографичный родного домах продолжил рукопись, толку возвращайся.</p>
+				</div>
+			</div>
+
+			<div class="accordion-wrap">
+				<div class="accordion-header">
+					<div class="row">
+						<div class="col-2"><i class="fa fa-clock-o"></i> Время</div>
+						<div class="col">План мероприятия</div>
+					</div>
+				</div>	
+
+				<div class="accordion" data-accordion>
+					<div data-control>
+						<div class="row">
+							<div class="col-2">10:00</div>
+							<div class="col">Приветствие</div>
+							<div class="col-1 icon"></div>
+						</div>
+					</div>
+					<div data-content>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих вопрос лучше большого первую не напоивший свой имени снова, образ океана необходимыми заголовок агенство его щеке залетают, реторический ручеек все путь языком инициал своего грамматики которое текстов толку? Агенство.</p>
+					</div>
+				</div>
+
+				<div class="accordion" data-accordion>
+					<div data-control>
+						<div class="row">
+							<div class="col-2">10:20</div>
+							<div class="col">Начало мастер-класса</div>
+							<div class="col-1 icon"></div>
+						</div>
+					</div>
+					<div data-content>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих вопрос лучше большого первую не напоивший свой имени снова, образ океана необходимыми заголовок агенство его щеке залетают, реторический ручеек все путь языком инициал своего грамматики которое текстов толку? Агенство.</p>
+					</div>
+				</div>
+
+				<div class="accordion" data-accordion>
+					<div data-control>
+						<div class="row">
+							<div class="col-2">11:40</div>
+							<div class="col">Кофе-брейк</div>
+							<div class="col-1 icon"></div>
+						</div>
+					</div>
+					<div data-content>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих вопрос лучше большого первую не напоивший свой имени снова, образ океана необходимыми заголовок агенство его щеке залетают, реторический ручеек все путь языком инициал своего грамматики которое текстов толку? Агенство.</p>
+					</div>
+				</div>
+
+				<div class="accordion" data-accordion>
+					<div data-control>
+						<div class="row">
+							<div class="col-2">12:10</div>
+							<div class="col">Продолжение мастер-класса</div>
+							<div class="col-1 icon"></div>
+						</div>
+					</div>
+					<div data-content>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих вопрос лучше большого первую не напоивший свой имени снова, образ океана необходимыми заголовок агенство его щеке залетают, реторический ручеек все путь языком инициал своего грамматики которое текстов толку? Агенство.</p>
+					</div>
+				</div>
+
+				<div class="accordion" data-accordion>
+					<div data-control>
+						<div class="row">
+							<div class="col-2">13:30</div>
+							<div class="col">Завершение мероприятия</div>
+							<div class="col-1 icon"></div>
+						</div>
+					</div>
+					<div data-content>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих вопрос лучше большого первую не напоивший свой имени снова, образ океана необходимыми заголовок агенство его щеке залетают, реторический ручеек все путь языком инициал своего грамматики которое текстов толку? Агенство.</p>
+					</div>
+				</div>
+			</div>
+
+			<span class="accordion-bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало решила деревни все переписали это составитель рукописи океана образ своих текстами, курсивных, лучше которое меня несколько запятой, коварных бросил ведущими мир скатился заголовок назад пояс. Себя использовало пояс правилами знаках повстречался ручеек эта lorem родного рыбного.</span>
+			
+		</div>
+	</section>
+
+	<section class="elita">
+		<div class="mask"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<div class="badg"></div>
+				</div>
+				<div class="col text-right text">
+					<h2 class="h2-white">Стань элитой!</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Деревни, правилами? Родного пояс скатился что своего возвращайся которое на берегу прямо большого. Взгляд она грустный предложения переписали, свое ты, жаренные ручеек, использовало lorem безорфографичный ее несколько но переписывается алфавит маленький.</p>
+					<p>Даже но что подпоясал меня языкового путь даль вопрос выйти одна раз пунктуация дороге мир оксмокс это рот, рукописи взобравшись, злых коварный назад вскоре деревни однажды! Своих напоивший меня несколько имени знаках! Грамматики страну дорогу от всех о путь.</p>
+					<p>Обеспечивает, эта алфавит гор города домах образ! Журчит своего своего курсивных пустился взобравшись силуэт маленькая речью повстречался семантика. Предупреждал путь приставка текст большого, единственное, от всех вскоре однажды ему назад возвращайся ее имеет, не гор букв свою безорфографичный. От всех ipsum, свое.</p>
+					<a href="#" class="btn btn-def">Зарегистрироваться</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="speackers" class="speackers">
+		<div class="container">
+			<div class="row">
+				<div class="col-7 speaker-heading">
+					<h2 class="h2">Спикеры</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переулка путь если назад до города текстов языком все. Продолжил необходимыми всемогущая.</p>
+				</div>
+			</div>
+			<div class="row justify-content-md-center speackers-grid">
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Алексей Новиков</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Алексей Новиков</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Александр Сидоров</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-md-center speackers-grid">
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Алексей Новиков</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker-icon">
+						<img class="img-responsive" src="img/speaker-icon.png" alt="">
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Александр Сидоров</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-md-center speackers-grid">
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Алексей Новиков</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Алексей Новиков</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="speaker">
+						<img class="img-rounded img-fluid" src="img/speaker.jpg" alt="speaker">
+						<div class="speaker-info">
+							<span class="speaker-info-name">Александр Сидоров</span>
+							<span class="speaker-info-desc">Далеко-далеко за словесными горами в стране, гласных и согласных.</span>
+							<span class="speaker-info-social">
+								<a href="#"><i class="fa fa-vk"></i></a></li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-odnoklassniki"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sponsors">
+		<div class="mask"></div>
+		<div class="container">
+			<div class="row justify-content-md-center text-center">
+				<div class="col-8">
+					<h2 class="h2">Спонсоры</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переписали он ручеек одна, большого которой прямо, необходимыми однажды это вскоре своих языком заглавных. Букв встретил взобравшись своих путь инициал несколько буквенных ручеек, бросил пустился!</p>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+				</div>
+			
+				<div class="w-100"></div>
+
+				<div class="col-8">
+					<div class="owl-carousel owl-theme">
+						<div class="item">
+							<img src="img/sponsor1.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor2.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor3.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor4.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor1.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor2.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor3.png" alt="sponsor">
+						</div>
+						<div class="item">
+							<img src="img/sponsor4.png" alt="sponsor">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row text-center sponsor-btn">
+				<div class="col">
+					<a class="btn btn-def" href="#">Стать спонсором</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="past-event">
+		<div class="container">
+			<div class="row">
+				<div class="col-7">
+					<h2 class="h2">Прошедшие меропрятия</h2>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Осталось журчит одна, текстов. Взгляд осталось которой продолжил.</p>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-md-7 past-event-bg">
+					<div class="blue past-event-content">
+						<a href="#">Повышение финансовой грамотности</a>
+					</div>	
+				</div>
+				<div class="col-md-5 past-event-bg">
+					<div class="green past-event-content">
+						<a href="#">Защита прав потребителей</a>
+					</div>	
+				</div>
+				<div class="col-md-5 past-event-bg">
+					<div class="yellow past-event-content">
+						<a href="#">Эмоциональный интелект</a>
+					</div>	
+				</div>
+				<div class="col-md-7 past-event-bg">
+					<div class="orange past-event-content">
+						<a href="#">Банковская деятельность</a>
+					</div>	
+				</div>
+
+				<a href="#" class="btn btn-def">Смотреть все мероприятия</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<div class="container-fluid">
+			<div class="map-wrap">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c3e6fb19bbd527e76fe4e160ff69a9da5f27a16bd3b910132b3912c29c691c1&amp;width=100%25&amp;height=660&amp;scroll=false&amp;lang=ru_RU&amp;"></script>				
+				<div class="btn-show">
+					<button class="btn btn-def">Написать нам</button>
+				</div>
+				<div id="map-overlay" class="mask"></div>
+				<div class="message">
+					<div class="row justify-content-center">
+						<div class="col-8 message-body">
+							<h2 class="h2 text-center">Написать нам</h2>
+							<div class="row">
+								<div class="col left-col">
+									<img src="img/mai-icon.png" alt="">
+									<p class="adress">Россия, Саратовская область, г.Саратов, ул.Комсомольская 999, кор. 3, офис 491</p>
+									<button id="hide_map" class="btn btn-def">Показать карту</button>
+								</div>
+								<div class="col right-col">
+									<div class="signup-form">
+										<form action="#">
+											<input type="text" name="email" placeholder="Ваш E-mail">
+											<textarea name="message" rows="6" placeholder="Ваше сообщение.."></textarea>
+											<input name="signup" class="btn btn-defl" type="submit" value="Отправить">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col">
+					<div class="social-icons">
+						<a href="#"><span class="fa fa-vk"></span></a>
+						<a href="#"><span class="fa fa-facebook"></span></a>
+						<a href="#"><span class="fa fa-odnoklassniki"></span></a>
+					</div>
+				</div>
+				<div class="w-100"></div>
+					<div class="col">
+						<span class="devby">Template develop by Leonidov Sergey</span>
+						<p class="copyright">Event html template © 2017</p>
+					</div>
+			</div>
+		</div>
+	</footer>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/jquery.accordion.js"></script>
+	<script src="js/common.min.js"></script>
+
+</body>
+</html>
