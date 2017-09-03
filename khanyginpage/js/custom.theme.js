@@ -606,7 +606,7 @@ jQuery(document).ready(function() {
 			enabled: true,
 			navigateByImgClick: true,
 			preload: [0,1],
-			
+
 		tPrev: 'Назад',
 		tNext: 'Далее',
 		tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
@@ -616,5 +616,7 @@ jQuery(document).ready(function() {
 			navigateByImgClick: true,
 		}
 	});
+
+	jQuery("body").on("contextmenu", false);
 });
 
