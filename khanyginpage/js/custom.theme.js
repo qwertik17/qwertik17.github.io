@@ -575,18 +575,46 @@ jQuery(document).ready(function() {
 		
 		
 	}
-	jQuery('.image-popup-no-margins').magnificPopup({
+	// jQuery('.image-popup-no-margins').magnificPopup({
+	// 	type: 'image',
+	// 	closeOnContentClick: true,
+	// 	closeBtnInside: false,
+	// 	fixedContentPos: true,
+	// 	mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+	// 	image: {
+	// 		verticalFit: true
+	// 	},
+	// 	zoom: {
+	// 		enabled: true,
+	// 		duration: 300 // don't foget to change the duration also in CSS
+	// 	}
+	// });
+
+	jQuery('.popup-gallery').magnificPopup({
+		delegate: 'a',
 		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-		image: {
-			verticalFit: true
-		},
+		mainClass: 'mfp-with-zoom',
 		zoom: {
 			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
+			duration: 500,
+			easing: 'ease-in-out',
+			opener: function(openerElement) {
+				return openerElement.is('img') ? openerElement : openerElement.find('img');
+			}
+		},
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1],
+			
+		tPrev: 'Назад',
+		tNext: 'Далее',
+		tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+		},
+		image: {
+			tError: 'Ошибка загрузки фото...',
+			navigateByImgClick: true,
 		}
 	});
 });
+
