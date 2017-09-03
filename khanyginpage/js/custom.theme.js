@@ -614,6 +614,7 @@ jQuery(document).ready(function() {
 		image: {
 			tError: 'Ошибка загрузки фото...',
 			navigateByImgClick: true,
+			 cursor: 'default'
 		}
 	});
 
