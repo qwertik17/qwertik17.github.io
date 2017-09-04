@@ -2291,10 +2291,6 @@ position: absolute; top:50%; margin-bottom:auto; margin-top:auto;
 .liquid-loading-wrap{ 
 	position:relative; cursor:default;
 }
-.ux-loading{
-	width:62px; height:62px; position: absolute; left:50%; top:50%; right:auto; bottom:auto; margin-top:-31px; margin-left:-31px; z-index:999; 
-	background:#fff url(../img/isotope-loading.gif) no-repeat 50% 50%;border-radius:31px;
-}
 .csstransforms .ux-loading,
 .no-csstransforms .ux-loading-transform {
 	display: none;

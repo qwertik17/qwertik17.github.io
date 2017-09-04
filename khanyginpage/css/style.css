@@ -207,10 +207,6 @@ input[type="text"].textboxsearch,
 .page-loading .ux-loading-transform {
  margin-top: -36px;
 }
-.page-loading .ux-loading,
-.site-loading .ux-loading {
-  background-image: url('../img/loading.gif');  margin-top: -56px; display: none;
-}
 .no-csstransforms .page-loading .ux-loading,
 .no-csstransforms .site-loading .ux-loading {
   display: block;
@@ -844,162 +840,6 @@ body.single .pagebuilder-wrap{
   margin-bottom: 60px;
 }
 
-/* Post navigation */
-.post-navi a{ position:relative; font-size:16px; display:inline-block; max-width:45%; margin-bottom:20px; cursor:pointer; }
-.post-navi span{ padding:20px; display:inline-block; float:left;  white-space:nowrap;  overflow:hidden;  text-overflow:ellipsis; width:100%;  background-color:#f8f8f8; }
-.post-navi-next{ float:right;}
-.post-navi-next span{ padding-right:80px;}
-.post-navi-prev span{ float:right; padding-left:80px;}
-.post-navi i{ position:absolute; font-size:24px; display:inline-block; width:60px; height:60px; line-height:60px; text-align:center; background-color:#f0f0f0; }
-.post-navi-next i{ right:0;}
-
-/* Portfolio post Template*/
-.gallery-info-wrap,
-.gallery-images-wrap{
-	-webkit-transition: all 0.3s linear;
-	   -moz-transition: all 0.3s linear;
-	    -ms-transition: all 0.3s linear;
-	     -o-transition: all 0.3s linear;
-	        transition: all 0.3s linear;
-}
-
-.gallery-wrap-sidebar #title-bar,
-#page-feaured-image-layout #title-bar{
-  padding: 60px 0 80px 0;
-}
-.carousel-inner img,.portfolio_vertical_list img{ width:100%;}
-.gallery-post-wrap .single-image{ width:100%; }
-.gallery-post-wrap img,
-.page-portfolio-template img{ width:100%; height:auto; }
-.gallery-images-wrap.span8{ 
-  width: 65%; margin-bottom:0; margin-left: 0; overflow: hidden;
-}
-.gallery-wrap .post-meta{
-  display: none;
-}
-.gallery-info-wrap.span4{
-  width: 35%; margin-bottom:0; margin-left: 0; -webkit-backface-visibility:hidden; -webkit-transform: translateZ(0);
-}
-.gallery-info-property li{
-  display: table-row;
-}
-.gallery-info-property span {
-    display: table-cell;
-}
-.gallery-info-property-tit {
-    padding-right: 10px; min-width: 70px; text-transform: uppercase;
-}
-.gallery-wrap-sidebar .gallery-info-property {
-    margin-left: 0;width: 100%;
-}
-.galleria-stage{
-  left: 0; top:0; right: 0; bottom: 0; 
-}
-.galleria-info-text,.galleria-info-link,.galleria-info-close{ 
-  background: none;
-}
-.galleria-info-close,
-.galleria-info-description{
-  display: none;
-}
-.galleria-info-text {
-  display: block;
-}
-.gallery-wrap .galleria-info-text {
-  display: none;
-}
-.gallery-wrap .portfolio-post-meta .post-meta {
-  display: block;
-}
-.galleria-info {
-  left: auto; right:138px; top:20px; width: auto; height: 60px; line-height: 60px; border-bottom-left-radius: 0px; border-top-left-radius: 0px; 
-} 
-.galleria-info-title {
-  line-height: 60px; margin: 0;
-}
-.galleria-info-text {
-  padding: 0 20px;
-}
-.gallery-wrap-fullwidth .gallery-info-property {
-  border-left-width: 2px; border-left-style: solid; padding-left: 30px; margin-bottom: 0;
-}
-.gallery-wrap-fullwidth .entry,
-body.single .gallery-wrap-fullwidth .gallery-wrap-slider ~ .gallery-info-wrap .entry,
-#content_wrap .gallery-wrap-fullwidth .entry p:last-child {
-  margin-bottom: 0;
-}
-.galleria-image-nav {
-  height:60px; width:120px; left: auto; right: 20px; top:20px; margin-top: 0;
-}
-.galleria-image-nav-left, 
-.galleria-image-nav-right {
-  background: none; width: 60px; height:60px; font-size: 24px; text-align: center; line-height: 60px; opacity: 1; left: 0!important;
-}
-.galleria-image-nav-left:after, 
-.galleria-image-nav-right:after{
-  content:''; position: absolute; z-index: -1; left: 0; top: 0; width: 60px; height: 60px;
-}
-.gallery-post-wrap .galleria-image-nav-left:after,
-.gallery-post-wrap .galleria-image-nav-right:after {
-  opacity: .2;
-}
-.gallery-post-wrap .galleria-image-nav-left:hover:after,
-.gallery-post-wrap .galleria-image-nav-right:hover:after{
-  opacity: 1;
-}
-.galleria-image-nav-right {
-  right: 0!important; left: auto!important; border-top-right-radius: 0px; border-bottom-right-radius: 0px; 
-}
-.galleria-image-nav-left {
-  border-top-left-radius: 0px; border-bottom-left-radius: 0px; 
-}
-.galleria-image-nav-right:before,
-.galleria-image-nav-left:before {
-   font-family:'FontAwesome'; content:"\f105";
-}
-.galleria-image-nav-left:before {
-content:"\f104";
-}
-.galleria-thumbnails-container {
-  display: none;
-}
-.galleria-counter {
-  opacity: 0.8!important; font-size: 18px; text-shadow: 0 0 1px rgba(0,0,0,0.5);
-}
-.galleria-counter span {
-  position: relative; top: 1px;
-}
-.galleria-counter .galleria-current{
-  font-size: 26px;
-}
-
-
-/*Related posts*/
-.related-post-wrap-tit{
- height: 220px; text-align: center; font-size: 0; position: relative; text-indent: -90000px; color:transparent;
-}
-.related-post-wrap-tit:before{
-  content: ''; position: absolute; top: 112px; left: 50%; margin-left: -20px; width:40px; height:3px; 
-}
-.related-post-unit{
-  width: 25%; float: left;
-}
-.related-post-wrap h3{
-  position: relative; font-size: 14px; line-height: 20px; padding: 20px 20px 0 20px; text-align: center; cursor: pointer;
-}
-.related-post-wrap h3:hover:before{
-  opacity: 1;
-}
-.related-post-caption{
-  padding: 0 20px 0 20px; display: none;
-}
-.related-post-wrap {
-    padding-bottom: 100px;
-}
-.related-post-image>img{
-  width: 100%; 
-}
-
 /* Page portfolio template(post slider)*/
 #logo-page {
   position: absolute; z-index: 9; left: 100px; top:20px;
@@ -1017,21 +857,8 @@ content:"\f104";
   top: auto; bottom: 20px; height: 60px;
 }
 /* bordered*/
-.galleria.bordered .galleria-container {
-  background: none;
-}
-.galleria.bordered .galleria-stage {
-  left: 20px; top: 20px; right: 20px; bottom: 20px; 
-}
-.page-portfolio-navi-bottom .galleria.bordered .galleria-image-nav {
-  bottom: 0; top: auto;
-}
-.galleria.bordered .galleria-image-nav {
-  right: 0;
-}
-.galleria.bordered .galleria-image-nav {
-  top: 0;
-}
+
+
 
 /* Featured image layout*/
 #featured-img-wrap {
@@ -2177,6 +2004,20 @@ blockquote em, blockquote i, blockquote cite {
   font-size: 40px;
 }
 
+.brick-content img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE 6-9 */
+  transition: filter .3s ease
+  border: none;
+}
+
+.brick-content img:hover {
+  filter: none;
+}
 /*------------------------------- ----------------
       Responsive
 ---------------------------------------------------*/
