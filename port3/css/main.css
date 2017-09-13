@@ -57,6 +57,10 @@ a {
 	opacity: 0.8;
 }
 
+ul,li {
+	margin: 0;
+	padding: 0;
+}
 .contacts-links {
 	margin-top: 40px;
 	list-style: none;
