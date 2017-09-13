@@ -68,6 +68,7 @@ a {
 .contacts-links a {
 	color: #fff;
 	transition: opacity .3s ease;
+	font-size: 12px;
 }
 .contacts-links a:hover,
 .contacts-links a:focus,
