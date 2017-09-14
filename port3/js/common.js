@@ -45,7 +45,8 @@ $(document).ready(function() {
 
 		tPrev: 'Назад',
 		tNext: 'Далее',
-		tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+		// tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+		tCounter: '',
 		},
 		image: {
 			tError: 'Ошибка загрузки фото...',
