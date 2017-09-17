@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 	}, 700);
 
 	//timer
-	var time = "2017/09/15";
+	var time = "2017/11/15";
 	$("#days").countdown(time).on('update.countdown', function(e) {
 		$(this).html(e.strftime('%D'));
 	})
