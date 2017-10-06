@@ -35,10 +35,11 @@ jQuery(document).ready(function($) {
 				$(".news-loader").hide();
 			},500)
 		});
-		
-		
-		// alert(id);
 	});
+	$(".news-loader").height($(".news-body").height());
+	$(window).resize(function(){
+		$(".news-loader").height($(".news-body").height());
+	})
 
 	//Adaptive
 	var about_w = $(".about-content-wrap").width();
