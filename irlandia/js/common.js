@@ -1,7 +1,10 @@
 jQuery(document).ready(function($) {
 
 	//Parallax
-	$('.homepage .header').parallax({imageSrc: '../img/bg_header_home.jpg'});
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		$('.homepage .header').parallax({imageSrc: '../img/bg_header_home.jpg'});
+	}
+	
 	$('.new-project').parallax({imageSrc: 'http://irlandia.adminsdw.beget.tech/upload/new_project/bg.jpg'});
 
 	//Mobile menu
