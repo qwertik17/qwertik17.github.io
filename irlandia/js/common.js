@@ -147,4 +147,18 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	//Service page
+	if ($(window).width() > 992) {
+		$(".left-service-bar").css({top: $("header").outerHeight()});
+		$(".service-bar-item").css({height: ($(".left-service-bar").outerHeight()/4)});
+		$(".service-content").attr('style', 'padding-left:'+ ($(".left-service-bar").width()+15)+"px");
+	}
+	$(window).resize(function() {
+		if ($(window).width() > 992) {
+			$(".left-service-bar").css({top: $("header").outerHeight()});
+			$(".service-bar-item").css({height: ($(".left-service-bar").outerHeight()/4)});
+			$(".service-content").attr('style', 'padding-left:'+ ($(".left-service-bar").width()+15)+"px");
+		}
+	});
+
 });
