@@ -115,10 +115,36 @@ jQuery(document).ready(function($) {
 		$(".contacts-page").attr('style', 'min-height:'+cont_min_h+'px');
 	});
 
-
+	//Margin
 	$(".nohomepage").attr('style', 'margin-top:'+$("header").outerHeight()+'px');
 	$(window).resize(function() {	
 		$(".nohomepage").attr('style', 'margin-top:'+$("header").outerHeight()+'px');
+	});
+
+	//Services page
+	if ($(window).width() > 768) {
+		var service_h = ($(window).height()-$("header").outerHeight())/2;
+		$(".nohomepage .services .column").css({
+			height: service_h
+		});
+	} else {
+		var service_h = ($(window).height()-$("header").outerHeight())/2.5;
+		$(".nohomepage .services .column").css({
+			height: service_h
+		});
+	}
+	$(window).resize(function() {
+		if ($(window).width() > 768) {
+			var service_h = ($(window).height()-$("header").outerHeight())/2;
+			$(".nohomepage .services .column").css({
+				height: service_h
+			});
+		} else {
+			var service_h = ($(window).height()-$("header").outerHeight())/2.5;
+			$(".nohomepage .services .column").css({
+				height: service_h
+			});
+		}
 	});
 
 });
