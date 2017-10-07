@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$('.homepage .header').parallax({imageSrc: 'http://irlandia.adminsdw.beget.tech/template/images/bg_header_home.jpg'});
 	}
-	
 	$('.new-project').parallax({imageSrc: 'http://irlandia.adminsdw.beget.tech/upload/new_project/bg.jpg'});
 
 	//Mobile menu
@@ -19,6 +18,57 @@ jQuery(document).ready(function($) {
 		$(".mobile-menu").slideToggle('400', function() {
 			
 		});
+	});
+
+	//Footer
+	var $check_class = $('.nohomepage');
+	var footer = new Boolean(true);
+	if ($check_class.length > 0) {
+		var footer_h = $(".footer").height()+26;
+		$(".footer").css({bottom: -footer_h});
+		$(".footer-up").click(function(event) {
+			event.preventDefault();
+			var icon_f = $(this).children('i');
+			if(footer) {
+				footer = false;
+				$(".footer-up").css({bottom: footer_h-1});
+				$(".footer").css({bottom: 0});
+				icon_f.removeClass('fa-chevron-up');
+				icon_f.addClass('fa-chevron-down');
+			} else {
+				footer = true;
+				$(".footer-up").css({bottom: 0});
+				$(".footer").css({bottom: -footer_h});
+				icon_f.removeClass('fa-chevron-down');
+				icon_f.addClass('fa-chevron-up');
+			}
+		});
+	}
+
+	$(window).resize(function() {
+		var $check_class = $('.nohomepage');
+		var footer = new Boolean(true);
+		if ($check_class.length > 0) {
+			var footer_h = $(".footer").height()+26;
+			$(".footer").css({bottom: -footer_h});
+			$(".footer-up").click(function(event) {
+				event.preventDefault();
+				var icon_f = $(this).children('i');
+				if(footer) {
+					footer = false;
+					$(".footer-up").css({bottom: footer_h-1});
+					$(".footer").css({bottom: 0});
+					icon_f.removeClass('fa-chevron-up');
+					icon_f.addClass('fa-chevron-down');
+				} else {
+					footer = true;
+					$(".footer-up").css({bottom: 0});
+					$(".footer").css({bottom: -footer_h});
+					icon_f.removeClass('fa-chevron-down');
+					icon_f.addClass('fa-chevron-up');
+				}
+			});
+		}
 	});
 
 	//Home News-slider
@@ -56,4 +106,19 @@ jQuery(document).ready(function($) {
 			height: about_h
 		});
 	});
+
+	//Contacts page wrapper
+	var cont_min_h = $(window).height()-$("header").outerHeight();
+	$(".contacts-page").attr('style', 'min-height:'+cont_min_h+'px');
+	$(window).resize(function() {	
+		var cont_min_h = $(window).height()-$("header").outerHeight();
+		$(".contacts-page").attr('style', 'min-height:'+cont_min_h+'px');
+	});
+
+
+	$(".nohomepage").attr('style', 'margin-top:'+$("header").outerHeight()+'px');
+	$(window).resize(function() {	
+		$(".nohomepage").attr('style', 'margin-top:'+$("header").outerHeight()+'px');
+	});
+
 });
