@@ -517,6 +517,11 @@ section
 	background-image: url("http://irlandia.adminsdw.beget.tech/template/images/download.gif")
 	background-size: cover
 	background-position: center center
+.news-page-loader
+	display: none
+	background-image: url("http://irlandia.adminsdw.beget.tech/template/images/download.gif")
+	background-size: cover
+	background-position: center center
 
 /*News page*/
 .social-share
@@ -539,6 +544,7 @@ section
 		border-bottom: 2px solid transparent
 		transition: all 0.25s ease-in-out
 		padding-bottom: 3px
+		background-color: transparent
 		&:hover,&:focus,&:active
 			text-decoration: none
 			border-bottom: 2px solid $accent
@@ -556,9 +562,10 @@ section
 			&:hover,&:focus,&:active
 				text-transform: none
 				background-color: rgba(0, 0, 0, 0.05)
-.news-content
+.news-body
 	overflow-y: auto
 .search-news
+	margin-bottom: 25px
 	input
 		background-color: #f6f6f5
 		width: 80%
@@ -582,6 +589,56 @@ section
 		transition: all 0.25s ease-in-out
 		&:hover,&:focus
 			background-color: darken($accent,5)
+.yes
+	.news-page-list-item-content
+		background-color: red !important
+		opacity: 0.5
+
+.news-page	
+	.news-page-list
+		background-color: transparent
+		overflow-y: auto
+		clear: both
+		&-item
+			display: table
+			position: relative
+			margin-bottom: 5px
+			&:first-child
+				margin-top: 5px
+			&-image
+				display: table-cell
+				position: relative
+				width: 200px
+				.news-page-list-item-tag
+					position: absolute
+					background-color: $accent
+					bottom: 0
+					right: 0
+					padding: 5px 10px
+					font-size: 0.8rem
+					font-weight: bold
+					color: #fff
+			&-content
+				display: table-cell
+				background-color: #ebebeb
+				vertical-align: middle
+				padding-left: 1rem
+				padding-right: 1rem
+				color: $text
+				padding: 1rem
+				transition: all 0.25s ease-in-out
+				&-title
+					font-weight: bold
+					font-size: 1.1rem
+				&-intotext
+					display: block
+					font-size: 0.9rem
+					line-height: 1rem
+			&:hover
+				text-decoration: none
+				.news-page-list-item-content
+					background-color: darken(#ebebeb,10)
+
 
 
 
