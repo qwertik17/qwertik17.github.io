@@ -837,7 +837,7 @@ button, input, select, textarea {
 
 .controls button {
   background-color: #333;
-  border: 1px solid #333;
+  border: 1px solid transparent;
   color: #fff;
   -webkit-transition: 0.2s ease-out 0.1s;
   -o-transition: 0.2s ease-out 0.1s;
@@ -1324,6 +1324,13 @@ button, input, select, textarea {
         padding: 0 1rem; }
   .right-block.p0 {
     padding: 15px !important; } }
+
+@media only screen and (max-width: 400px) {
+  .social-share .share-text {
+    display: block;
+    float: none; }
+  .social-share .ya-share2 {
+    display: block; } }
 
 @media only screen and (max-width: 360px) {
   .engeneers {
