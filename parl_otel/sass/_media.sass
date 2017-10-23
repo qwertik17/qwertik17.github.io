@@ -55,13 +55,33 @@
 				.publish-date
 					margin-right: 0
 
+	.youtube-video-more, .news-item-next
+		height: 100px
+
+	.news
+		.news-item-next
+			a
+				font-size: 2rem
+				line-height: 2rem
+				span
+					margin-top: -1rem
+					margin-left: -117px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.top-contact
+		display: none
+	.social-links
+		margin-bottom: 0
+	.news-single
+		img
+			float: left
+			width: 50%
 	.logo-center
 		img
 			width: 150px
-	.services-wrap, .section-head
+	.services-wrap, .section-head, .content-wrap
 		margin-left: 0
 		margin-right: 0
 	.section-wrap
@@ -74,9 +94,10 @@
 		display: none
 		position: fixed;
 		width: 100%
-		background-color: rgba(0,0,0,0.9);
+		background-color: rgba(0,0,0,0.95);
 		text-align: center
 		.logo
+			padding: 10px 0 10px
 			img
 				width: 60px
 			&-header
@@ -84,15 +105,21 @@
 				display: block
 				color: #fff
 		.header-bottom
-			position: relative
-		.social
-			margin-top: 20px
-		.advice
-			position: fixed
+			position: absolute
 			bottom: 0
-			width: 100%
-			img
-				height: 35px
+			.social
+				.soc-text
+					display: none
+			.contact-menu
+				list-style: none
+				padding-left: 0
+				a,span,li
+					color: #fff
+				span
+					padding-right: 10px
+
+		.advice
+			display: none
 	.mobile-mnu
 		display: block
 	.booking-widget
@@ -105,6 +132,45 @@
 	.main-menu
 		ul			
 			column-count: 2
+			.dropdown
+				position: relative
+				&:before
+					content: "\f0da"
+					font-family: "FontAwesome"
+					font-size: 1rem
+					line-height: 1rem
+					position: absolute
+					top: 8px
+					right: 10px
+					color: #fff
+				ul
+					display: none
+					position: fixed
+					top: inherit
+					left: 0
+					bottom: 0
+					width: 100%
+					z-index: 99999
+					background-color: #fff
+					column-count: 2
+					padding: 5px
+					&:before
+						content: ""
+						position: absolute
+						width: 1px
+						background-color: rgba(#000,0.5)
+						height: 80%
+						top: 10%
+						left: 50%
+					li
+						a
+							color: #000
+						&:hover
+							a
+								color: #fff
+				&:hover, &:focus, &:active
+					ul
+						display: none
 	.search-form
 		top: 57px
 		right: 0
@@ -114,6 +180,11 @@
 	.youtube
 		.y-video
 			margin-right: 0
+	.news-single
+		img
+			float: left
+			width: 100%
+			padding: 10px 0
 
 @media only screen and (max-width : 580px)
 	.top-contact
@@ -195,6 +266,14 @@
 		padding: 0
 
 
+@media only screen and (max-width : 400px)
+	.gallery-folder
+		.gallery-item
+			a
+				span
+					font-size: 0.85rem
+					padding-right: 5px
+					padding-left: 5px
 
 
 /* Custom, iPhone Retina */

@@ -29,6 +29,89 @@ body
 	max-width: 100%
 	height: auto
 
+//Modal Callback
+.modal-callback-wrap
+	position: fixed
+	background-color: rgba(#000,0.88)
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	display: none
+	opacity: 0.3
+.modal-callback
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 90000
+	display: none
+	#callback-form
+		background-color: #fff
+		width: 300px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -150px
+		margin-top: -115px
+		.modal-head,.modal-cont
+			padding: 0 15px
+		.modal-head
+			padding-top: 15px
+			position: relative
+			h4
+				font-size: 1.4rem
+				text-transform: uppercase
+				color: $accent
+				margin-bottom: 0
+				padding-top: 2.3rem
+				text-align: center
+			.close-modal-callback
+				position: absolute
+				top: 11px
+				right: 11px
+				color: $accent
+				margin-top: -10px
+				font-size: 1.2rem
+			.operator
+				position: absolute
+				top: 0
+				left: 50%
+				margin-top: -40px
+				margin-left: -40px
+				img
+					border-radius: 50%
+		.modal-cont
+			padding-top: 15px
+			input
+				text-align: center
+				box-shadow: none !important
+
+		.submit-btn
+			background-color: $accent
+			border: 0
+			border-radius: 0
+			margin-top: 15px
+			text-align: center
+			display: block
+			text-transform: uppercase
+			color: #fff
+			font-weight: 400
+			letter-spacing: 0.1rem
+			padding: 1rem
+			transition: background-color 0.25s ease-in-out
+			&:hover
+				cursor: pointer
+				background-color: darken($accent,5)
+		input
+			border: 0
+			border-bottom: 1px solid #ccc
+			border-radius: 0
+			&::placeholder
+				c#ccc
+
+
 h1,h2,h3,h4,h5,h6
 	font-weight: 700
 
@@ -62,13 +145,12 @@ blockquote
 	padding: 0
 	margin: 0
 	background-color: rgba(0,0,0,0.75)
-	z-index: 99998
+	z-index: 88887
 	text-align: center
 	.advice
 		background-color: $accent
-		padding: 10px
+		padding: 5px 5px 7px
 		&-header
-			padding-bottom: 10px
 			display: block
 			color: #fff
 	.header-bottom
@@ -78,10 +160,10 @@ blockquote
 		width: 100%
 	.logo
 		text-align: center
-		padding: 35px 0 20px
+		padding: 25px 0 10px
 .mobile-mnu
 	display: none
-	z-index: 99999
+	z-index: 88888
 	position: fixed
 	top: 0
 	right: 0
@@ -102,20 +184,149 @@ blockquote
 		padding: 0
 		font-size: 0.9rem
 		li
-			transition: background-color 0.4s ease
+			transition: background-color 0.25s ease
+			padding: 5px 7px
+			display: block
+			width: 100%
+			height: 100%
+			text-transform: uppercase
+			color: #fff
+			cursor: pointer
 			&:hover,&:focus,&:active
 				background-color: $accent
 			&.active
 				background-color: $accent
 			a
-				padding: 7px 7px
-				display: block
-				width: 100%
-				height: 100%
-				text-transform: uppercase
 				color: #fff
 				&:hover
 					text-decoration: none
+		.dropdown
+			position: relative
+			&:before
+				content: "\f0da"
+				font-family: "FontAwesome"
+				font-size: 1rem
+				line-height: 1rem
+				position: absolute
+				top: 8px
+				right: 10px
+				color: #fff
+			ul
+				display: none
+				position: absolute
+				top: 0
+				left: 200px
+				width: 150px
+				background-color: rgba(0,0,0,0.75)
+			&:hover
+				ul
+					display: block
+
+
+/* Callback*/
+#popup__toggle
+	bottom: 10px
+	right: -25px
+	position: fixed
+	z-index: 100
+.img-circle
+	background-color: $accent
+	box-sizing: content-box
+.circlephone
+	box-sizing: content-box
+	border: 2px solid $accent
+	width: 100px
+	height: 100px
+	bottom: -6px
+	right: 29px
+	position: absolute
+	border-radius: 100%
+	opacity: .5
+	animation: circle-anim 2.4s infinite ease-in-out !important
+	transition: all 0.5s
+.circle-fill
+	box-sizing: content-box
+	background-color: $accent
+	width: 88px
+	height: 88px
+	bottom: 0px
+	right: 35px
+	position: absolute
+	border-radius: 100%
+	border: 2px solid transparent;
+	animation: circle-fill-anim 2.3s infinite ease-in-out
+	transition: all 0.5s
+.img-circle
+	box-sizing: content-box
+	width: 60px
+	height: 60px
+	bottom: 14px
+	right: 49px
+	position: absolute
+	border-radius: 100%
+	border: 2px solid transparent
+	opacity: .7
+.img-circleblock
+	box-sizing: content-box
+	width: 72px
+	height: 72px
+	background-position: center center
+	background-repeat: no-repeat
+	animation-name: tossing;
+	animation-duration: 1.5s
+	animation-iteration-count: infinite
+	color: #fff
+	font-size: 2rem
+	line-height: 64px
+	text-align: center
+	width: 100%
+.img-circle:hover
+	opacity: 1
+
+@keyframes pulse
+	0%
+		transform: scale(0.9)
+		opacity: 1
+	50%
+		transform: scale(1)
+		opacity: 1   
+	100%
+		transform: scale(0.9)
+		opacity: 1
+ 
+@keyframes tossing
+	0%
+		transform: rotate(-8deg)
+	50%
+		transform: rotate(8deg)
+	100%
+		transform: rotate(-8deg)
+
+@keyframes circle-anim
+	0%
+		transform: rotate(0deg) scale(0.5) skew(1deg)
+		opacity: .1
+	30%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .5
+	100%
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .1
+@keyframes circle-fill-anim 
+	0%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50%
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .2
+	100%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+#callback
+	z-index: 99999
+	padding: 20px
+/*=======================================*/
 .social
 	text-align: center
 	span
@@ -137,7 +348,6 @@ blockquote
 /*Header-bg */
 .header-bg
 	position: relative
-	height: 100vh
 	background-image: url("../img/header-bg.png")
 	background-position: center
 	background-size: cover
@@ -148,17 +358,28 @@ blockquote
 		left: 0
 		right: 0
 		bottom: 0
-		background-color: rgba(0,0,0,0.48)
-		.logo-center
-			text-align: center
-			margin-top: 20vh
-			img
-				height: 40vh
+		background-color: rgba(0,0,0,0.6)
+		background-image: url("../img/pattern.png")
+		&:before
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			content: ""
+			background-image: url("../img/logo.svg")
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: auto 50%
+			z-index: 0
+				
 .top-contact
 	list-style: none
 	margin: 0
 	padding: 17px 30px
 	text-transform: uppercase
+	z-index: 199
+	position: absolute
 	li
 		display: inline-block
 		margin-right: 30px
@@ -175,6 +396,8 @@ blockquote
 		span
 			margin-right: 10px
 			color: $accent
+.contact-menu
+	display: none
 
 .search-form
 	position: absolute
@@ -218,7 +441,7 @@ blockquote
 	top: 0
 	right: 10px
 	width: 266px
-	z-index: 9999
+	z-index: 8888
 	.booking-header
 		background-color: $accent
 		a
@@ -235,6 +458,49 @@ blockquote
 				margin-left: 20px
 	.booking-body
 		background-color: $accent
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay
+	background-color: $accent
+	border: none
+.flatpickr-day.inRange, .flatpickr-day.prevMonthDay.inRange, .flatpickr-day.nextMonthDay.inRange, .flatpickr-day.today.inRange, .flatpickr-day.prevMonthDay.today.inRange, .flatpickr-day.nextMonthDay.today.inRange, .flatpickr-day:hover, .flatpickr-day.prevMonthDay:hover, .flatpickr-day.nextMonthDay:hover, .flatpickr-day:focus, .flatpickr-day.prevMonthDay:focus, .flatpickr-day.nextMonthDay:focus
+	background-color: lighten($accent, 8)
+	border: none
+	border-radius: 0
+.flatpickr-day.inRange,
+	box-shadow: -5px 0 0 lighten($accent, 8), 5px 0 0 lighten($accent, 8)
+.flatpickr-day.selected.startRange + .endRange, .flatpickr-day.startRange.startRange + .endRange, .flatpickr-day.endRange.startRange + .endRange
+	box-shadow: -5px 0 0 lighten($accent, 8)
+.flatpickr-day.selected.startRange, .flatpickr-day.startRange.startRange, .flatpickr-day.endRange.startRange
+	border-radius: 0
+.flatpickr-day.selected.endRange, .flatpickr-day.startRange.endRange, .flatpickr-day.endRange.endRange
+	border-radius: 0
+.flatpickr-day.today
+	border-color: $accent
+.flatpickr-day.today:hover, .flatpickr-day.today:focus
+	border-color: lighten($accent, 8)
+	background: lighten($accent, 8)
+.flatpickr-day.disabled, .flatpickr-day.disabled:hover, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay, .flatpickr-day.notAllowed, .flatpickr-day.notAllowed.prevMonthDay, .flatpickr-day.notAllowed.nextMonthDay
+	    color: rgba(255,255,255,0.7)
+.flatpickr-day.today
+	border-radius: 0
+.rangeMode .flatpickr-day
+	margin-top: 0
+.flatpickr-prev-month:hover svg, .flatpickr-next-month:hover svg
+	fill: $accent
+.flatpickr-calendar
+	background: rgb(26, 26, 26);
+//Select input
+span.selectbox
+    color: #fff
+    padding: 5px 0
+.dropdown
+	position: absolute
+	ul
+		background-color: #1a1a1a
+		list-style: none
+		padding-left: 0
+		li
+			cursor: pointer
+//Booking-form
 .booking-form
 	.date
 		input
@@ -244,6 +510,7 @@ blockquote
 		border: none
 		padding: 0
 		color: #fff
+		padding-right: 10px
 	.input-group
 		padding: 0 15px
 		border-bottom: 1px solid rgba(255,255,255,0.2)	
@@ -252,6 +519,7 @@ blockquote
 		.agree
 			margin-left: 10px
 			color: #fff
+			line-height: 1.2rem
 			a
 				display: inline
 				color: #fff
@@ -301,18 +569,21 @@ blockquote
 	.checkbox-gr
 		padding-top: 10px
 		padding-bottom: 10px
-
-.booking
+.form-control:disabled, .form-control[readonly]
+	background-color: transparent
+.booking-com
+	img
+		height: 85px
 	position: absolute
 	bottom: 0
-	right: 0
+	left: 0
 	padding: 10px
 	span
 		position: absolute
-		bottom: 27px
-		right: 37px
+		bottom: 25px
+		right: 35px
 		color: #fff
-		font-size: 1.8rem
+		font-size: 1.6rem
 
 .services-wrap
 	margin-left: 210px
@@ -326,6 +597,10 @@ blockquote
 .youtube-wrap
 	margin-left: 210px
 	margin-right: 0
+.content-wrap
+	margin-left: 200px
+	margin-right: 0
+	padding: 5px
 
 .services
 	padding: 15px 0
@@ -417,7 +692,7 @@ blockquote
 .btn-awesome
 	color: $default-color
 	position: relative
-	padding-right: 32px
+	// padding-right: 32px
 	text-transform: uppercase
 	margin: 30px 0 0
 	transition: color 0.4s ease-in-out
@@ -428,7 +703,7 @@ blockquote
 		content: ""
 		position: absolute
 		top: 5px
-		right: 0
+		right: -20px
 		background-image: url("../img/slim-right.svg")
 		height: 22px
 		width: 22px
@@ -513,24 +788,34 @@ blockquote
 		top: -10px
 		right: -8px
 
-
 .youtube
 	padding: 30px 0
-	.y-video-more
-		background-color: #a6a6a6
-		// transition: background-color 0.4s ease-in-out
+	.h2
+		padding-bottom: 30px
+		margin-top: 10px
+.youtube-video-wrap
+	padding: 5px !important
+.youtube-video,.youtube-video-more
+	padding: 5px !important
+	a
+		.video-mask
+			position: absolute
+			top: 5px
+			bottom: 5px
+			right: 5px
+			left: 5px
+			background-color: rgba(#000,0.2)
+			transition: background-color 0.25s ease-in-out
 		&:hover
-			background-color: $accent
-	.y-video
-		margin-right: 10px
-		position: relative
+			.video-mask
+				background-color: rgba(#000,0.5)
 		.video-icon
 			position: absolute
 			top: 50%
 			left: 50%
 			color: #fff
 			font-size: 2rem
-			border: 1px solid #fff
+			border: 2px solid #fff
 			border-radius: 50%
 			width: 80px
 			height: 80px
@@ -539,155 +824,38 @@ blockquote
 			margin-top: -40px
 			margin-left: -40px
 			padding-left: 9px
-			a
-				color: #fff
-		.more-video
+			transition: all .25s ease-in-out
+		&:hover
+			.video-icon
+				border: 2px solid $accent
+				color: $accent
+.youtube-video-more
+	position: relative
+	width: 100%
+	height: 100%
+	a
+		background-color: #a6a6a6
+		display: block
+		position: absolute
+		top: 5px
+		right: 5px
+		left: 5px
+		bottom: 5px
+		transition: background-color 0.25s ease-in-out
+		&:hover
+			background-color: $accent
+		span
 			position: absolute
 			top: 50%
 			left: 50%
+			margin-top: -1rem
+			margin-left: -99px
 			color: #fff
+			font-family: 'Playfair Display', serif
+			font-size: 2rem
+			font-weight: 700
+			line-height: 2rem
 			text-transform: uppercase
-			font-family:  'Playfair Display', serif
-			font-weight: bold
-			font-size: 1.4rem
-			line-height: 1.4rem
-			margin-left: -71px
-			margin-top: -11px
-
-.events
-	a
-		.mask
-			opacity: 0.5
-			position: absolute
-			bottom: 0
-			left: 0
-			right: 0
-			top: 0
-			transition: opacity 0.4s ease
-			background-color: rgba(#000,0.5)
-			i
-				display: none
-				opacity: 0
-				position: absolute
-				transition: opacity 0.4s ease
-		&:hover
-			.mask
-				position: absolute
-				bottom: 0
-				left: 0
-				right: 0
-				top: 0
-				background-color: rgba(#000,0.9)
-				opacity: 1
-				i
-					display: block
-					position: absolute
-					top: 50%
-					left: 50%
-					color: #fff
-					font-size: 4rem
-					line-height: 4rem
-					margin-top: -32px
-					margin-left: -32px
-					opacity: 1
-	.event-item
-		.np1
-			padding: 0 0px 9px 0px
-			.into-text
-				bottom: 20px!important
-		.np2
-			padding: 0 0px 9px 0px
-			margin-right: -9px
-			.into-text
-				bottom: 20px!important
-			.publish-date
-				margin-right: 0px !important
-	.left-column,.right-column,.event-item
-		width: 50%
-		float: left
-		display: block
-	.event-item,.event-item-last
-		box-shadow: 0px 0px 0px 10px #fff;
-	.event-item-last
-		position: relative
-		.event-info
-			position: absolute
-			bottom: 0
-			left: 0
-			width: 100%
-			.into-text
-				display: inline-block
-				color: #fff
-				line-height: 1.2rem
-				position: absolute
-				bottom: 10px
-				left: 10px
-				right: 82px
-			.publish-date
-				display: inline-block
-				background-color: $accent
-				width: 64px
-				float: right
-				padding: 10px
-				margin-right: 10px
-				color: #fff
-				text-align: center
-				line-height: 1.3rem
-				font-size: 1.1rem
-	.event-item
-		position: relative			
-		&:nth-child(4)
-			&:before
-				transition: all 0.4s ease-in-out
-			&:hover
-				&:before
-					content: ""
-					position: absolute
-					top: 0
-					bottom: 0
-					right: 0
-					left: 0
-					background-color: $accent
-		.event-info
-			position: absolute
-			bottom: 0
-			left: 0
-			width: 100%
-			font-size: 0.9rem
-			.into-text
-				display: inline-block
-				color: #fff
-				line-height: 1.2rem
-				position: absolute
-				bottom: 10px
-				left: 10px
-				right: 82px
-			.publish-date
-				display: inline-block
-				background-color: $accent
-				width: 23%
-				padding: 10px
-				color: #fff
-				text-align: center
-				line-height: 1.3rem
-				font-size: 1.1rem
-				width: 64px
-				float: right
-				margin-right: 9px
-	.event-info-more
-		position: absolute
-		top: 50%
-		left: 50%
-		color: #fff
-		text-transform: uppercase
-		font-family:  'Playfair Display', serif
-		font-weight: bold
-		font-size: 1.4rem
-		line-height: 1.4rem
-		margin-left: -71px
-		margin-top: -11px
-		&:hover
-			text-decoration: none
 
 .footer
 	.foobg		
@@ -760,7 +928,6 @@ blockquote
 				top: 25px
 				right: 25px
 
-
 .top-line
 	background-color: $accent
 	padding: 20px 15px
@@ -768,7 +935,7 @@ blockquote
 	color: #fff
 	text-transform: uppercase
 	font-size: 2.1rem
-	font-family:  'Playfair Display', serif
+	font-family: 'Playfair Display', serif
 	font-weight: 700
 
 .content
@@ -792,7 +959,295 @@ blockquote
 	p
 		margin-bottom: 10px
 
+.fond
+	&-item
+		min-height: 40vh
+		margin: 5px
+		display: block
+		background-size: cover
+		background-position: center
+		position: relative
+		&-content
+			display: block
+			color: #fff
+			text-align: center
+			padding: 10vh 10px
+			background-color: rgba($accent,0)
+			transition: background-color 0.25s ease-in-out
+			&:hover
+				text-decoration: none
+				color: #fff
+				background-color: rgba($accent,0.8)
+			.h2
+				padding: 25px
 
+.gallery
+	padding: 5px
+	.gallery-item
+		padding: 5px 10px !important
+		&:nth-child(odd)
+			padding: 5px !important
+		&:nth-child(even)
+			padding: 5px !important
+		a
+			position: relative
+			display: block
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: #000
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:after
+				content: "\f00e"
+				position: absolute
+				font-family: "FontAwesome"
+				top: 50%
+				left: 50%
+				color: #fff
+				font-size: 2rem
+				line-height: 2rem
+				width: 30px
+				height: 30px
+				text-align: center
+				margin-top: -15px
+				margin-left: -15px
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:hover
+				&:before
+					opacity: 0.8
+				&:after
+					opacity: 1
+
+.gallery-folder
+	padding: 5px
+	.gallery-item
+		padding: 5px 10px !important
+		&:nth-child(odd)
+			padding: 5px !important
+		&:nth-child(even)
+			padding: 5px !important
+		a
+			position: relative
+			display: block
+			color: #fff
+			span
+				display: block
+				position: absolute
+				bottom: 0
+				background-color: $accent
+				width: 100%
+				text-align: center
+				padding: 15px
+				line-height: 1.2rem
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: #000
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:after
+				content: "\f115"
+				position: absolute
+				font-family: "FontAwesome"
+				top: 50%
+				left: 50%
+				color: #fff
+				font-size: 2rem
+				line-height: 2rem
+				width: 30px
+				height: 30px
+				text-align: center
+				margin-top: -15px
+				margin-left: -15px
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:hover
+				color: #fff
+				&:before
+					opacity: 0.8
+				&:after
+					opacity: 1
+
+.news
+	padding: 5px
+	.news-item
+		padding: 5px 10px !important
+		&:nth-child(odd)
+			padding: 5px !important
+		&:nth-child(even)
+			padding: 5px !important
+		a
+			position: relative
+			display: block
+			color: #fff
+			span.news-published
+				display: block
+				position: absolute
+				bottom: 10px
+				right: 10px
+				background-color: $accent
+				width: 60px
+				height: 60px
+				vertical-align: middle
+				padding-top: 12px
+				padding-bottom: 12px
+				text-align: center
+				line-height: 1.2rem
+			span.news-title
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				padding: 10px
+				right: 80px
+				line-height: 1.2rem
+				font-size: 0.8rem
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: #000
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:after
+				content: "\f06e"
+				position: absolute
+				font-family: "FontAwesome"
+				top: 50%
+				left: 50%
+				color: #fff
+				font-size: 2rem
+				line-height: 2rem
+				width: 30px
+				height: 30px
+				text-align: center
+				margin-top: -15px
+				margin-left: -15px
+				opacity: 0
+				transition: opacity 0.25s ease-in-out
+			&:hover
+				color: #fff
+				&:before
+					opacity: 0.8
+				&:after
+					opacity: 1
+	.news-item-next
+		a
+			background-color: #a6a6a6
+			position: absolute
+			top: 0px
+			right: 0px
+			left: 0px
+			bottom: 0px
+			margin: 5px
+			color: #fff
+			text-transform: uppercase
+			font-size: 1.5rem
+			font-family: 'Playfair Display', serif
+			font-weight: 700
+			line-height: 1.5rem
+			transition: background-color 0.25s ease-in-out 
+			span
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 100%
+				margin-top: -0.75rem
+				margin-left: -90px
+			&:hover
+				background-color: $accent
+
+.up-btn
+	display: block
+	text-align: center
+	width: 100%
+	margin: 10px 5px 0
+	padding: 15px
+	text-transform: uppercase
+	color: $default-color
+	transition: background-color 0.25s ease-in-out
+	letter-spacing: 3px
+	i
+		padding-left: 10px
+	&:hover
+		text-decoration: none
+		color: $default-color
+		background-color: #cecece
+.load-btn
+	display: block
+	text-align: center
+	margin: 5px
+	padding: 15px
+	text-transform: uppercase
+	color: $default-color
+	transition: background-color 0.25s ease-in-out
+	letter-spacing: 3px
+	i
+		padding-left: 10px
+	&:hover
+		text-decoration: none
+		color: $default-color
+		background-color: #cecece
+.back-btn
+	margin: 10px 5px 0
+	padding: 15px
+	text-transform: uppercase
+	color: $default-color
+	transition: color 0.25s ease-in-out
+	letter-spacing: 3px
+	i
+		padding-right: 10px
+		font-size: 1.2rem
+	&:hover
+		text-decoration: none
+		color: $accent
+
+.gallery-arrow 
+	position: fixed
+	bottom: 10px
+	left: 50%
+	background-color: #fff
+	height: 40px
+	width: 120px
+	line-height: 40px
+	cursor: pointer
+	transition: all 0.25 ease-in-out
+	letter-spacing: 2px
+	&:hover
+		background-color: $accent
+		color: #fff
+
+.gallery-arrow-right
+	// margin-left: 121px
+.gallery-arrow-left
+	margin-left: -121px
+
+.news-single
+	img
+		float: left
+		width: 40%
+		padding: 10px 20px 20px 0
+	h2
+		padding-top: 15px
+		padding-bottom: 10px
+	.publish
+		font-weight: bold
+		padding-bottom: 20px
+		span
+			color: $accent
 
 
 @import "media"
