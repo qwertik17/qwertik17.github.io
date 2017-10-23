@@ -111,6 +111,7 @@
 				.soc-text
 					display: none
 			.contact-menu
+				display: block
 				list-style: none
 				padding-left: 0
 				a,span,li
@@ -174,7 +175,14 @@
 	.search-form
 		top: 57px
 		right: 0
-
+@media only screen and (max-width : 768px) and (orientation : landscape)
+	.main-menu
+		margin-top: 40px
+		ul
+			column-count: 2
+	.header
+		.logo
+			display: none
 
 @media only screen and (max-width : 575px)
 	.youtube
