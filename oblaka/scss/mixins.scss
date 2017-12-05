@@ -1,0 +1,17 @@
+@mixin transition ($selector, $time) {
+	-webkit-transition: $selector $time ease;
+	-o-transition: $selector $time ease;
+	transition: $selector $time ease;
+}
+
+@function rem($pixels, $context: $default-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
