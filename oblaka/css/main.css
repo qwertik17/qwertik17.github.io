@@ -587,6 +587,7 @@ body {
   display: block; }
 
 .sidebar {
+  position: relative;
   height: 100px;
   background-color: #fff;
   position: fixed;
@@ -598,7 +599,13 @@ body {
 .sidebar-logo {
   display: block;
   float: left; }
-  .sidebar-logo img:nth-child(2), .sidebar-logo img:nth-child(3) {
+
+.logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .7rem 1.3rem; }
+  .logo-img img:last-child {
     display: none; }
 
 .time-work {
@@ -1231,6 +1238,17 @@ address {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .logo-img {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0; }
+    .logo-img img {
+      display: none;
+      padding: 1rem;
+      height: 100px; }
+      .logo-img img:last-child {
+        display: block; }
   section.slider {
     display: none; }
   .location {
@@ -1249,12 +1267,6 @@ address {
     padding: 0 !important; }
   .top-menu {
     display: none; }
-  .sidebar-logo img {
-    display: none; }
-  .sidebar-logo img:nth-child(2) {
-    display: block; }
-  .sidebar-logo img {
-    padding: 1rem 2rem 0; }
   .sidebar-menu ul {
     width: 203px;
     margin: 3rem auto 0;
@@ -1334,27 +1346,28 @@ address {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .logo-img {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0; }
+    .logo-img img {
+      display: none;
+      padding: 1rem;
+      height: 80px; }
+      .logo-img img:last-child {
+        display: block; }
   .footer-menu {
     text-align: center; }
   .social-link {
     margin-top: 1rem;
     text-align: center; }
-  .sidebar-logo img {
-    display: none; }
-  .sidebar-logo img:nth-child(2) {
-    display: none; }
-  .sidebar-logo img:nth-child(3) {
-    display: block; }
   .map-complex {
     display: none; }
   .menu-btn {
     margin-right: 2rem; }
   .sidebar {
     height: 80px !important; }
-  .sidebar-logo img {
-    height: 60px;
-    padding: 0;
-    margin: 10px 1rem 10px 2rem; }
   .time-work {
     line-height: 80px; }
   .menu-btn {
@@ -1390,10 +1403,6 @@ address {
 @media only screen and (max-width: 480px) {
   .time-work {
     display: none; }
-  .sidebar-logo img {
-    height: 50px;
-    padding: 0;
-    margin: 15px 1rem 15px 1.5rem; }
   .menu-btn {
     margin: 26px 1.5rem 26px 1rem; } }
 
@@ -1403,9 +1412,7 @@ address {
     height: 100px;
     line-height: 100px; }
   .footer-menu li {
-    margin-right: 1rem; }
-  .sidebar-logo img {
-    padding-right: 1rem; } }
+    margin-right: 1rem; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
@@ -1455,7 +1462,6 @@ address {
       background-size: cover;
       width: 415px;
       height: 246px;
-      padding: 1rem 2rem;
       pointer-events: none; }
   .time-work {
     text-align: center;

@@ -21,6 +21,7 @@ body {
   display: block; }
 
 .sidebar {
+  position: relative;
   height: 100px;
   background-color: #fff;
   position: fixed;
@@ -32,7 +33,13 @@ body {
 .sidebar-logo {
   display: block;
   float: left; }
-  .sidebar-logo img:nth-child(2), .sidebar-logo img:nth-child(3) {
+
+.logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .7rem 1.3rem; }
+  .logo-img img:last-child {
     display: none; }
 
 .time-work {
