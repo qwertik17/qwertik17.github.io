@@ -1627,7 +1627,8 @@ address {
     border: 1px solid transparent;
     -webkit-border-radius: 15px;
             border-radius: 15px;
-    height: 107px; }
+    height: 107px;
+    resize: none; }
 
 .chosen-drop ul li {
   padding-left: 0; }
@@ -1706,6 +1707,27 @@ a:not([href]):not([tabindex]) {
 #contact-map {
   width: auto;
   height: 650px; }
+
+.not-found {
+  background-image: none;
+  padding: 5% 0; }
+  .not-found img {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 5%; }
+  .not-found a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125rem;
+    color: #1d89b6; }
+    .not-found a span {
+      text-decoration: underline; }
+    .not-found a:hover {
+      text-decoration: none;
+      color: #1d89b6; }
+      .not-found a:hover span {
+        text-decoration: none; }
 
 @media only screen and (max-width: 1590px) {
   .item-txt {
@@ -1907,6 +1929,10 @@ a:not([href]):not([tabindex]) {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .contact-form .form-group textarea {
+    max-width: 100%;
+    min-width: 100%;
+    resize: auto; }
   .contact-form .left-col .form-group {
     margin-right: 0; }
   #contact-map {

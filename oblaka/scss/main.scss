@@ -522,6 +522,7 @@ address {
 			border: 1px solid transparent;
 			border-radius: 15px;
 			height: 107px;
+			resize: none;
 		}
 	}
 }
@@ -607,5 +608,32 @@ a:not([href]):not([tabindex]) {
 	width: auto;
 	height: 650px;
 }
+.not-found {
+	background-image: none;
+	padding: 5% 0;
+	img {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 5%;
+	}
+	a {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		font-size: rem(18);
+		color: $accent-color;
+		span {
+			text-decoration: underline;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $accent-color;
+			span {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 
 @import "media";
