@@ -73,66 +73,150 @@
 
 					<div class="container">
 						<div class="row">
-							<div class="col-xs-12">
+							<div class="col-12">
 								<div class="page-header">
 									<h1 class="h1">Контакты</h1>
 								</div>
-								<div class="content">
-									
+								<div class="page-content">
+									<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+									<script type="text/javascript">
+										var map;
+
+										DG.then(function () {
+											var myIcon = DG.icon({
+												iconUrl: 'img/contact-map-marker.png',
+												iconSize: [104, 122]
+											});
+											map = DG.map('contact-map', {
+											center: [51.4879056, 46.1257148],
+											scrollWheelZoom: false,
+											zoomControl: false,
+											zoom: 16
+											});
+											DG.marker([51.4879056, 46.1257148], {icon: myIcon}).addTo(map);
+										});
+									</script>
+									<div id="contact-map"></div>
+
+									<div class="row">
+										<div class="col-sm-12 col-lg-4">
+											<div class="contact-block">
+												<div class="icon-li home-li">г. Энгельс, ул. Тельмана, 25</div>
+												<div class="icon-li marker-li"><a href="#" class="scheme">СХЕМА ПРОЕЗДА</a></div>
+												<div class="icon-li phone-li double">
+													<a href="#">+7 (8453) 75–23–23</a>
+													<span>администрация</span>
+												</div>
+												<div class="icon-li mail-li double">
+													<a href="#">Oblaka@mail.ru</a>
+													<span>По всем вопросам</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 col-lg-4">
+											<div class="contact-block">
+												<span class="contact-block-header">Рекламодателям</span>
+												<p>По вопросам рекламы обращайтесь к менеджеру:</p>
+												<div class="icon-li phone-li">
+													<a href="#">+7 (8453) 75–23–23</a>
+												</div>
+												<div class="icon-li mail-li">
+													<a href="#">Oblaka@mail.ru</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 col-lg-4">
+											<div class="contact-block">
+												<span class="contact-block-header">Арендаторам</span>
+												<p>По вопросам рекламы обращайтесь к менеджеру:</p>
+												<div class="icon-li phone-li">
+													<a href="#">+7 (8453) 75–23–23</a>
+												</div>
+												<div class="icon-li mail-li">
+													<a href="#">Oblaka@mail.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<form class="contact-form">
+										<div class="contact-form-header">напишите нам, задав интересующий вас вопрос, и мы с радостью вам ответим:</div>
+										<div class="form-row">
+											<div class="col-md-12 col-lg-6 left-col">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="af_name" placeholder="Имя">
+												</div>
+												<div class="form-group">
+													<select name="subject" id="af_subject" class="form-control chosen-select" required>
+														<option selected disabled>Тема сообщения</option>
+														<option>Тема сообщения 1</option>
+														<option>Тема сообщения 2</option>
+														<option>Тема сообщения 3</option>
+														<option>Тема сообщения 4</option>
+														<option>Тема сообщения 5</option>
+														<option>Тема сообщения 6</option>
+													</select>	
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-6 right-col">
+												<div class="form-group">
+													<textarea class="form-control" placeholder="Текст сообщения"></textarea>
+												</div>
+											</div>
+										</div>
+										<button type="submit" class="button form-button">Отправить</button>
+									</form>
+
 								</div>
 							</div>
 						</div>
 					</div>
+					<footer class="container-fluid">
+						<div class="footer">
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-md-9">
+										<ul class="footer-menu">
+											<li><a href="#">Арендаторам</a></li>
+											<li><a href="#">Реклама</a></li>
+											<li><a href="#">Контакты</a></li>
+										</ul>
+									</div>
+									<div class="col-12 col-md-3">
+										<ul class="social-link">
+											<li><a href="#"><i class="icon-insta"></i></a></li>
+											<li><a href="#"><i class="icon-facebook"></i></a></li>
+											<li><a href="#"><i class="icon-vk"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="row cont-footer">
+									<div class="col-md-12 contacts-wrap">
+										<ul class="full-width">
+											<li class="text-left"><i class="icon-home"></i><address>г. Энгельс, ул. Тельмана, 25</address></li>
+											<li><a href="tel:78453752323"><i class="icon-phone-call"></i> +7 (8453) 75–23–23</a></li>
+										</ul>
+										<ul class="full-width">
+											<li><a href="mailto:oblaka@mail.ru"><i class="icon-message"></i> Oblaka@mail.ru</a></li>
+											<li class="text-right">Создано в <a href="http://site-creative.ru/" class="sitecreative">сайткреативе</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 order-2 col-md-12 order-md-1 text-center">
+										<div class="copyright">© 2017 Торгово-развлекательный центр “Облака”</div>
+									</div>
+									<div class="col-12 order-1 col-md-12 order-md-2 text-center">
+										<div class="polic">Использование сайта подразумевает согласие с <a href="#">политикой конфедициальности</a> и <a href="#">Пользовательским соглашением</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
 				</main>
 			</div>
 		</div>
 	</div>
-
-	<footer class="container-fluid">
-		<div class="row">
-			<div class="wrapper">
-				<div class="left-sidebar"></div>
-				<div class="content footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-md-9">
-								<ul class="footer-menu">
-									<li><a href="#">Арендаторам</a></li>
-									<li><a href="#">Реклама</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-							<div class="col-12 col-md-3">
-								<ul class="social-link">
-									<li><a href="#"><i class="icon-insta"></i></a></li>
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-vk"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row cont-footer">
-							<div class="col-md-12 contacts-wrap">
-								<ul class="full-width">
-									<li class="text-left"><i class="icon-home"></i><address>г. Энгельс, ул. Тельмана, 25</address></li>
-									<li><a href="tel:78453752323"><i class="icon-phone-call"></i> +7 (8453) 75–23–23</a></li>
-								</ul>
-								<ul class="full-width">
-									<li><a href="mailto:oblaka@mail.ru"><i class="icon-message"></i> Oblaka@mail.ru</a></li>
-									<li class="text-right">Создано в <a href="http://site-creative.ru/" class="sitecreative">сайткреативе</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12 text-center">
-								<div class="copyright">© 2017 Торгово-развлекательный центр “Облака”</div>
-								<div class="polic">Использование сайта подразумевает согласие с <a href="#">политикой конфедициальности</a> и <a href="#">Пользовательским соглашением</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

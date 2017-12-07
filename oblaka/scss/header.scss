@@ -96,6 +96,7 @@ body {
 	}
 }
 .map-complex {
+	text-decoration: none;
 	display: block;
 	float: right;
 	background: -webkit-linear-gradient(113deg, #9ddf8b 13%, #74cfbe 50%, #4dbfef 86%);
@@ -137,6 +138,10 @@ body {
 		background-color: rgba(#fff,.8);
 		border-radius: 1.3rem 0 0 1.3rem;
 		li {
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
 			display: inline-block;
 			a {
 				display: block;

@@ -85,6 +85,7 @@ body {
       background-color: #2b9bca; }
 
 .map-complex {
+  text-decoration: none;
   display: block;
   float: right;
   background: -webkit-linear-gradient(113deg, #9ddf8b 13%, #74cfbe 50%, #4dbfef 86%);
@@ -124,7 +125,10 @@ body {
     -webkit-border-radius: 1.3rem 0 0 1.3rem;
             border-radius: 1.3rem 0 0 1.3rem; }
     .top-menu ul li {
+      padding-left: 0;
       display: inline-block; }
+      .top-menu ul li:before {
+        display: none; }
       .top-menu ul li a {
         display: block;
         color: #444;

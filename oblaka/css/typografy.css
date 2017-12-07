@@ -2,3 +2,81 @@ a {
   outline: none; }
   a:focus {
     outline: none; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: #1d89b6; }
+
+h1, .h1 {
+  font-size: rem(29);
+  line-height: 1.4;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e2e2; }
+
+h2, .h2 {
+  font-size: rem(24);
+  line-height: 2.1; }
+
+h3, .h3 {
+  font-size: rem(22);
+  line-height: 2.2; }
+
+h4, .h4 {
+  font-size: rem(20);
+  line-height: 2.1; }
+
+h5, .h5 {
+  font-size: rem(18);
+  line-height: 2.3; }
+
+p, .p {
+  font-size: rem(16);
+  font-weight: 400; }
+
+a {
+  color: #1d89b6;
+  text-decoration: underline; }
+  a:hover {
+    color: #1d89b6;
+    text-decoration: none; }
+
+blockquote {
+  padding: 25px 0;
+  background-image: url(../img/blockquote.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+  ul li {
+    position: relative;
+    padding-left: 20px; }
+    ul li:before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: #b8e0f3;
+      -webkit-border-radius: 50px;
+              border-radius: 50px;
+      top: 9px;
+      left: 0; }
+
+ol {
+  counter-reset: myCounter;
+  padding: 0; }
+  ol li {
+    list-style: none; }
+    ol li:before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: #6bb5d8;
+      display: inline-block;
+      text-align: center;
+      padding-right: 10px;
+      padding-left: 1px;
+      font-weight: 700; }

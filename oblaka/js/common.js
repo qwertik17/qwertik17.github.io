@@ -57,4 +57,11 @@ jQuery(document).ready(function($) {
 		$(".mobile-menu").slideUp(400);
 	});
 
+	var wh = $(window).height();
+	var ph = $(".page-header").outerHeight(true);
+	var fh = $("footer").outerHeight(true);
+	$(".page-content").css({"min-height": wh-ph-fh-8 + "px"});
+
+	$(".chosen-select").chosen({disable_search_threshold: 10});
+
 })

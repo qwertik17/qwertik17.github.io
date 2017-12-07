@@ -116,6 +116,15 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	#contact-map {
+		height: 500px;
+	}
+	.page-header {
+		margin-top: 30px;
+	}
+	.contact-block {
+		font-size: rem(14);
+	}
 	.logo-img {
 		position: relative;
 		display: inline-block;
@@ -163,6 +172,10 @@
 			padding: 1rem 0;
 			list-style-type: none;
 			li {
+				&:before {
+					display: none;
+				}
+				padding-left: 0;
 				position: relative;
 				padding-left: 3.2rem;
 				a {
@@ -222,11 +235,24 @@
 	.sidebar {
 		box-shadow: 0px 4px 10px rgba(#000,.1);
 	}
+	.contact-form-header {
+		font-size: rem(20);
+	}
 }
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.contact-form .left-col .form-group {
+		margin-right: 0;
+	}
+	#contact-map {
+		height: 400px;
+	}
+	.contact-block {
+		height: auto;
+		font-size: rem(18);
+	}
 	.map-cover {
 		display: none;
 	}
@@ -244,6 +270,10 @@
 		text-align: center;
 		li {
 			width: 50%;
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
 		}
 		.text-left,.text-right {
 			text-align: center !important;
@@ -298,6 +328,13 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px) {
+
+	.contact-form-header {
+		font-size: rem(17);
+	}	
+	.contact-block {
+		font-size: rem(16);
+	}
 	section.events {
 		.event-item {
 			.wrap-img {
@@ -313,6 +350,10 @@
 		width: 100%;
 		text-align: center;
 		li {
+			&:before {
+				display: none;
+			}
+			padding-left: 0;
 			width: 100%;
 			display: block;
 			margin-top: 1.5rem;
@@ -347,6 +388,11 @@
 	.menu-btn {
 		margin: 26px 1.5rem 26px 1rem;
 	}
+	.footer-menu {
+		li {
+			margin-right: 1rem;
+		}
+	}
 }
 
 
@@ -362,17 +408,16 @@
 			}
 		}
 	}
-	.footer-menu {
-		li {
-			margin-right: 1rem;
-		}
-	}
 }
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-	/**/
+@media only screen and (max-width : 340px) {
+	.footer-menu {
+		li {
+			margin-right: 5px;
+		}
+	}
 }
 
 
@@ -455,8 +500,12 @@
 			padding: 0;
 			list-style-type: none;
 			li {
+				padding-left: 0;
 				position: relative;
 				padding-left: 3.2rem;
+				&:before {
+					display: none;
+				}
 				a {
 					text-decoration: none;
 					color: $default-color;
