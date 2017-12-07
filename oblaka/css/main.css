@@ -866,7 +866,8 @@ a {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Ubuntu";
   font-weight: 300;
-  color: #1d89b6; }
+  color: #1d89b6;
+  text-transform: uppercase; }
 
 h1, .h1 {
   font-size: 1.8125rem;
@@ -1187,7 +1188,8 @@ body {
   -webkit-transition: background-color 0.25s ease;
   -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
-  outline: none; }
+  outline: none;
+  text-decoration: none; }
   .nav-tabs .nav-link:last-child {
     margin-right: 0;
     border: none; }
@@ -1757,6 +1759,135 @@ a:not([href]):not([tabindex]) {
       .not-found a:hover span {
         text-decoration: none; }
 
+.arenda-form input {
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  padding-top: 9px;
+  padding-bottom: 9px; }
+  .arenda-form input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.arenda-form div#af_subject_chosen {
+  border: 1px solid #ced4da; }
+
+.arenda-form .uplfile {
+  background-color: #e2f8d7;
+  position: relative;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  padding: 12px 18px;
+  padding-left: 40px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease; }
+  .arenda-form .uplfile:before {
+    content: "";
+    font-family: "Oblaka";
+    font-size: 1.25rem;
+    position: absolute;
+    top: 7px;
+    left: 13px; }
+  .arenda-form .uplfile:hover {
+    background-color: #d9f6ca; }
+
+.arenda-form .txt {
+  color: #989898;
+  padding-left: 15px;
+  display: inline-block;
+  line-height: 20px; }
+
+.arenda-form #file-name1 {
+  color: #989898; }
+
+.arenda-form .form-button {
+  margin-left: 0;
+  margin-top: 15px;
+  margin-bottom: 40px; }
+
+input[type="checkbox"] {
+  display: none; }
+
+.check {
+  position: relative; }
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer;
+  margin: 5px; }
+
+input[type="checkbox"]:checked + label:before {
+  content: '✓';
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  color: #64da29; }
+
+.dgr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3; }
+
+.polic-form {
+  color: #989898;
+  line-height: 20px;
+  padding-left: 5px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  display: block; }
+
+/* -- Ripple-effect ----------------------------------- */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translatez(0); }
+
+.ink {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+
+.ink {
+  background: #64da29;
+  opacity: 1; }
+
+.ink.animate {
+  -webkit-animation: ripple-effect 0.5s linear;
+  animation: ripple-effect 0.5s linear; }
+
+@keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5); } }
+
+@-webkit-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5); } }
+
 @media only screen and (max-width: 1590px) {
   .item-txt {
     position: absolute;
@@ -2053,6 +2184,12 @@ a:not([href]):not([tabindex]) {
     display: none; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 496px) {
+  .polic-form {
+    top: 0; }
+  .arenda-form .form-button {
+    margin-bottom: 10px; } }
+
 @media only screen and (max-width: 480px) {
   .time-work {
     display: none; }

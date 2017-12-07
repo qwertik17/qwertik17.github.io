@@ -21,6 +21,7 @@
 	color: $default-color;
 	@include transition(background-color, .25s);
 	outline: none;
+	text-decoration: none;
 	&:last-child {
 		margin-right: 0;
 		border: none;
@@ -657,5 +658,169 @@ a:not([href]):not([tabindex]) {
 	}
 }
 
+.arenda-form {
+	input {
+		border-radius: 15px;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		&:focus {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+	div#af_subject_chosen {
+		border: 1px solid #ced4da;
+	}
+	.uplfile {
+		background-color: #e2f8d7;
+		position: relative;
+		font-size: rem(15);
+		font-weight: 300;
+		padding: 12px 18px;
+		padding-left: 40px;
+		border-radius: 25px;
+		cursor: pointer;
+		display: inline-block;
+		@include transition(background-color,.25s)
+		&:before {
+			content:"";
+			font-family: "Oblaka";
+			font-size: rem(20);
+			position: absolute;
+			top: 7px;
+			left: 13px;
+		}
+		&:hover {
+			background-color: darken(#e2f8d7,3);
+		}
+	}
+	.txt {
+		color: #989898;
+		padding-left: 15px;
+		display: inline-block;
+		line-height: 20px;
+	}
+	#file-name1 {
+		color: #989898;
+	}
+	.form-button {
+		margin-left: 0;
+		margin-top: 15px;
+		margin-bottom: 40px;
+	}
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+.check {
+	position: relative;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: '✓';
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  color: darken(#e2f8d7,40);
+}
+
+.dgr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+.polic-form {
+	color: #989898;
+	line-height: 20px;
+	padding-left: 5px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+	display: block;
+}
+
+
+/* -- Ripple-effect ----------------------------------- */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translatez(0);
+}
+.ink {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.ink {
+  background: darken(#e2f8d7,40);
+  opacity: 1;
+}
+.ink.animate {
+  -webkit-animation: ripple-effect 0.5s linear;
+  -o-animation: ripple-effect 0.5s linear;
+  animation: ripple-effect 0.5s linear;
+}
+
+@keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-webkit-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-moz-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-ms-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+@-o-keyframes ripple-effect {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
 
 @import "media";

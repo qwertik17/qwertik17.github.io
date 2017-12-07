@@ -390,6 +390,16 @@
 
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 496px) {
+	.polic-form {
+		top: 0;
+	}
+	.arenda-form {
+		.form-button {
+			margin-bottom: 10px;
+		}
+	}
+}
 @media only screen and (max-width : 480px) {
 	.time-work {
 		display: none;
