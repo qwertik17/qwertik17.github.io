@@ -1227,7 +1227,13 @@ section.events {
                 border-radius: 50%;
         font-weight: 700;
         font-size: 0.75rem;
-        color: #444; }
+        color: #444;
+        -webkit-transition: transform 0.25s ease;
+        -o-transition: transform 0.25s ease;
+        -webkit-transition: -webkit-transform 0.25s ease;
+        transition: -webkit-transform 0.25s ease;
+        transition: transform 0.25s ease;
+        transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
       section.events .event-item .wrap-img .label-stock {
         background-color: rgba(155, 229, 207, 0.7); }
     section.events .event-item img {
@@ -1235,9 +1241,13 @@ section.events {
               border-radius: 50%;
       -webkit-transform: scale(0.8) translate(-9%, -9%);
       -ms-transform: scale(0.8) translate(-9%, -9%);
-      transform: scale(0.8) translate(-9%, -9%); }
-    section.events .event-item:hover {
-      opacity: .8; }
+      transform: scale(0.8) translate(-9%, -9%);
+      -webkit-transition: transform 0.25s ease;
+      -o-transition: transform 0.25s ease;
+      -webkit-transition: -webkit-transform 0.25s ease;
+      transition: -webkit-transform 0.25s ease;
+      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
     section.events .event-item span {
       display: block;
       width: 79%;
@@ -1245,7 +1255,25 @@ section.events {
       text-align: center;
       color: #444;
       line-height: 1.25;
-      margin-top: -2rem; }
+      margin-top: -2rem;
+      -webkit-transition: transform 0.25s ease;
+      -o-transition: transform 0.25s ease;
+      -webkit-transition: -webkit-transform 0.25s ease;
+      transition: -webkit-transform 0.25s ease;
+      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
+    section.events .event-item:hover img {
+      -webkit-transform: scale(0.9) translate(-5%, -5%);
+      -ms-transform: scale(0.9) translate(-5%, -5%);
+      transform: scale(0.9) translate(-5%, -5%); }
+    section.events .event-item:hover .wrap-img .label {
+      -webkit-transform: scale(0.8) translate(10%, 10%);
+      -ms-transform: scale(0.8) translate(10%, 10%);
+      transform: scale(0.8) translate(10%, 10%); }
+    section.events .event-item:hover span {
+      -webkit-transform: translateY(13px);
+      -ms-transform: translateY(13px);
+      transform: translateY(13px); }
 
 .show-more {
   color: #444;

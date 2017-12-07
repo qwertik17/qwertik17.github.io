@@ -58,6 +58,7 @@ section.events {
 				font-weight: 700;
 				font-size: rem(12);
 				color: $default-color;
+				@include transition(transform,.25s);
 			}
 			.label-stock {
 				background-color: rgba(155, 229, 207, 0.7);
@@ -69,9 +70,7 @@ section.events {
 			-ms-transform: scale(.8) translate(-9%,-9%);
 			-o-transform: scale(.8) translate(-9%,-9%);
 			transform: scale(.8) translate(-9%,-9%);
-		}
-		&:hover {
-			opacity: .8;
+			@include transition(transform,.25s);
 		}
 		span {
 			display: block;
@@ -81,6 +80,29 @@ section.events {
 			color: $default-color;
 			line-height: 1.25;
 			margin-top: -2rem;
+			@include transition(transform,.25s);
+		}
+		&:hover {
+			img {
+				-webkit-transform: scale(.9) translate(-5%,-5%);
+				-ms-transform: scale(.9) translate(-5%,-5%);
+				-o-transform: scale(.9) translate(-5%,-5%);
+				transform: scale(.9) translate(-5%,-5%);
+			}
+			.wrap-img {
+				.label {
+					-webkit-transform: scale(.8) translate(10%,10%);
+					-ms-transform: scale(.8) translate(10%,10%);
+					-o-transform: scale(.8) translate(10%,10%);
+					transform: scale(.8) translate(10%,10%);
+				}
+			}
+			span {
+				-webkit-transform: translateY(13px);
+				-ms-transform: translateY(13px);
+				-o-transform: translateY(13px);
+				transform: translateY(13px);
+			}
 		}
 	}
 }
