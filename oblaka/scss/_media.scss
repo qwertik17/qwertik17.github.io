@@ -36,6 +36,7 @@
 			color: #fff;
 			border-radius: 1rem;
 			line-height: 1rem;
+			text-decoration: none;
 			@include transition(opacity,.25s);
 			&:hover {
 				text-decoration: none;

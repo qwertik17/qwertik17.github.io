@@ -1146,6 +1146,7 @@ body {
     -webkit-border-radius: 1rem;
             border-radius: 1rem;
     line-height: 1rem;
+    text-decoration: none;
     -webkit-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease; }
@@ -1326,6 +1327,19 @@ section.insta {
       -webkit-transform: translateY(-35%);
       -ms-transform: translateY(-35%);
       transform: translateY(-35%); }
+  section.insta .owl-carousel .item {
+    overflow: hidden; }
+    section.insta .owl-carousel .item a img {
+      -webkit-transition: transform 0.25s ease;
+      -o-transition: transform 0.25s ease;
+      -webkit-transition: -webkit-transform 0.25s ease;
+      transition: -webkit-transform 0.25s ease;
+      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
+    section.insta .owl-carousel .item a:hover img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
 
 .owl-carousel {
   position: relative;
@@ -2246,6 +2260,7 @@ span.h2 {
       -webkit-border-radius: 1rem;
               border-radius: 1rem;
       line-height: 1rem;
+      text-decoration: none;
       -webkit-transition: opacity 0.25s ease;
       -o-transition: opacity 0.25s ease;
       transition: opacity 0.25s ease; }

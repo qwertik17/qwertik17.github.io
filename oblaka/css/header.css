@@ -202,6 +202,7 @@ body {
     -webkit-border-radius: 1rem;
             border-radius: 1rem;
     line-height: 1rem;
+    text-decoration: none;
     -webkit-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease; }

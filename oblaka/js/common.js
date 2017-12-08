@@ -148,7 +148,7 @@ jQuery(document).ready(function($) {
 		delegate: 'a',
 		type: 'image',
 		tLoading: 'Загрузка изображения #%curr%...',
-		mainClass: 'mfp-fade',
+		mainClass: 'mfp-img-mobile, mfp-fade',
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
