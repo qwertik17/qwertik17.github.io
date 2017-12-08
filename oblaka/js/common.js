@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 		autoplaySpeed: 500,
 		navSpeed: 500,
 		navText: [],
-    	autoWidth: true,
+		autoWidth: true,
 		margin: 100,
 		center:true
 	});
@@ -67,28 +67,28 @@ jQuery(document).ready(function($) {
 
 
 
-    var speed = 2000;
-    var container =  $('.display-animation');
-    container.each(function() {
-        var elements = $(this).children();
-        elements.each(function() {
-            var elementOffset = $(this).offset();
-            var offset = elementOffset.left*0.8 + elementOffset.top;
-            var delay = parseFloat(offset/speed).toFixed(2);
-            $(this)
-                .css("-webkit-animation-delay", delay+'s')
-                .css("-o-animation-delay", delay+'s')
-                .css("animation-delay", delay+'s')
-                .addClass('animated');
-        });
-    });
+	var speed = 2000;
+	var container =  $('.display-animation');
+	container.each(function() {
+		var elements = $(this).children();
+		elements.each(function() {
+			var elementOffset = $(this).offset();
+			var offset = elementOffset.left*0.8 + elementOffset.top;
+			var delay = parseFloat(offset/speed).toFixed(2);
+			$(this)
+			.css("-webkit-animation-delay", delay+'s')
+			.css("-o-animation-delay", delay+'s')
+			.css("animation-delay", delay+'s')
+			.addClass('animated');
+		});
+	});
 
-    $(".ripple-effect").click(function(e){
-        var rippler = $(this);
+	$(".ripple-effect").click(function(e){
+		var rippler = $(this);
 
         // create .ink element if it doesn't exist
         if(rippler.find(".ink").length == 0) {
-            rippler.append("<span class='ink'></span>");
+        	rippler.append("<span class='ink'></span>");
         }
 
         var ink = rippler.find(".ink");
@@ -99,8 +99,8 @@ jQuery(document).ready(function($) {
         // set .ink diametr
         if(!ink.height() && !ink.width())
         {
-            var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
-            ink.css({height: d, width: d});
+        	var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        	ink.css({height: d, width: d});
         }
 
         // get click coordinates
@@ -109,11 +109,76 @@ jQuery(document).ready(function($) {
 
         // set .ink position and add class .animate
         ink.css({
-            top: y+'px',
-            left:x+'px'
+        	top: y+'px',
+        	left:x+'px'
         }).addClass("animate");
     })
 
-    $(".phone-input").mask("+7(999) 999-9999");
+	$(".phone-input").mask("+7(999) 999-9999");
+
+
+
+	var filterList = {
+		init: function () {
+			$('.shops-list').mixitup({
+				targetSelector: '.shop-item',
+				filterSelector: '.filter',
+				effects: ['fade','scale'],
+				easing: 'snap'
+			});
+		}
+	};
+	filterList.init();
+
+	var toggle_categories = new Boolean(false);
+	$(".toggle-filters, .close-filter-list").on('click', function(event) {
+		event.preventDefault();
+		if (toggle_categories == false) {
+			toggle_categories = true;
+			$(".toggle-filters").addClass('active-toggle');
+			$(".filters-list").slideDown(400);
+		} else {
+			toggle_categories = false;
+			$(".toggle-filters").removeClass('active-toggle');
+			$(".filters-list").slideUp(400);
+		}
+	});
+
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Загрузка изображения #%curr%...',
+		mainClass: 'mfp-fade',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1],
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+			tPrev: '',
+			tNext: ''
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		},
+		image: {
+			cursor: 'default',
+			verticalFit: true, // Fits image in area vertically
+			tError: 'При загрузке изображения произошла ошибка.' // Error message
+		}
+	});
+
+	$('.popup-youtube').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
 
 })
