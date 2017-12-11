@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- <base href="[[++site_url]]"> -->
-	<title>Контакты</title>
+	<title>Заголовок одной новости или акции</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="no-homepage">
+<body class="no-homepage single-news">
 
 	<div class="container-fluid">
 		<div class="row">
@@ -73,101 +73,54 @@
 
 					<div class="container">
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12 col-lg-9">
 								<div class="page-header">
-									<h1 class="h1">Контакты</h1>
+									<h1 class="h1">Заголовок одной новости или акции</h1>
 								</div>
 								<div class="page-content">
-									<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-									<script type="text/javascript">
-										var map;
-
-										DG.then(function () {
-											var myIcon = DG.icon({
-												iconUrl: 'img/contact-map-marker.png',
-												iconSize: [104, 122]
-											});
-											map = DG.map('contact-map', {
-											center: [51.4879056, 46.1257148],
-											scrollWheelZoom: false,
-											zoomControl: false,
-											touchZoom: false,
-											zoom: 16
-											});
-											DG.marker([51.4879056, 46.1257148], {icon: myIcon}).addTo(map);
-										});
-									</script>
-									<div id="contact-map"></div>
-
 									<div class="row">
-										<div class="col-sm-12 col-lg-4">
-											<div class="contact-block">
-												<div class="icon-li home-li">г. Энгельс, ул. Тельмана, 25</div>
-												<div class="icon-li marker-li"><a href="#" class="scheme">СХЕМА ПРОЕЗДА</a></div>
-												<div class="icon-li phone-li double">
-													<a href="#">+7 (8453) 75–23–23</a>
-													<span>администрация</span>
-												</div>
-												<div class="icon-li mail-li double">
-													<a href="#">Oblaka@mail.ru</a>
-													<span>По всем вопросам</span>
-												</div>
-											</div>
+										<div class="col-12">
+											<span class="stock-timer"><i class="icon-calendar"></i> 01.11.2017 - 01.12.2017</span>
+											<img class="img-fluid mb-4" src="img/single-news.png"></img>
+											<p>Идейные соображения высшего порядка, а также консультация с широким активом в значительной степени обуславливает создание новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия.</p>
+											<p>Повседневная практика показывает, что консультация с широким активом позволяет оценить значение дальнейших направлений развития. Товарищи! консультация с широким активом играет важную роль в формировании существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий требуют определения и уточнения модели развития.</p>
+											<a href="#" class="show-all-news">Посмотреть все акции</a>
 										</div>
-										<div class="col-sm-12 col-lg-4">
-											<div class="contact-block">
-												<span class="contact-block-header">Рекламодателям</span>
-												<p>По вопросам рекламы обращайтесь к менеджеру:</p>
-												<div class="icon-li phone-li">
-													<a href="#">+7 (8453) 75–23–23</a>
-												</div>
-												<div class="icon-li mail-li">
-													<a href="#">Oblaka@mail.ru</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-12 col-lg-4">
-											<div class="contact-block">
-												<span class="contact-block-header">Арендаторам</span>
-												<p>По вопросам рекламы обращайтесь к менеджеру:</p>
-												<div class="icon-li phone-li">
-													<a href="#">+7 (8453) 75–23–23</a>
-												</div>
-												<div class="icon-li mail-li">
-													<a href="#">Oblaka@mail.ru</a>
-												</div>
-											</div>
-										</div>
+									</div>							
+								</div>
+							</div>
+							<div class="col-12 col-lg-3">								
+								<div class="right-sidebar">
+									<div class="page-header">
+										<span class="h2 no-border">Другие новости</span>
 									</div>
-
-									<form class="contact-form">
-										<div class="contact-form-header">напишите нам, задав интересующий вас вопрос, и мы с радостью вам ответим:</div>
-										<div class="form-row">
-											<div class="col-md-12 col-lg-6 left-col">
-												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="af_name" placeholder="Имя">
-												</div>
-												<div class="form-group">
-													<select name="subject" id="af_subject" class="form-control chosen-select" required>
-														<option selected disabled>Тема сообщения</option>
-														<option>Тема сообщения 1</option>
-														<option>Тема сообщения 2</option>
-														<option>Тема сообщения 3</option>
-														<option>Тема сообщения 4</option>
-														<option>Тема сообщения 5</option>
-														<option>Тема сообщения 6</option>
-													</select>	
+									<section class="events">
+										<div class="container">
+											<div class="row mt-4">
+													<a href="#" class="col-12 col-sm-6 col-md-4 col-lg-12 mb-3 event-item">
+														<div class="wrap-img">
+															<img class="img-fluid" src="img/events/1.jpg" alt="">
+															<div class="label label-stock">Акция</div>
+														</div>
+														<span>18 ноября состоится детский праздник. Приходите, будет весело!</span>
+													</a>
+													<a href="#" class="col-12 col-sm-6 col-md-4 col-lg-12 mb-3 event-item">
+														<div class="wrap-img">
+															<img class="img-fluid" src="img/events/2.jpg" alt="">
+															<div class="label label-sale">Скидки</div>
+														</div>
+														<span>18 ноября состоится детский праздник. Приходите, будет весело!</span>
+													</a>
+													<a href="#" class="col-12 d-sm-none d-md-block col-md-4 col-lg-12 mb-3 event-item">
+														<div class="wrap-img">
+															<img class="img-fluid" src="img/events/3.jpg" alt="">
+															<div class="label label-stock">Акция</div>
+														</div>
+														<span>18 ноября состоится детский праздник. Приходите, будет весело!</span>
+													</a>
 												</div>
 											</div>
-											<div class="col-md-12 col-lg-6 right-col">
-												<div class="form-group">
-													<textarea class="form-control" placeholder="Текст сообщения"></textarea>
-												</div>
-											</div>
-										</div>
-										<button type="submit" class="button form-button">Отправить</button>
-									</form>
-
+									</section>
 								</div>
 							</div>
 						</div>
@@ -199,7 +152,7 @@
 										</ul>
 										<ul class="full-width">
 											<li><a href="mailto:oblaka@mail.ru"><i class="icon-message"></i> Oblaka@mail.ru</a></li>
-											<li class="text-right">Создано в <a href="http://site-creative.ru/" class="sitecreative production">сайткреативе</a></li>
+											<li class="text-right production">Создано в <a href="http://site-creative.ru/" class="sitecreative">сайткреативе</a></li>
 										</ul>
 									</div>
 								</div>

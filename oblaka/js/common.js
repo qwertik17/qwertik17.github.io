@@ -39,6 +39,18 @@ jQuery(document).ready(function($) {
 		center:true
 	});
 
+	$('.shop-gallery-slider .owl-carousel').owlCarousel({
+		loop:true,
+		margin: 10,
+		nav: true,
+		autoplay: 3000,
+		autoplaySpeed: 500,
+		navSpeed: 500,
+		navText: [],
+		items: 1,
+		margin: 0
+	});
+
 	if ( $(window).width()>600) {
 		$("#map").css({"height":$(".map-cover").outerHeight(true)+"px"});
 	};
@@ -58,7 +70,7 @@ jQuery(document).ready(function($) {
 	});
 
 	var wh = $(window).height();
-	var ph = $(".page-header").outerHeight(true);
+	var ph = $(".page-header:first-child").outerHeight(true);
 	var fh = $("footer").outerHeight(true);
 	$(".page-content").css({"min-height": wh-ph-fh-8 + "px"});
 

@@ -1199,6 +1199,12 @@ body {
     -webkit-box-shadow: none;
             box-shadow: none; }
 
+.no-homepage section.events {
+  padding-top: 0; }
+
+.single-news section.events .event-item span {
+  width: 90%; }
+
 section.events {
   padding-top: 3rem;
   width: 100%;
@@ -1239,6 +1245,8 @@ section.events {
         transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
       section.events .event-item .wrap-img .label-stock {
         background-color: rgba(155, 229, 207, 0.7); }
+      section.events .event-item .wrap-img .label-sale {
+        background-color: rgba(244, 244, 244, 0.8); }
     section.events .event-item img {
       -webkit-border-radius: 50%;
               border-radius: 50%;
@@ -1558,6 +1566,9 @@ ul.full-width li a {
 address {
   display: inline-block;
   margin-bottom: 0; }
+
+.production {
+  padding-top: 4px; }
 
 .sitecreative {
   color: #63eadb !important; }
@@ -2082,9 +2093,9 @@ input[type="checkbox"]:checked + label:before {
     transition: transform 0.25s ease;
     transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
     .filter-wrap .close-filter-list:hover {
-      -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg); }
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
 
 .youtube-img {
   display: block;
@@ -2224,6 +2235,114 @@ span.h2 {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0; }
 
+.page-header .h2 {
+  line-height: 1.7;
+  text-align: center;
+  display: block; }
+
+.single-news .h1 {
+  margin-bottom: 0; }
+
+.single-news section.events .event-item span {
+  width: 90%; }
+
+.stock-timer {
+  display: block;
+  margin-top: -5px;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  color: #1d89b6;
+  font-size: 1.125rem; }
+
+.show-all-news {
+  display: block;
+  background-color: #b2dbf2;
+  padding: 7px 23px !important;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  width: 215px;
+  text-decoration: none;
+  color: #444;
+  -webkit-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease; }
+  .show-all-news:hover {
+    color: #444;
+    background-color: #a5d5f0; }
+
+.shop-single-info span {
+  display: block;
+  margin-bottom: 7px; }
+  .shop-single-info span i {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #1d89b6;
+    color: #fff;
+    font-size: 1.25rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-right: 10px; }
+    .shop-single-info span i:before {
+      margin: 0 auto;
+      padding: 0;
+      margin-left: 8px;
+      margin-top: 8px; }
+  .shop-single-info span a {
+    -webkit-text-decoration-color: #d6e5ee;
+            text-decoration-color: #d6e5ee; }
+  .shop-single-info span a.phone {
+    text-decoration: none;
+    margin-bottom: 0; }
+
+.shop-single-info .number {
+  color: #1d89b6;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.5rem; }
+  .shop-single-info .number span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.0625rem; }
+
+.over-hidden {
+  overflow: hidden; }
+
+.shop-gallery-slider .owl-carousel .owl-nav {
+  top: auto;
+  bottom: 29px;
+  left: 0;
+  width: 70px;
+  -webkit-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease; }
+  .shop-gallery-slider .owl-carousel .owl-nav .owl-prev, .shop-gallery-slider .owl-carousel .owl-nav .owl-next {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 0;
+    margin-left: 5px; }
+    .shop-gallery-slider .owl-carousel .owl-nav .owl-prev:before, .shop-gallery-slider .owl-carousel .owl-nav .owl-next:before {
+      color: #1d89b6;
+      top: 2px; }
+    .shop-gallery-slider .owl-carousel .owl-nav .owl-prev:hover, .shop-gallery-slider .owl-carousel .owl-nav .owl-next:hover {
+      background-color: #fff; }
+
+.shop-gallery-slider .item {
+  overflow: hidden; }
+  .shop-gallery-slider .item img {
+    -webkit-transition: transform 0.25s ease;
+    -o-transition: transform 0.25s ease;
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease; }
+  .shop-gallery-slider .item:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
 @media only screen and (max-width: 1590px) {
   .item-txt {
     position: absolute;
@@ -2327,6 +2446,8 @@ span.h2 {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .shop-details {
+    margin-top: -20px; }
   #contact-map {
     height: 500px; }
   .page-header {
@@ -2425,6 +2546,13 @@ span.h2 {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .shop-details {
+    margin-top: 30px; }
+  .shop-gallery-slider {
+    margin-top: -80px; }
+  .right-sidebar {
+    margin-top: -2rem;
+    margin-bottom: 2rem; }
   .contact-form .form-group textarea {
     max-width: 100%;
     min-width: 100%;
@@ -2489,6 +2617,11 @@ span.h2 {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
+  .shop-details {
+    margin-top: -10px; }
+  .pr-reset {
+    padding-right: 15px !important;
+    margin-bottom: 25px; }
   .contact-form-header {
     font-size: 1.0625rem; }
   .contact-block {
@@ -2534,7 +2667,7 @@ span.h2 {
     margin: 26px 1.5rem 26px 1rem; }
   .footer-menu li {
     margin-right: 1rem; }
-  a#about, a#carier, a#team, a#ad {
+  a#about, a#carier, a#team, a#ad, a#all, a#events, a#stock, a#sale {
     margin-bottom: 10px;
     margin-right: 5px;
     padding-right: 10px;
@@ -2644,3 +2777,11 @@ span.h2 {
     display: none; }
   .mobile-menu {
     display: block !important; } }
+
+@media only screen and (max-height: 720px) and (min-width: 1200px) {
+  .time-work {
+    margin: 1.1rem auto .7rem; }
+  .sidebar-menu i {
+    font-size: 1.7rem; }
+  .sidebar-menu ul li a {
+    line-height: 2.7rem; } }

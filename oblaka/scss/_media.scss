@@ -117,6 +117,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	.shop-details {
+		margin-top: -20px;
+	}
 	#contact-map {
 		height: 500px;
 	}
@@ -243,7 +246,17 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 992px) {	
+	.shop-details {
+		margin-top: 30px;
+	}
+	.shop-gallery-slider {
+		margin-top: -80px;
+	}
+	.right-sidebar {
+		margin-top: -2rem;
+		margin-bottom: 2rem;
+	}
 	.contact-form {
 		.form-group {
 			textarea {
@@ -337,7 +350,14 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 576px) {
+@media only screen and (max-width : 576px) {	
+	.shop-details {
+		margin-top: -10px;
+	}
+	.pr-reset {
+		padding-right: 15px !important;
+		margin-bottom: 25px;
+	}
 
 	.contact-form-header {
 		font-size: rem(17);
@@ -413,7 +433,7 @@
 			margin-right: 1rem;
 		}
 	}
-	a#about,a#carier,a#team,a#ad {
+	a#about,a#carier,a#team,a#ad,a#all,a#events,a#stock,a#sale {
 		margin-bottom: 10px;
 		margin-right: 5px;
 		padding-right: 10px;
@@ -568,5 +588,17 @@
 	}
 	.mobile-menu {
 		display: block !important;
+	}
+}
+
+@media only screen and (max-height : 720px) and (min-width : 1200px) {
+	.time-work {
+		margin: 1.1rem auto .7rem;
+	}
+	.sidebar-menu i {
+		font-size: 1.7rem;
+	}
+	.sidebar-menu ul li a {
+		line-height: 2.7rem;
 	}
 }
