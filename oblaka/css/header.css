@@ -121,7 +121,6 @@ body {
     list-style: none;
     padding-left: 1rem;
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.8);
     -webkit-border-radius: 1.3rem 0 0 1.3rem;
             border-radius: 1.3rem 0 0 1.3rem; }
     .top-menu ul li {

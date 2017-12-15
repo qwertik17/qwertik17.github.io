@@ -156,31 +156,33 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Загрузка изображения #%curr%...',
-		mainClass: 'mfp-img-mobile, mfp-fade',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1],
-			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
-			tPrev: '',
-			tNext: ''
-		},
-		zoom: {
-			enabled: true,
-			duration: 300, // don't foget to change the duration also in CSS
-			opener: function(element) {
-				return element.find('img');
+	$('.popup-gallery').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			tLoading: 'Загрузка изображения #%curr%...',
+			mainClass: 'mfp-img-mobile, mfp-fade',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0,1],
+				tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+				tPrev: '',
+				tNext: ''
+			},
+			zoom: {
+				enabled: true,
+				duration: 300,
+				opener: function(element) {
+					return element.find('img');
+				}
+			},
+			image: {
+				cursor: 'default',
+				verticalFit: true,
+				tError: 'При загрузке изображения произошла ошибка.'
 			}
-		},
-		image: {
-			cursor: 'default',
-			verticalFit: true, // Fits image in area vertically
-			tError: 'При загрузке изображения произошла ошибка.' // Error message
-		}
+		});
 	});
 
 	$('.popup-youtube').magnificPopup({

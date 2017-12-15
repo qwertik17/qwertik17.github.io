@@ -1065,7 +1065,6 @@ body {
     list-style: none;
     padding-left: 1rem;
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.8);
     -webkit-border-radius: 1.3rem 0 0 1.3rem;
             border-radius: 1.3rem 0 0 1.3rem; }
     .top-menu ul li {
@@ -1597,7 +1596,6 @@ address {
 
 .contact-block {
   background-color: #e9f7f8;
-  margin-top: 30px;
   padding: 30px 20px;
   font-size: 1.0625rem;
   height: 271px; }
@@ -1762,7 +1760,8 @@ a:not([href]):not([tabindex]) {
 
 #contact-map {
   width: auto;
-  height: 650px; }
+  height: 325px;
+  margin-top: 30px; }
 
 .not-found {
   background-image: none;
@@ -2343,6 +2342,9 @@ span.h2 {
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
 
+.right-block {
+  margin-top: -110px; }
+
 @media only screen and (max-width: 1590px) {
   .item-txt {
     position: absolute;
@@ -2667,7 +2669,7 @@ span.h2 {
     margin: 26px 1.5rem 26px 1rem; }
   .footer-menu li {
     margin-right: 1rem; }
-  a#about, a#carier, a#team, a#ad, a#all, a#events, a#stock, a#sale {
+  a#about, a#carier, a#team, a#ad, a#all, a#events, a#stock, a#sale, a#reviews {
     margin-bottom: 10px;
     margin-right: 5px;
     padding-right: 10px;
@@ -2741,8 +2743,10 @@ span.h2 {
     line-height: 3.5rem;
     float: none; }
   .sidebar-menu {
+    display: block;
     width: 203px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 1.8rem; }
     .sidebar-menu ul {
       margin: 0;
       padding: 0;
@@ -2769,8 +2773,6 @@ span.h2 {
       position: absolute;
       top: 0;
       left: 0; }
-  .sidebar-menu {
-    display: block; }
   .sidebar .social-link {
     display: none; }
   .sidebar .menu-btn, .sidebar .map-complex, .sidebar .close-menu {

@@ -28,8 +28,6 @@
 							<img src="img/logo-sidebar-inline.svg" alt="[[++site_name]]">
 						</a>
 
-						<div class="time-work"><i class="demo-icon icon-clock"></i> 09:00-21:00</div>
-
 						<a href="#" class="map-complex"><i class="demo-icon icon-layers"></i> Карта комплекса</a></li>
 
 						<div class="menu-btn"><span></span></div>
@@ -39,12 +37,13 @@
 							<div class="close-menu"><img src="https://icongr.am/material/close.svg?size=50&color=ffffff"></div>
 							<nav class="sidebar-menu">
 								<ul>
-									<li><a href="#"><i class="demo-icon icon-video-camera"></i> Кинотеатр</a></li>
-									<li><a href="#"><i class="demo-icon icon-cutlery"></i>Рестораны и кафе</a></li>
-									<li><a href="#"><i class="demo-icon icon-shopping-cart"></i>Магазины</a></li>
-									<li><a href="#"><i class="demo-icon icon-file"></i>Спектр услуг</a></li>
-									<li><a href="#"><i class="demo-icon icon-chat"></i>Вопросы и отзывы</a></li>
-									<li><a href="#"><i class="demo-icon icon-marker"></i>Как добраться</a></li>
+									<li><a href="#"><i class=""></i> О ТРЦ</a></li>
+									<li><a href="#"><i class="icon-video-camera"></i> Кинотеатр</a></li>
+									<li><a href="#"><i class="icon-shopping-cart"></i>Магазины</a></li>
+									<li><a href="#"><i class="icon-cutlery"></i>Рестораны и кафе</a></li>
+									<li><a href="#"><i class="icon-chat1"></i>Развлечения</a></li>
+									<li><a href="#"><i class="icon-file"></i>Спектр услуг</a></li>
+									<li><a href="#"><i class="icon-marker"></i>Контакты</a></li>
 								</ul>
 							</nav>
 
@@ -63,8 +62,6 @@
 						<div class="row">
 							<div class="top-menu">
 								<ul>
-									<li><a href="#">Облака</a></li>
-									<li><a href="#">Арендаторам</a></li>
 									<li><a href="#"><i class="demo-icon icon-layers"></i> Карта комплекса</a></li>
 								</ul>
 							</div>
@@ -77,27 +74,7 @@
 								<div class="page-header">
 									<h1 class="h1">Контакты</h1>
 								</div>
-								<div class="page-content">
-									<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-									<script type="text/javascript">
-										var map;
-
-										DG.then(function () {
-											var myIcon = DG.icon({
-												iconUrl: 'img/contact-map-marker.png',
-												iconSize: [104, 122]
-											});
-											map = DG.map('contact-map', {
-											center: [51.4879056, 46.1257148],
-											scrollWheelZoom: false,
-											zoomControl: false,
-											touchZoom: false,
-											zoom: 16
-											});
-											DG.marker([51.4879056, 46.1257148], {icon: myIcon}).addTo(map);
-										});
-									</script>
-									<div id="contact-map"></div>
+								<div class="page-content">									
 
 									<div class="row">
 										<div class="col-sm-12 col-lg-4">
@@ -140,6 +117,27 @@
 										</div>
 									</div>
 
+									<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+									<script type="text/javascript">
+										var map;
+
+										DG.then(function () {
+											var myIcon = DG.icon({
+												iconUrl: 'img/contact-map-marker.png',
+												iconSize: [104, 122]
+											});
+											map = DG.map('contact-map', {
+											center: [51.4879056, 46.1257148],
+											scrollWheelZoom: false,
+											zoomControl: false,
+											touchZoom: false,
+											zoom: 16
+											});
+											DG.marker([51.4879056, 46.1257148], {icon: myIcon}).addTo(map);
+										});
+									</script>
+									<div id="contact-map"></div>
+
 									<form class="contact-form">
 										<div class="contact-form-header">напишите нам, задав интересующий вас вопрос, и мы с радостью вам ответим:</div>
 										<div class="form-row">
@@ -179,8 +177,9 @@
 									<div class="col-12 col-md-9">
 										<ul class="footer-menu">
 											<li><a href="#">Арендаторам</a></li>
+											<li><a href="#">Покупателям</a></li>
 											<li><a href="#">Реклама</a></li>
-											<li><a href="#">Контакты</a></li>
+											<li><a href="#">FAQ</a></li>
 										</ul>
 									</div>
 									<div class="col-12 col-md-3">
@@ -198,8 +197,8 @@
 											<li><a href="tel:78453752323"><i class="icon-phone-call"></i> +7 (8453) 75–23–23</a></li>
 										</ul>
 										<ul class="full-width">
-											<li><a href="mailto:oblaka@mail.ru"><i class="icon-message"></i> Oblaka@mail.ru</a></li>
-											<li class="text-right">Создано в <a href="http://site-creative.ru/" class="sitecreative production">сайткреативе</a></li>
+											<li><i class="demo-icon icon-clock"></i> 09:00-21:00</li>
+											<li class="text-right production">Создано в <a href="http://site-creative.ru/" class="sitecreative">сайткреативе</a></li>
 										</ul>
 									</div>
 								</div>

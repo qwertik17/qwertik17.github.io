@@ -433,7 +433,7 @@
 			margin-right: 1rem;
 		}
 	}
-	a#about,a#carier,a#team,a#ad,a#all,a#events,a#stock,a#sale {
+	a#about,a#carier,a#team,a#ad,a#all,a#events,a#stock,a#sale,a#reviews {
 		margin-bottom: 10px;
 		margin-right: 5px;
 		padding-right: 10px;
@@ -542,8 +542,10 @@
 	}
 
 	.sidebar-menu {
+		display: block;
 		width: 203px;
 		margin: 0 auto;
+		margin-top: 1.8rem;
 		ul {
 			margin: 0;
 			padding: 0;
@@ -574,9 +576,6 @@
 			top: 0;
 			left: 0;
 		}
-	}
-	.sidebar-menu {
-		display: block;
 	}
 	.sidebar .social-link {
 		display: none;
