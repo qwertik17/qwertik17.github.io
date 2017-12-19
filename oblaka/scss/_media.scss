@@ -1,4 +1,18 @@
 @media only screen and (max-width : 1590px) {
+	.map-indicators {
+		.indicator-wrap {
+			&-location {
+				top: 24%;
+				left: 18%;
+				width: 280px;
+				height: 280px;
+				-webkit-transform: scale(.85);
+				-ms-transform: scale(.85);
+				-o-transform: scale(.85);
+				transform: scale(.85);	
+			}
+		}
+	}
 	.item-txt {
 		position: absolute;
 		top: 30%;
@@ -47,21 +61,6 @@
 }
 
 @media only screen and (max-width : 1500px) {
-	.location {
-		&-wrap {
-			font-size: rem(20);
-			line-height: rem(20);
-			i {
-				font-size: rem(26);
-				line-height: rem(26);
-				&:first-child {
-					font-size: rem(46);
-					line-height: rem(46);
-				}
-			}
-
-		}
-	}
 	.cont-footer {
 		padding: 0 1rem !important;
 	}
@@ -117,6 +116,20 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	.map-indicators {
+		.indicator-wrap {
+			&-location {
+				top: 24%;
+				left: 10%;
+				width: 280px;
+				height: 280px;
+				-webkit-transform: scale(.8);
+				-ms-transform: scale(.8);
+				-o-transform: scale(.8);
+				transform: scale(.8);	
+			}
+		}
+	}
 	.shop-details {
 		margin-top: -20px;
 	}
@@ -145,23 +158,6 @@
 	}
 	section.slider {
 		display: none;
-	}
-	.location {
-		width: 17vw;
-		height: 17vw;
-		&-wrap {
-			font-size: rem(20);
-			line-height: rem(20);
-			i {
-				font-size: rem(26);
-				line-height: rem(26);
-				&:first-child {
-					font-size: rem(46);
-					line-height: rem(46);
-				}
-			}
-
-		}
 	}
 	.cont-footer {
 		padding: 0 !important;
@@ -246,7 +242,10 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {	
+@media only screen and (max-width : 992px) {
+	.map-indicators {
+		display: none;
+	}	
 	.shop-details {
 		margin-top: 30px;
 	}
@@ -284,9 +283,6 @@
 		width: 100%;
 		margin-left: 0;
 		margin-top: 0;
-	}
-	.location {
-		display: none;
 	}
 	ul.full-width{
 		width: 100%;
@@ -339,9 +335,6 @@
 	}
 	.sidebar {
 		height: 80px !important;
-	}
-	.time-work {
-		line-height: 80px;
 	}
 	.menu-btn {
 		margin: 26px 2rem 26px 1rem;
@@ -422,9 +415,6 @@
 	}
 }
 @media only screen and (max-width : 480px) {
-	.time-work {
-		display: none;
-	}
 	.menu-btn {
 		margin: 26px 1.5rem 26px 1rem;
 	}
@@ -470,32 +460,6 @@
 }
 
 
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-	/**/
-}
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-	/**/
-}
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-	/**/
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-	/**/
-}
-
-
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 	body {
@@ -529,16 +493,6 @@
 			height: 246px;
 			pointer-events: none;
 		}
-	}
-	.time-work {
-		text-align: center;
-		width: 203px;
-		margin: 2.5rem auto 1.9rem;
-		border-top: 1px solid #d8d8d8;
-		border-bottom: 1px solid #d8d8d8;
-		font-weight: 700;
-		line-height: 3.5rem;
-		float: none;
 	}
 
 	.sidebar-menu {
@@ -591,9 +545,6 @@
 }
 
 @media only screen and (max-height : 720px) and (min-width : 1200px) {
-	.time-work {
-		margin: 1.1rem auto .7rem;
-	}
 	.sidebar-menu i {
 		font-size: 1.7rem;
 	}
