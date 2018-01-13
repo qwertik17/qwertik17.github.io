@@ -659,6 +659,8 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .carousel-control {
+    padding: 7px 0; }
   .carousel-control.right {
     background-color: #f8f7f4;
     border-right: 15px solid #fff; }
