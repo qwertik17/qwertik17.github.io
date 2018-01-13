@@ -281,9 +281,6 @@ body {
   .read-more:hover:before {
     right: -10px; }
 
-.news-main {
-  margin-bottom: 15px; }
-
 .square-news {
   margin-top: 30px; }
   .square-news .square-news-wrap:last-child .square-news-item {
@@ -677,8 +674,6 @@ body {
               transform: rotate(-90deg); }
   .img-responsive, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     margin-bottom: 10px; }
-  .carousel-inner {
-    padding: 0 0 20px; }
   .bus-slider-bg {
     background: #fff; }
   .carousel-indicators {
