@@ -54,6 +54,147 @@ body
 	&:hover
 		border: 1px solid #fff
 // END DEFAULT
+// HEADER
+.header
+	padding: 20px 0
+	position: relative
+	.logo
+		img
+			display: block
+			margin: 0 auto
+	.main-menu
+		float: right
+		ul
+			list-style: none
+			li
+				display: inline-block
+				line-height: 26px
+				border-right: 1px solid #e7e4df
+				margin: 5px 0
+				&.active
+					a
+						color: $red
+				a
+					font-size: 16px
+					text-transform: uppercase
+					line-height: 1
+					color: $default
+					font-family: "ArialNarrow"
+					padding: 10px 18px
+					transition: color .25s ease
+					&:hover,&:focus
+						text-decoration: none
+						color: $red
+				&:first-child
+					a
+						padding-left: 0
+	.select-lang
+		float: right
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 1
+		color: $default
+		font-family: "ArialNarrow"
+		transition: color .25s ease
+		cursor: pointer
+		position: relative
+		span
+			padding: 10px 18px
+			display: block
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				right: 5px
+				width: 0;
+				height: 0;
+				margin-top: -2px
+				border-style: solid;
+				border-width: 4px 3.5px 0 3.5px;
+				border-color: #e7e4df transparent transparent transparent;
+		li
+			position: absolute
+			top: 36px
+			left: 0
+			z-index: 1
+			width: 100%
+			transform: scale(0) translateY(-50%);
+			// opacity: 0
+			transition: transform .25s ease
+			&:last-child
+				top: 72px
+				z-index: 2
+			a
+				color: $default
+				padding: 10px 18px
+				display: block
+				&:hover,&:focus
+					text-decoration: none
+					color: $red
+		&:hover,&:focus,&:active
+			li
+				opacity: 1
+				transform: scale(1) translateY(0%);
+	.submenu
+		position: absolute
+		top: -20px
+		right: -80px
+		text-align: center
+		transition: all .25s ease
+		background-color: $red
+		z-index: 1
+		li
+			background-color: $red
+			transition: all .5s ease
+			overflow: hidden
+			&:hover
+				background-color: $red-hover
+				&:last-child
+					background-color: $red-hover
+					i
+						color: #fff
+			a
+				display: block
+				width: 80px
+				height: 80px
+				color: #fff
+				line-height: 16px
+				font-family: "ArialNarrow"
+				position: relative
+				.vert
+					position: absolute
+					width: 100%
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+					i
+						display: block
+						font-size: 28px
+						display: block
+						margin-bottom: 5px
+						transition: color,transform .5s ease
+			&:last-child
+				background-color: #fff
+				i
+					color: $red
+		&.hide-submenu
+			margin-top: -400px
+			li
+				transform: scale(0)
+				&:last-child
+					transform: scale(1)
+					a
+						background-color: $red
+						i
+							color: #fff
+							transform: rotate(135deg)
+				&:hover
+					&:last-child
+						a
+							background-color: $red-hover
+
+// END HEADER
 // BUS SLIDER
 .bus-slider-bg
 	background-color: #f8f7f4
