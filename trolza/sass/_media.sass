@@ -4,6 +4,64 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.pushy,.pushy-open-left  .site-overlay
+		display: block
+	.header
+		.logo
+			width: auto
+		.main-menu-control
+			margin-right: 80px
+		.submenu
+			margin-top: -340px
+			right: 15px
+			li:last-child
+				transform: scale(1)
+				a
+					background-color: #e60d2e
+					i
+						color: #fff
+						transform: rotate(135deg)
+			li
+				transform: scale(0)
+				a					
+					width: 70px
+					height: 70px
+					font-size: 12px
+					.vert i						
+						font-size: 20px
+			&.hide-submenu
+				margin-top: 0
+				li:last-child a
+					i
+						color: #fff
+						transform: rotate(0deg)
+				li
+					transform: scale(1)
+	.history .carousel-inner .history-year
+		margin-bottom: 20px
+	.history .carousel-control.left
+		left: 390px
+	.history .carousel-inner .history-introtext
+		border-bottom: 0
+	.info-box
+		height: 55px
+	.info-item
+		float: left
+		width: 50%
+		margin: 0 auto
+		text-align: center
+		display: block
+	.main-news-item p
+		padding-left: 0
+	.main-news-item:first-child
+		border-bottom: 0
+	.main-menu
+		display: none
+	.main-news-item
+		margin-top: 20px
+		height: 170px
+	.main-news-item .news-label
+		right: 0
 	.carousel-indicators .nav-item img
 		margin-top: 25px
 		margin-bottom: 0px
@@ -18,23 +76,48 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.history-slider-bg
+		background: none
+	.history
+		.carousel-control
+			padding: 0
+			i
+				color: #d0c4b6
+			&.right
+				top: 10px
+				border-color: #d0c4b6
+				right: -7px
+			&.left
+				left: 38px
+				top: 10px
+				border-color: #d0c4b6
+		.carousel-inner .history-year
+			text-align: center
+		.image-slide
+			padding-right: 15px !important
+	.main-news-item p
+		padding-bottom: 55px
+	.main-news-item
+		height: auto
 	.carousel-control
 		padding: 7px 0
-	.carousel-control.right
-		background-color: #f8f7f4
-		border-right: 15px solid #fff
-		i
-			transform: rotate(90deg)
-	.carousel-control.left
-		background-color: #f8f7f4
-		border-left: 15px solid #fff
-		i
-			transform: rotate(-90deg)
-	.img-responsive, .carousel-inner>.item>img, .carousel-inner>.item>a>img
+	.bus-slider
+		.carousel-control.right
+			background-color: #f8f7f4
+			border-right: 15px solid #fff
+			i
+				transform: rotate(90deg)
+	.bus-slider
+		.carousel-control.left
+			background-color: #f8f7f4
+			border-left: 15px solid #fff
+			i
+				transform: rotate(-90deg)
+	.bus-slider .carousel-inner>.item>img
 		margin-bottom: 10px
 	.bus-slider-bg
 		background: #fff
-	.carousel-indicators
+	.bus-slider .carousel-indicators
 		display: none
 	.news-sec.articles .big-news
 		margin-top: 30px
@@ -66,6 +149,21 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.header .main-menu-control
+		margin-right: 0
+		padding-right: 0
+	.sticky-header
+		padding: 15px 0
+	.header
+		border-bottom: 3px solid $accent
+		.submenu
+			display: none
+		.select-lang
+			margin-right: 0
+	.bus-slider-bg .carousel-inner .item .btn
+		float: none
+	#main-slider
+		display: none
 	.carousel-inner .item .btn
 		float: none
 		width: 280px
@@ -97,6 +195,24 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.header
+		.submenu
+			right: 15px
+	.header .logo img
+		margin-left: 0
+	.info-box
+		border-top: 0
+	.advantages .item-caption
+		margin: 15px auto 0
+		width: 80%
+	.info-box
+		height: 80px
+	.info-item
+		width: 100%
+	.bus-slider-bg .carousel-control
+		padding: 5px 0
+	.history .image-slide
+		display: none
 	.carousel-inner .item-title
 		font-size: 30px
 	.news-sec
@@ -120,9 +236,12 @@
 		margin-bottom: 10px
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 400px)
+	.header .select-lang
+		margin-right: 0
+	.header .main-menu-control
+	.header
+		padding-bottom: 10px
 
 
 /*==========  Mobile First  ==========*/
@@ -149,5 +268,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	.main-menu-control
+		display: none
 	/**/
 

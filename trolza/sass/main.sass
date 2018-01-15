@@ -1,6 +1,9 @@
 @import "fonts"
 @import "vars"
 
+body,html
+	overflow-scrolling: touch;
+
 body
 	font-size: 14px
 	min-width: 320px
@@ -53,15 +56,25 @@ body
 	margin-top: 5px
 	&:hover
 		border: 1px solid #fff
+.carousel-control
+	text-shadow: none
 // END DEFAULT
 // HEADER
 .header
-	padding: 20px 0
+	padding: 22px 0 22px
 	position: relative
+	z-index: 100
+	transition: all .25s ease
+	background-color: #fff
 	.logo
+		float: left
+		width: 275px
 		img
 			display: block
+			transition: opacity .25s ease
 			margin: 0 auto
+			&:hover
+				opacity: .8
 	.main-menu
 		float: right
 		ul
@@ -88,6 +101,21 @@ body
 				&:first-child
 					a
 						padding-left: 0
+	.main-menu-control
+		float: right
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 1
+		color: $default
+		font-family: "ArialNarrow"
+		transition: color .25s ease
+		cursor: pointer
+		position: relative
+		padding: 6px 18px 0
+		&:hover
+			text-decoration: none
+			color: $red
+
 	.select-lang
 		float: right
 		font-size: 16px
@@ -99,9 +127,12 @@ body
 		cursor: pointer
 		position: relative
 		span
-			padding: 10px 18px
+			padding: 0 18px
 			display: block
 			position: relative
+			background-color: #fff
+			z-index: 2
+			line-height: 35px
 			&:before
 				content: ""
 				position: absolute
@@ -115,30 +146,33 @@ body
 				border-color: #e7e4df transparent transparent transparent;
 		li
 			position: absolute
-			top: 36px
+			top: 35px
 			left: 0
 			z-index: 1
 			width: 100%
-			transform: scale(0) translateY(-50%);
-			// opacity: 0
+			opacity: 0
+			transform: translateY(-100%);
 			transition: transform .25s ease
 			&:last-child
-				top: 72px
+				top: 76px
 				z-index: 2
+				a
+					// background-color: #f3f3f3
 			a
 				color: $default
-				padding: 10px 18px
+				padding: 13px 18px
 				display: block
+				background-color: #fff
 				&:hover,&:focus
 					text-decoration: none
 					color: $red
 		&:hover,&:focus,&:active
 			li
 				opacity: 1
-				transform: scale(1) translateY(0%);
+				transform: translateY(0%);
 	.submenu
 		position: absolute
-		top: -20px
+		top: -22px
 		right: -80px
 		text-align: center
 		transition: all .25s ease
@@ -182,6 +216,9 @@ body
 			margin-top: -400px
 			li
 				transform: scale(0)
+				background-color: transparent
+				a
+					background-color: transparent
 				&:last-child
 					transform: scale(1)
 					a
@@ -193,106 +230,354 @@ body
 					&:last-child
 						a
 							background-color: $red-hover
+.sticky-header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	animation-name: opacity
+	animation-duration: .4s
+@keyframes opacity
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+.menu-panel
+	background-color: $accent
+	position: fixed
+	left: -15.625em
+	width: 15.625em
+.pushy-open-left .site-overlay
+	display: none
+.pushy
+	display: none
+	width: 250px
+	background-color: $accent
+	a
+		color: #fff
+		font-family: "ArialNarrow"
+		font-size: 18px
+		line-height: 1.2
+		text-transform: uppercase
+		padding: 8px 30px
+		transition: color .25s ease
+		&:hover
+			color: $red
+	button
+		color: #fff
+		font-family: "ArialNarrow"
+		font-size: 18px
+		line-height: 1.2
+		text-transform: uppercase
+		padding: 8px 30px
+.pushy-open-left .site-overlay, .pushy-open-right .site-overlay
+	background-color: rgba(0,0,0,.3)
+	cursor: pointer
+.pushy-left
+	transform: translate3d(-250px,0,0)
+.mobile-search
+	padding: 20px 30px 10px
+	position: relative
+	input
+		display: block
+		width: 130px
+		font-size: 17px
+		border: 0
+		padding: 5px 10px
+		border-radius: 4px 0 0 4px
+	button
+		display: block
+		width: 40px
+		height: 38px
+		background-color: $red
+		border: 0
+		box-shadow: none
+		text-align: center
+		position: absolute
+		top: 20px
+		padding: 0
+		right: 30px
+		border-radius: 0 4px 4px 0
 
 // END HEADER
+// HEADER SECTION
+.info-box
+	padding: 15px 15px 15px 40px
+	border-top: 1px solid #e7e4df
+	border-bottom: 1px solid #e7e4df
+	color: $accent
+	font-size: 16px
+	.info-item
+		a
+			color: $accent
+.main-news-item
+	position: relative
+	margin-top: 15px
+	height: 217px
+	&:first-child
+		border-bottom: 1px solid #e7e4df
+	&:last-child
+		.news-label
+			background-color: #66c9b5
+	.news-label
+		position: absolute
+		top: 0
+		right: -30px
+		background-color: #33a8a3
+		width: 100px
+		height: 30px
+		text-align: center
+		text-transform: uppercase
+		line-height: 30px
+		color: #fff
+		font-family: "ArialNarrow"
+	.news-date
+		color: $default
+		padding: 0
+		margin-left: 15px
+	.read-more
+		color: $default	
+		&:hover
+			color: $default		
+	p
+		padding: 0
+		padding-top: 50px
+		font-size: 16px
+		line-height: 21px
+
+#main-slider
+	.item
+		.item-capture
+			font-size: 43px
+			color: $accent
+			font-family: Verdana
+			position: absolute
+			top: 40px
+			left: 60px
+			text-transform: uppercase
+			font-weight: bold
+			line-height: 56px
+	.carousel-indicators .active
+		background-color: $red
+		border-color: $red
+	.carousel-indicators li
+		border-width: 2px 
+		border-color: $red
+		margin-left: 4px
+		&:first-child
+			margin-left: 0
+	.carousel-indicators
+		width: auto
+		right: 20px
+		bottom: 20px
+		left: auto
+// END HEADER SECTION
+
+// ADVANTAGES
+.advantages
+	background-color: #f8f7f4
+	padding: 35px 0
+	.item
+		img
+			position: relative
+			display: block
+			margin-bottom: 10px
+			width: auto
+			margin: 0 auto
+		&-caption
+			margin-top: 15px
+			border-top: 1px solid $silver
+			padding-top: 15px
+			font-size: 15px
+			text-align: center
+			line-height: 21px
+			font-weight: 700
+			// font-family: "ArialNarrow"
+// END ADVANTAGES
+
+// HISTORY
+.history
+	.header-sec-wrap
+		.btn
+			max-width: 176px
+			bottom: 49px
+	.carousel-control
+		text-shadow: nine
+		&.right
+			background: none
+			top: 50%
+			right: 5px
+			width: 45px
+			height: 45px
+			border: 1px solid #fff
+			transform: translateX(-50%) rotate(90deg)
+
+		&.left
+			background: none
+			top: 50%
+			left: 360px
+			width: 45px
+			height: 45px
+			border: 1px solid #fff
+			transform: translateX(-50%) rotate(-90deg)		
+		i
+			display: block
+			width: 45px
+			height: 45px
+			line-height: 45px
+	.image-slide
+		padding-right: 0 !important
+		position: relative
+	.carousel-inner
+		position: relative
+		background-color: #fff
+		.history-year
+			font-size: 42px
+			font-weight: bold
+			margin-bottom: 30px
+			text-decoration: underline
+			color: #d0c4b6
+		.history-introtext
+			font-size: 17px
+			text-indent: 40px
+			position: relative
+			line-height: 26px
+			border-bottom: 1px solid #e7e4df
+			padding-bottom: 30px
+			&:before
+				content: ""
+				position: absolute
+				top: -10px
+				left: 0
+				width: 24px
+				height: 17px
+				background-image: url("../img/blockquote.png")
+			&:after
+				content: ""
+				position: absolute
+				bottom: 20px
+				right: 0
+				width: 24px
+				height: 17px
+				background-image: url("../img/blockquote.png")
+				transform: rotate(180deg)
+.carousel.fade
+	opacity: 1
+.carousel.fade .item
+	display: block
+	position: absolute;
+	left: 0
+	top: 0
+	width: 100%
+	opacity: 0
+	transition: opacity 1s ease
+.carousel.fade .item.active
+	position: relative
+	opacity: 1
+.history-slider-bg
+	background-image: url("../img/history-bg.jpg")
+	background-size: cover
+	background-attachment: fixed
+// END HISTORY
+
 // BUS SLIDER
 .bus-slider-bg
 	background-color: #f8f7f4
 	padding: 20px 0
-.carousel>div:first-child
-	background-color: #fff
-.carousel-indicators
-	position: relative
-	margin: 0
-	padding: 0
-	left: 0
-	bottom: 0
-	width: auto
-	.nav-item
-		display: block
+	.carousel>div:first-child
+		background-color: #fff
+	.carousel-indicators
 		position: relative
-		cursor: pointer
-		padding: 17px 0 25px
-		font-family: "ArialNarrow"
-		margin-top: 10px
-		border: 1px solid transparent
-		transition: all .25s ease
-		line-height: 1
-		border-bottom: 1px solid $silver
-		z-index: 0
-		&:first-child
-			margin-top: 15px
-		&:hover
-			border: 1px solid $accent
-		&.active
-			width: auto
-			height: auto
-			border: 1px solid $red
-			z-index: 1
+		margin: 0
+		padding: 0
+		left: 0
+		bottom: 0
+		width: auto
+		.nav-item
+			display: block
+			position: relative
+			cursor: pointer
+			padding: 17px 0 25px
+			font-family: "ArialNarrow"
+			margin-top: 10px
+			border: 1px solid transparent
+			transition: all .25s ease
+			line-height: 1
+			border-bottom: 1px solid $silver
+			z-index: 0
+			&:first-child
+				margin-top: 15px
+			&:hover
+				border: 1px solid $accent
+			&.active
+				width: auto
+				height: auto
+				border: 1px solid $red
+				z-index: 1
+				.number-bus
+					color: $red
+				.bus-title
+					border-bottom: 1px solid $red
 			.number-bus
-				color: $red
+				font-size: 16px
+				color: $accent
+				position: absolute
+				top: 15px
+				left: 15px
+				line-height: 1
 			.bus-title
-				border-bottom: 1px solid $red
-		.number-bus
-			font-size: 16px
-			color: $accent
-			position: absolute
-			top: 15px
-			left: 15px
-			line-height: 1
-		.bus-title
-			text-transform: uppercase
-			font-weight: bold
-			text-align: center
-			border-bottom: 1px solid $accent
-			line-height: 1
-			padding-bottom: 10px
-		img
-			margin: 0 auto
-			margin-top: 29px
-			margin-bottom: 4px
-.carousel-control
-	position: relative
-	width: 50%
-	text-shadow: none
-	padding: 15px 0
-	opacity: 1
-	display: block
-	i
-		color: $silver	
+				text-transform: uppercase
+				font-weight: bold
+				text-align: center
+				border-bottom: 1px solid $accent
+				line-height: 1
+				padding-bottom: 10px
+			img
+				margin: 0 auto
+				margin-top: 29px
+				margin-bottom: 4px
+	.carousel-control
+		position: relative
+		width: 50%
+		text-shadow: none
+		padding: 15px 0
+		opacity: 1
 		display: block
-		transition: color .25s ease
-	&.left
-		background: none
-		border-right: 1px solid $silver
-		filter: none
-	&.right
-		background: none
-		filter: none
 		i
-			transform: rotate(180deg)
-	&:hover
-		i
-			color: darken($silver,20)
-.carousel-inner
-	.item
-		&-title
-			position: absolute
-			color: #fff
-			font-weight: bold
-			text-transform: uppercase
-			font-size: 56px
-			line-height: 1
-			margin: 20px
-			border-bottom: 4px solid #fff
-		p
-			font-size: 16px
-			line-height: 21px
-			padding: 10px 0 0
-		.btn
-			float: right
-			right: 1px
-			margin-bottom: 0
+			color: $silver	
+			display: block
+			transition: color .25s ease
+		&.left
+			background: none
+			border-right: 1px solid $silver
+			filter: none
+		&.right
+			background: none
+			filter: none
+			i
+				transform: rotate(180deg)
+		&:hover
+			i
+				color: darken($silver,20)
+	.carousel-inner
+		.item
+			&-title
+				position: absolute
+				color: #fff
+				font-weight: bold
+				text-transform: uppercase
+				font-size: 56px
+				line-height: 1
+				margin: 20px
+				border-bottom: 4px solid #fff
+			p
+				font-size: 16px
+				line-height: 21px
+				padding: 10px 0 0
+			.btn
+				float: right
+				right: 1px
+				margin-bottom: 0
 // END BUS SLIDER
 
 // NEWS
