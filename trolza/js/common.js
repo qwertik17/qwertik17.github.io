@@ -53,6 +53,10 @@ jQuery(document).ready(function($) {
 	$('body').swipe({swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection){	
 			if (phase=="end"){
 				if (direction == 'up') {
+					$(".header").removeClass('sticky-header');
+					$("body").css({"margin-top": '0px'});
+				}
+				if (direction == 'down') {
 					if ($(window).scrollTop()>$(".header").outerHeight()) {
 						$(".header").addClass('sticky-header');
 						$("body").css({"margin-top": $(".header").outerHeight()+'px'});
@@ -60,10 +64,6 @@ jQuery(document).ready(function($) {
 						$(".header").removeClass('sticky-header');
 						$("body").css({"margin-top": '0px'});
 					}
-				}
-				if (direction == 'down') {
-					$(".header").removeClass('sticky-header');
-					$("body").css({"margin-top": '0px'});
 				}
 			}
 		},

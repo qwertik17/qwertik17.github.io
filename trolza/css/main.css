@@ -5,9 +5,6 @@
   src: url("../fonts/ArialNarrow/ArialNarrow.eot");
   src: url("../fonts/ArialNarrow/ArialNarrow.eot?#iefix") format("embedded-opentype"), url("../fonts/ArialNarrow/ArialNarrow.woff") format("woff"), url("../fonts/ArialNarrow/ArialNarrow.ttf") format("truetype"); }
 
-body, html {
-  overflow-scrolling: touch; }
-
 body {
   font-size: 14px;
   min-width: 320px;
