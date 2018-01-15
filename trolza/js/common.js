@@ -36,39 +36,21 @@ jQuery(document).ready(function($) {
 
 	$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
 		delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-		if (delta >= 0) {
-			if ($(window).scrollTop()>$(".header").outerHeight()) {
-				$(".header").addClass('sticky-header');
-				$("body").css({"margin-top": $(".header").outerHeight()+'px'});
+		if ($(window).width()>=1200) {
+			if (delta >= 0) {
+				if ($(window).scrollTop()>$(".header").outerHeight()) {
+					$(".header").addClass('sticky-header');
+					$("body").css({"margin-top": $(".header").outerHeight()+'px'});
+				} else {
+					$(".header").removeClass('sticky-header');
+					$("body").css({"margin-top": '0px'});
+				}
+				
 			} else {
 				$(".header").removeClass('sticky-header');
 				$("body").css({"margin-top": '0px'});
 			}
-			
-		} else {
-			$(".header").removeClass('sticky-header');
-			$("body").css({"margin-top": '0px'});
 		}
-	});
-	$('body').swipe({swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection){	
-			if (phase=="end"){
-				if (direction == 'up') {
-					$(".header").removeClass('sticky-header');
-					$("body").css({"margin-top": '0px'});
-				}
-				if (direction == 'down') {
-					if ($(window).scrollTop()>$(".header").outerHeight()) {
-						$(".header").addClass('sticky-header');
-						$("body").css({"margin-top": $(".header").outerHeight()+'px'});
-					} else {
-						$(".header").removeClass('sticky-header');
-						$("body").css({"margin-top": '0px'});
-					}
-				}
-			}
-		},
-		triggerOnTouchEnd:false,
-		threshold:20
 	});
 
 
