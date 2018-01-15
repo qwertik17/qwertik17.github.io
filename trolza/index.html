@@ -30,7 +30,7 @@
 					</div>
 					<div class="main-menu-control menu-btn hamburger">
 						<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
+							<span class="hamburger-inner"></span>
 						</span>
 					</div>
 					<ul class="select-lang">
@@ -50,7 +50,7 @@
 					</nav>
 					<ul class="submenu">
 						<li>
-							<a href="#">
+							<a href="#search-popup" class="open-search-popup">
 								<div class="vert">
 									<i class="icon-search"></i>Поиск
 								</div>
@@ -100,7 +100,7 @@
 	<nav class="pushy pushy-left">
 		<div class="pushy-content">
 			<form class="mobile-search">
-				<input type="search" name="search" placeholder="Поиск...">
+				<input type="text" name="search" placeholder="Поиск...">
 				<button type="submit"><i class="icon-search"></i></button>
 			</form>
 			<ul>
@@ -117,6 +117,77 @@
 		</div>
 	</nav>
 	<div class="site-overlay"></div>
+
+	<div id="search-popup" class="mfp-hide">
+		<div class="container">
+			<div class="row top-line">
+				<div class="col-xs-11">
+					<a href="#"><img src="img/logo.png"></a>
+				</div>
+				<div class="col-xs-1">
+					<a href="#" class="close-search-popup"><i class="icon-close"></i></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<form class="search-form" action="#" method="post">
+						<p>Напишите, что Вы ищете, и нажмите Enter</p>
+						<input type="text" name="search" id="search-input">
+						<button type="submit"><i class="icon-search"></i></button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Мир Тролза</a></li>
+						<li><a href="#">Миссия</a></li>
+						<li><a href="#">История</a></li>
+						<li><a href="#">Руководство</a></li>
+						<li><a href="#">Награды</a></li>
+						<li><a href="#">География поставок</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Продукты и решения</a></li>
+						<li><a href="#">Оптима</a></li>
+						<li><a href="#">Мегаполис</a></li>
+						<li><a href="#">Электробус</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Медиа центр</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Интервью</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Фотогалерея</a></li>
+						<li><a href="#">Видеогалерея</a></li>
+						<li><a href="#">Полезные статьи</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Партнеры</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Карьера</a></li>
+						<li><a href="#">О кадровой политике</a></li>
+						<li><a href="#">Соискателям</a></li>
+						<li><a href="#">Сотрудникам</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<ul class="search-list">
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- HEADER-SECTION -->
 	<section class="header-section">

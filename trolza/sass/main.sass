@@ -21,6 +21,8 @@ body
 	max-width: 100%
 	height: auto
 // DEFAULT
+a:focus
+	outline: none
 .btn
 	background-color: transparent
 	border: 1px solid $red
@@ -305,6 +307,80 @@ body
 	bottom: -100px
 	left: -100px
 	right: -100px
+.mfp-bg
+	background-color: #fff
+	opacity: 1
+#search-popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	.top-line
+		padding: 22px 0 20px 56px
+	.mfp-close
+		display: none
+	.close-search-popup
+		text-align: right
+		display: block
+		font-size: 24px
+		color: $default
+	.search-form 
+		margin: 40px auto 70px
+		width: 530px
+		position: relative
+		p
+			font-size: 16px
+			font-family: "ArialNarrow"
+			font-style: italic
+			color: #727272
+			line-height: 30px
+		input
+			width: 100%
+			padding: 12px 40px 12px 12px
+			border: 1px solid $red
+			border-radius: 4px
+		button
+			border: none
+			background-color: transparent
+			position: absolute
+			padding: 10px
+			top: 30px
+			right: 0
+			font-size: 20px
+			opacity: .5
+			transition: opacity .25s ease
+			&:hover
+				opacity: 1
+	.search-list
+		list-style: none
+		li
+			display: block
+			a
+				font-size: 16px
+				line-height: 2
+				color: #727272
+				text-decoration: none
+				border-bottom: 1px solid transparent
+				transition: color,border .25s ease
+				&:hover
+					color: $red
+					border-bottom: 1px solid $red
+
+			&:first-child
+				margin-bottom: 10px
+				a
+					text-transform: uppercase
+					font-family: "ArialNarrow"
+					color: $default
+					transition: color .25s ease
+					line-height: 1
+					&:hover
+						color: $red
+						border-bottom: none
+		&:last-child
+			margin-top: 10px
+
 
 // END HEADER
 // HEADER SECTION

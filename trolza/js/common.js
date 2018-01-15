@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
 	$("#bus-carousel").carousel({
 		swipe: 20,
-		interval: 10000
+		interval: 11000
 	});
 	$("#main-slider").carousel({
 		swipe: 20,
@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 	});
 	$("#history-slider").carousel({
 		swipe: 20,
-		interval: 5000
+		interval: 6000
 	});
 
 
@@ -54,8 +54,6 @@ jQuery(document).ready(function($) {
 	});
 
 
-
-
 	$("body").on('click', '.close-submenu', function(event) {
 		event.preventDefault();
 		$(".submenu").toggleClass('hide-submenu');
@@ -65,6 +63,23 @@ jQuery(document).ready(function($) {
 	$(".hamburger-box, .site-overlay").click(function(event) {
 		$(".hamburger-box").toggleClass('hamburger--spin is-active');
 	});
+
+	$('.open-search-popup').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#search-input',
+		callbacks: {
+			open: function() {
+				$('.search-list').equalHeights();
+			}
+		}
+	});
+	$(document).on('click', '.close-search-popup', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+
+	
 
 	
 });
