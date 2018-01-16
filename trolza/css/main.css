@@ -1204,9 +1204,47 @@ a:focus {
   color: #272727;
   padding-left: 45px; }
 
+.err404 {
+  background-image: url("../img/404-bg.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center bottom;
+  padding: 100px 0;
+  margin-bottom: -1px; }
+  .err404 .error-block {
+    padding: 50px 15px;
+    background-color: #fff; }
+    .err404 .error-block .h1-header {
+      color: #33a8a2;
+      font-weight: bold;
+      text-align: center;
+      font-size: 95px;
+      margin: 0;
+      line-height: 1; }
+    .err404 .error-block .err-caption {
+      color: #33a8a2;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px; }
+    .err404 .error-block p {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 18px;
+      margin: 15px 0; }
+    .err404 .error-block .btn {
+      margin: 0 40px;
+      margin-bottom: 10px;
+      padding-top: 18px;
+      padding-bottom: 18px; }
+      .err404 .error-block .btn:last-child {
+        margin-bottom: 0; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .err404 {
+    padding: 70px 0; }
   .pushy, .pushy-open-left .site-overlay {
     display: block; }
   body {
@@ -1453,7 +1491,10 @@ a:focus {
     font-size: 13px;
     line-height: 1;
     margin-top: 2px;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .err404 .error-block .btn {
+    margin-right: 0;
+    margin-left: 0; } }
 
 @media only screen and (max-width: 400px) {
   .header .select-lang {
@@ -1486,8 +1527,8 @@ a:focus {
 
 @media print {
   img, svg {
-    -webkit-filter: invert(100%);
-            filter: invert(100%); }
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
   .btn {
     display: none; }
   .main-news-item {
@@ -1583,5 +1624,6 @@ a:focus {
   .top-footer .footer-contacts-list li,
   .header .main-menu ul li a,
   .main-news-item .news-label,
-  .info-box .info-item a {
-    color: #000; } }
+  .info-box .info-item a,
+  i {
+    color: #000 !important; } }
