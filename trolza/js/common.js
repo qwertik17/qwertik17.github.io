@@ -80,7 +80,9 @@ jQuery(document).ready(function($) {
 	});
 
 	lightGallery(document.getElementById('lightgallery'),{
-		thumbnail: true
+		thumbnail: true,
+		hash: false,
+		share: false
 	});
 
 	

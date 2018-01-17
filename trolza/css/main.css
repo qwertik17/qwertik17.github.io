@@ -1424,60 +1424,62 @@ a.news-title {
     .albums-list li.active a {
       color: #e60d2e; }
 
-#lightgallery a {
-  position: relative; }
-  #lightgallery a:after {
-    content: "\f00e";
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    left: 15px;
-    color: #fff;
-    font-family: "FontAwesome";
-    text-align: center;
-    font-size: 30px;
-    opacity: 0;
-    margin-top: -25px;
-    -webkit-transition: opacity .25s ease;
-    -o-transition: opacity .25s ease;
-    transition: opacity .25s ease; }
-  #lightgallery a:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 15px;
-    left: 15px;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    -webkit-transition: opacity .25s ease;
-    -o-transition: opacity .25s ease;
-    transition: opacity .25s ease; }
-  #lightgallery a:hover:before {
-    opacity: 1; }
-  #lightgallery a:hover:after {
-    opacity: 1; }
-  #lightgallery a:hover p {
-    opacity: 1; }
-  #lightgallery a p {
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    top: 0;
-    padding: 5px 15px;
-    width: auto;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-style: italic;
-    font-size: 13px;
-    line-height: 16px;
-    opacity: 0;
-    -webkit-transition: opacity .25s ease;
-    -o-transition: opacity .25s ease;
-    transition: opacity .25s ease; }
-
-#lightgallery .gal-image {
-  margin-bottom: 30px; }
+#lightgallery {
+  padding: 0 10px; }
+  #lightgallery a {
+    position: relative;
+    padding: 0 5px !important; }
+    #lightgallery a:after {
+      content: "\f00e";
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      left: 5px;
+      color: #fff;
+      font-family: "FontAwesome";
+      text-align: center;
+      font-size: 30px;
+      opacity: 0;
+      margin-top: -25px;
+      -webkit-transition: opacity .25s ease;
+      -o-transition: opacity .25s ease;
+      transition: opacity .25s ease; }
+    #lightgallery a:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 5px;
+      left: 5px;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: opacity .25s ease;
+      -o-transition: opacity .25s ease;
+      transition: opacity .25s ease; }
+    #lightgallery a:hover:before {
+      opacity: 1; }
+    #lightgallery a:hover:after {
+      opacity: 1; }
+    #lightgallery a:hover p {
+      opacity: 1; }
+    #lightgallery a p {
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: 0;
+      padding: 5px 15px;
+      width: auto;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-style: italic;
+      font-size: 13px;
+      line-height: 16px;
+      opacity: 0;
+      -webkit-transition: opacity .25s ease;
+      -o-transition: opacity .25s ease;
+      transition: opacity .25s ease; }
+  #lightgallery .gal-image {
+    margin-bottom: 10px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
