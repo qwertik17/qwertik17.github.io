@@ -21,6 +21,12 @@ body
 	max-width: 100%
 	height: auto
 // DEFAULT
+.mt-25
+	margin-top: 25px
+.mb-40
+	margin-bottom: 40px
+hr
+    border-top: 1px solid #e7e4df
 a:focus
 	outline: none
 .btn
@@ -1125,9 +1131,223 @@ a:focus
 			padding-bottom: 18px
 			&:last-child
 				margin-bottom: 0
-
-
 // END 404 ERROR
+// Внутряки
+
+.site-section
+	text-transform: uppercase
+	font-weight: bold
+	color: $red
+	font-family: "ArialNarrow"
+	font-size: 17px
+	border-top: 1px solid #e7e4df
+	border-bottom: 1px solid #e7e4df
+	padding: 20px
+	line-height: 1
+	i
+		color: $gray
+		padding-right: 10px
+.in-section-links
+	list-style: none
+	padding: 20px
+	border-bottom: 1px solid #e7e4df
+	margin-bottom: 20px
+	font-size: 17px
+	i
+		width: 15px
+		margin-right: 10px
+		font-size: 17px
+		line-height: 17px
+	a
+		color: $default
+		text-decoration: none
+		transition: color .25s ease
+		&:hover
+			color: $red
+	li
+		&.active a
+			color: $red
+.crumbs
+	list-style: none
+	padding: 15px 0
+	li
+		display: inline-block
+		padding: 0 10px
+		position: relative
+		color: #03887f
+		text-transform: uppercase
+		font-family: "ArialNarrow"
+		font-size: 12px
+		text-decoration: none
+		transition: color .25s ease
+		&:after
+			content: "\f105"
+			font-family: "FontAwesome"
+			position: absolute
+			right: -3px
+		&:last-child
+			&:after
+				display: none
+		&:first-child
+			padding-left: 0
+
+		a
+			color: $default
+			text-transform: uppercase
+			font-family: "ArialNarrow"
+			font-size: 12px
+			text-decoration: none
+			transition: color .25s ease
+			&:hover
+				color: #03887f
+		&.active
+			a
+				color: #03887f
+.date-list
+	list-style: none
+	li
+		display: inline-block
+		padding-right: 8px
+		line-height: 1
+		&:last-child
+			padding-right: 0
+		a
+			font-family: "ArialNarrow"
+			font-size: 17px
+			color: $default
+			text-decoration: none
+			transition: color .25s ease
+	&.years-list
+		margin-bottom: 5px
+		li a:hover
+			color: $red
+		li.active a
+			color: $red
+	&.mounth-list
+		li a
+			color: #727272
+		li a:hover
+			color: $red
+		li.active a
+			color: $red
+.first-news
+	.news-date
+		left: 15px
+	.read-more
+		position: relative
+		color: $default
+		padding-left: 0
+		bottom: 0
+		left: 0
+		display: block
+		width: 60px
+		margin: 8px 0
+	p
+		font-size: 14px
+		line-height: 17px
+		color: #656565
+a.news-title
+	display: block
+	margin: 16px 0 8px
+	font-size: 16px
+	line-height: 20px
+	font-weight: bold
+	color: $default
+	text-decoration: none
+	transition: color .25s ease
+	&:hover
+		color: $red
+		text-decoration: none
+.mini-news	
+	padding-bottom: 15px
+	border-bottom: 1px solid #e7e4df
+	margin-bottom: 30px
+	&-date
+		color: #727272
+		font-family: "ArialNarrow"
+		font-size: 13px
+		text-transform: uppercase
+	a.news-title
+		margin-top: 8px
+.btn.load-more
+	width: 165px
+	margin-bottom: 60px
+	margin-top: 20px
+.albums-list
+	list-style: none
+	margin-bottom: 5px
+	li
+		display: inline-block
+		padding-right: 8px
+		line-height: 1
+		&:last-child
+			padding-right: 0
+		a
+			font-family: "ArialNarrow"
+			font-size: 17px
+			color: $default
+			text-decoration: none
+			transition: color .25s ease
+			&:hover
+				color: $red
+		&.active a
+			color: $red
+
+//Gallery
+#lightgallery
+	a
+		position: relative
+		&:after
+			content: "\f00e"
+			position: absolute
+			top: 50%
+			right: 15px
+			left: 15px
+			color: #fff
+			font-family: "FontAwesome"
+			text-align: center
+			font-size: 30px
+			opacity: 0
+			margin-top: -25px
+			transition: opacity .25s ease
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 15px
+			left: 15px
+			bottom: 0
+			background-color: rgba(#000,.5)
+			opacity: 0
+			transition: opacity .25s ease
+		&:hover
+			&:before
+				opacity: 1
+			&:after
+				opacity: 1
+
+			p
+				opacity: 1
+		p
+			position: absolute
+			left: 15px
+			right: 15px
+			top: 0
+			padding: 5px 15px
+			width: auto
+			color: #fff
+			background-color: rgba(#000,.5)
+			font-style: italic
+			font-size: 13px
+			line-height: 16px
+			opacity: 0
+			transition: opacity .25s ease
+	.gal-image
+		margin-bottom: 30px
+
+// END Gallery
+
+// END Внутряки
 
 
 

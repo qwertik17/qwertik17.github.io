@@ -79,6 +79,10 @@ jQuery(document).ready(function($) {
 		$.magnificPopup.close();
 	});
 
+	lightGallery(document.getElementById('lightgallery'),{
+		thumbnail: true
+	});
+
 	
 
 	
