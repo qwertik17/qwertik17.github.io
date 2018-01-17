@@ -68,6 +68,7 @@ jQuery(document).ready(function($) {
 		type: 'inline',
 		preloader: false,
 		focus: '#search-input',
+		mainClass: 'search-bg',
 		callbacks: {
 			open: function() {
 				$('.search-list').equalHeights();
@@ -85,9 +86,75 @@ jQuery(document).ready(function($) {
 		share: false
 	});
 
-	
+	$('.airSticky').airStickyBlock({
+		offsetTop: 100
+	});
 
-	
+	$('.history-timeline-list a').click(function (e) {
+		e.preventDefault();
+		var curLink = $(this);
+		var scrollPoint = $(curLink.attr('href')).position().top;
+		$('body,html').animate({
+			scrollTop: scrollPoint
+		}, 600);
+	})
+
+	$(window).on('scroll', function(event) {		
+		var scrollPosition = $(document).scrollTop();
+		$('.history-timeline-list li a').each(function(index, el) {
+			var currentLink = $(this);
+			refElement = $(currentLink.attr("href"));
+			// if (refElement.position().top-1 <= scrollPosition && refElement.position().top + refElement.height() >= scrollPosition) {
+			if (refElement.position().top-1<= scrollPosition) {
+				if ($(this).parent().hasClass('active')) {
+					return true;
+				} else {
+					$('.history-timeline-list li').removeClass("active");
+					currentLink.parent().addClass("active");
+				}
+			} else {
+				currentLink.parent().removeClass("active");
+			}
+		});
+
+		var years_list = $('.history-timeline-list');
+		years_list_h = $('.history-timeline-list').outerHeight();
+		years_list_item = $('.history-timeline-list li');
+		length = $('.history-timeline-list').children('li').length;
+		end_length = $('.history-timeline-list').children('li').length-3;
+		years_list_item_h = years_list_h / length;
+		i = 0;
+		years_list_item.each(function(index, el) {
+			if ($(this).hasClass('active')) {
+				var el = index;
+			}
+			if (el > 4 && el < end_length) {
+				var count = el-4;
+				margin = years_list_item_h * count;
+				years_list.animate({"margin-top": "-"+margin+"px"}, 70);
+				console.log(years_list_h);
+			} else if (el <= 4) {
+				years_list.animate({"margin-top": 0}, 70);
+			}
+
+		});			
+	});
+
+	$('.image-popup').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
 });
 
 

@@ -25,6 +25,37 @@ body {
   max-width: 100%;
   height: auto; }
 
+h1, .h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px; }
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px; }
+
+::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px; }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(102, 201, 181, 0.6); }
+
+::-webkit-scrollbar-thumb {
+  background-color: #3ba792;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+
 .mt-25 {
   margin-top: 25px; }
 
@@ -381,7 +412,7 @@ a:focus {
   left: -100px;
   right: -100px; }
 
-.mfp-bg {
+.search-bg {
   background-color: #fff;
   opacity: 1; }
 
@@ -1273,7 +1304,8 @@ a:focus {
     width: 15px;
     margin-right: 10px;
     font-size: 17px;
-    line-height: 17px; }
+    line-height: 17px;
+    color: #d0c4b6; }
   .in-section-links a {
     color: #151515;
     text-decoration: none;
@@ -1282,8 +1314,12 @@ a:focus {
     transition: color .25s ease; }
     .in-section-links a:hover {
       color: #e60d2e; }
+      .in-section-links a:hover i {
+        color: #e60d2e; }
   .in-section-links li.active a {
     color: #e60d2e; }
+    .in-section-links li.active a i {
+      color: #e60d2e; }
 
 .crumbs {
   list-style: none;
@@ -1481,6 +1517,93 @@ a.news-title {
   #lightgallery .gal-image {
     margin-bottom: 10px; }
 
+.history-timeline .history-section {
+  padding-top: 30px; }
+  .history-timeline .history-section:first-child {
+    padding-top: 0; }
+
+.history-timeline .history-year {
+  color: #e60d2e;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px; }
+  .history-timeline .history-year:before {
+    content: "\f08d";
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    color: #d0c4b6;
+    top: 6px; }
+
+.history-timeline-list {
+  list-style: none;
+  position: relative;
+  float: right; }
+  .history-timeline-list:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #a5a4a4;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .history-timeline-list li {
+    line-height: 1; }
+    .history-timeline-list li a {
+      text-decoration: underline;
+      padding: 7px 15px;
+      display: block;
+      color: #a5a4a4;
+      font-family: "ArialNarrow";
+      font-size: 17px;
+      position: relative;
+      -webkit-transition: color,background-color .07s ease;
+      -o-transition: color,background-color .07s ease;
+      transition: color,background-color .07s ease; }
+      .history-timeline-list li a:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -4px;
+        margin-top: -4px;
+        height: 8px;
+        width: 8px;
+        background-color: #a5a4a4;
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
+      .history-timeline-list li a:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e60d2e; }
+        .history-timeline-list li a:hover:before {
+          background-color: #e60d2e; }
+    .history-timeline-list li.active a {
+      color: #fff;
+      text-decoration: none;
+      background-color: #e60d2e; }
+      .history-timeline-list li.active a:before {
+        background-color: #e60d2e; }
+    .history-timeline-list li.important-date a {
+      color: #e60d2e;
+      font-size: 20px; }
+      .history-timeline-list li.important-date a:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e60d2e; }
+    .history-timeline-list li.important-date.active a {
+      color: #fff; }
+
+.airSticky {
+  z-index: 1;
+  height: 282px;
+  overflow: hidden; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -1572,6 +1695,8 @@ a.news-title {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .airSticky {
+    display: none; }
   .in-section-links {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -1909,4 +2034,6 @@ a.news-title {
        -moz-column-count: 2;
             column-count: 2; }
   * {
-    color: #000 !important; } }
+    color: #000 !important; }
+  .airSticky {
+    display: none; } }
