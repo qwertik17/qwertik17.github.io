@@ -75,6 +75,9 @@ jQuery(document).ready(function($) {
 			}
 		}
 	});
+
+	$(".product-item, .leader").equalHeights();
+
 	$(document).on('click', '.close-search-popup', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
@@ -85,6 +88,30 @@ jQuery(document).ready(function($) {
 		hash: false,
 		share: false
 	});
+	lightGallery(document.getElementById('lightgallery_videos'), {
+	youtubePlayerParams: {
+		modestbranding: 1,
+		showinfo: 0,
+		rel: 0,
+		controls: 1
+	},
+	vimeoPlayerParams: {
+		byline : 0,
+		portrait : 0,
+		color : 'A90707',
+	},
+	loadYoutubeThumbnail: true,
+	youtubeThumbSize: 'default',
+	loadVimeoThumbnail: true,
+	vimeoThumbSize: 'thumbnail_medium',
+	thumbnail: true,
+	hash: false,
+	share: false,
+	zoom: false,
+	autoplay: false,
+	fullscreen: false
+
+}); 
 
 	$('.airSticky').airStickyBlock({
 		offsetTop: 100
@@ -145,15 +172,28 @@ jQuery(document).ready(function($) {
 		closeOnContentClick: true,
 		closeBtnInside: false,
 		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		mainClass: 'mfp-no-margins mfp-with-zoom',
 		image: {
 			verticalFit: true
 		},
 		zoom: {
 			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
+			duration: 300
 		}
 	});
+
+	var check_bus_page = $(".bus-btn").length;
+	if (check_bus_page > 0) {
+		$(".btn.bus-btn").on('click', function(event) {
+			event.preventDefault();
+			if($(this).hasClass('active')) return;
+			$(".btn.bus-btn.active").removeClass('active');
+			$(this).addClass('active');
+
+			$('.tab-content').fadeOut(0);
+			$($(this).attr('href')).fadeIn(250);
+		});
+	}
 
 });
 
