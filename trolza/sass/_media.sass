@@ -166,6 +166,19 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	table
+		thead
+			display: none
+		td
+			display: block
+			text-align: left !important
+			&:before
+				content: attr(cell-name) ': '
+				font-weight: bold
+		tr
+			display: block
+			margin-bottom: 10px
+			border: 1px solid #d0c4b6
 	.header-page
 		.bus-header
 			font-size: 40px
