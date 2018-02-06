@@ -1,0 +1,170 @@
+@import "fonts"
+@import "vars"
+@import "default"
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	color: $default
+	overflow-x: hidden
+
+*
+	outline: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.head-wrap
+	background-image: linear-gradient(-13deg, #9E2328 0%, #1B4E9B 100%)
+.header-home
+	background-color: #fff
+	// background-image: linear-gradient(rgba(#fff,1) 0%, rgba(#fff,0.1) 60%, rgba(#fff,0) 80%)
+	.header-info
+		font-weight: 500
+		text-align: right
+		margin-top: 30px
+		margin-bottom: 30px
+		li
+			display: inline-block
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			a
+				color: #fff
+				background-color: $blue
+				padding: 8px 20px
+				border-radius: 15px
+				text-decoration: none
+				transition: background-color .25s ease
+				&:hover,&:focus
+					background-color: darken($blue,5)
+	.main-menu
+		text-align: right
+		font-weight: 600
+		text-transform: uppercase
+		li
+			display: inline-block
+			margin-left: 25px
+			a
+				text-decoration: none
+				color: $default
+				transition: color .25s ease
+				&:hover,&:focus
+						color: $blue
+.main-view
+	font-weight: 600
+	padding-top: 30px
+	padding-bottom: 450px
+	background-image: url(../img/building.png)
+	background-position: center bottom
+	background-size: cover
+	background-repeat: no-repeat
+	&-title
+		color: #fff
+		text-transform: uppercase
+		font-size: 30px
+		line-height: 42px
+		span
+			font-weight: 00
+	p
+		color: #fff
+		line-height: 32px
+
+.filter
+	&-top-line
+		margin-bottom: 10px	
+	padding: 25px 0
+	margin-top: -170px
+	background-image: linear-gradient(rgba(#fff,.7) 0%, rgba(#fff,1) 100%)
+	&-title
+		display: inline-block
+		font-size: 24px
+		font-weight: 500
+		margin-bottom: 15px
+		span
+			color: $blue
+	&-map
+		float: right
+		color: $default
+		background-color: #fff
+		border-radius: 15px
+		padding: 8px 20px
+		line-height: 1
+		font-weight: 500
+		box-shadow: 0 4px 5px rgba(0,0,0,.15)
+		transition: color .25s ease
+		&:hover,&:focus
+			text-decoration: none
+			color: $blue
+.home-filter-form
+	label
+		display: block
+		font-weight: 500
+		margin-bottom: 5px
+.home-filter-form select
+	display: none
+.jq-selectbox__select
+	padding: 8px 12px
+.jq-selectbox.jqselect.custom-select
+	background-color: #fff
+	width: 100%
+	border-radius: 15px
+	border: 1px solid #bebebe
+	cursor: pointer
+.jq-selectbox.jqselect.custom-select.opened
+	border-radius: 15px 15px 0 0 !important
+.jq-selectbox__dropdown
+	background-color: #fff
+	border: 1px solid #bebebe
+	left: -1px
+	right: -1px
+	top: 39px !important
+	border-radius: 0 0 15px 15px
+	// max-height: 200px
+	// overflow: hidden
+	// overflow-y: auto
+	// border-top: 0
+.jq-selectbox__dropdown ul li
+	cursor: pointer
+	padding: 8px 10px
+	&:hover
+		background-color: darken(#fff, 4)
+.sel
+	background-color: darken(#fff, 4) !important
+.jq-selectbox__select-text 
+	position: relative
+.jq-selectbox__select-text:before
+	content: ""
+	position: absolute
+	top: 8px
+	right: 0
+	border: 4px solid transparent
+	border-top: 5px solid #000
+.isto
+	width: 46% !important
+span.separator
+	display: inline-block
+	line-height: 43px
+	vertical-align: top
+	padding: 0 2px
+.btn.btn-form
+	display: block
+	background-image: linear-gradient(-54deg, #9e2328 0%, #1b4e9b 100%)
+	text-align: center
+	color: #fff
+	padding: 8px 12px
+	border-radius: 15px
+	margin-top: 22px
+	font-weight: 500
+	text-decoration: none
+	opacity: 1
+	transition: opacity .25s ease
+	&:hover, &:focus
+		opacity: .9
+
+
+@import "media"
