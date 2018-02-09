@@ -14,10 +14,17 @@ body
 *
 	outline: 0
 
-.img-responsive
+
+
+.logo-link
 	display: block
-	max-width: 100%
-	height: auto
+	background-color: #fff
+	width: 140px
+	height: 140px
+	padding-top: 25px
+	img
+		display: block
+		margin: 0 auto
 .head-wrap
 	background-image: linear-gradient(-13deg, #9E2328 0%, #1B4E9B 100%)
 .header-home
@@ -62,6 +69,8 @@ body
 				transition: color .25s ease
 				&:hover,&:focus
 						color: $blue
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	background-color: $blue
 .main-view
 	font-weight: 600
 	padding-top: 30px
@@ -175,7 +184,7 @@ span.separator
 	vertical-align: top
 	padding: 0 2px
 	float: left
-	width: 20px
+	width: 8%
 	text-align: center
 .btn.btn-form
 	display: block
@@ -238,6 +247,7 @@ span.separator
 		right: 15px
 		color: #fff
 		font-weight: 500
+		z-index: 1
 		.obj-status
 			background-color: $blue
 			padding: 6px 30px

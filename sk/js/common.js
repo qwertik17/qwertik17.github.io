@@ -1,7 +1,18 @@
 jQuery(document).ready(function($) {
 
 	
-
+	$('.hamburger').on('click', function(event) {
+		event.preventDefault();
+		if ($(this).attr('data-show') == 'close') {
+			$(this).addClass('hamburger--slider').addClass('is-active');
+			$(this).attr('data-show', 'show');
+			$(".mobile-menu").slideDown(300);
+		} else {
+			$(this).removeClass('hamburger--slider').removeClass('is-active');
+			$(this).attr('data-show', 'close');
+			$(".mobile-menu").slideUp(300);
+		}
+	});
 
 	$('.home-filter-form select').styler();
 
@@ -36,14 +47,13 @@ jQuery(document).ready(function($) {
 	$("#romb6").paroller({ factor: '-0.1', type: 'foreground' });
 
 	$(".object-item").hover(function() {
-		$(this).find('.hidden-content').slideDown(250);
+		if ($(window).width() > 992) {
+			$(this).find('.hidden-content').slideDown(250);
+		}
 	}, function() {
-		$(this).find('.hidden-content').slideUp(250);
-	});
-
-	$(document).on('click', '.object-item', function(event) {
-		event.preventDefault();
-		$(this).find('.hidden-content').slideDown(250);
+		if ($(window).width() > 992) {
+			$(this).find('.hidden-content').slideUp(250);
+		}
 	});
 
 });
