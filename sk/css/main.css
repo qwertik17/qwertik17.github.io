@@ -961,8 +961,32 @@ a.polic {
     display: none; }
   .buyers .coube-box-wrap {
     margin: 110px auto 50px; }
-  .about h2, .partners .h2 {
-    text-align: center; } }
+  .about h2, .partners .h2, .news-reviews h2 {
+    text-align: center; }
+  .more-news {
+    width: 180px;
+    margin: 0 auto; }
+  .coubes-wrap {
+    position: relative;
+    width: 420px;
+    margin: 60px auto 0; }
+    .coubes-wrap .coube-item:nth-child(1) {
+      margin-left: 0px; }
+    .coubes-wrap .coube-item:nth-child(2) {
+      margin-top: -33px;
+      margin-left: 77px; }
+    .coubes-wrap .coube-item:nth-child(3) {
+      margin-top: -187px;
+      margin-left: 154px; }
+    .coubes-wrap .coube-item:nth-child(4) {
+      margin-top: -33px;
+      margin-left: 231px; }
+    .coubes-wrap .coube-item:nth-child(5) {
+      margin-top: -188px;
+      margin-left: 308px; }
+    .coubes-wrap .coube-item:nth-child(6) {
+      margin-top: 46px;
+      margin-left: 154px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -985,7 +1009,28 @@ a.polic {
   .objects .object-item .txt {
     display: block; }
   .objects .object-content .obg-street {
-    font-size: 19px; } }
+    font-size: 19px; }
+  .coubes-wrap {
+    position: relative;
+    width: 210px;
+    margin: 60px auto 0; }
+    .coubes-wrap .coube-item:nth-child(1) {
+      margin-left: 76px; }
+    .coubes-wrap .coube-item:nth-child(2) {
+      margin-top: -32px;
+      margin-left: 0; }
+    .coubes-wrap .coube-item:nth-child(3) {
+      margin-top: -34px;
+      margin-left: 76px; }
+    .coubes-wrap .coube-item:nth-child(4) {
+      margin-top: -32px;
+      margin-left: 0; }
+    .coubes-wrap .coube-item:nth-child(5) {
+      margin-top: -34px;
+      margin-left: 76px; }
+    .coubes-wrap .coube-item:nth-child(6) {
+      margin-top: -32px;
+      margin-left: 0; } }
 
 @media only screen and (max-width: 600px) {
   .buyers .coube-box-wrap {
@@ -1055,7 +1100,37 @@ a.polic {
             -ms-transform: rotate(0deg);
                 transform: rotate(0deg); }
       .buyers .coube-box-wrap .coube-box-item p {
-        font-size: 13px; } }
+        font-size: 13px; }
+  .coubes-wrap {
+    position: relative;
+    width: 155px;
+    margin: 50px auto 0; }
+    .coubes-wrap .coube-item-inner-desc {
+      font-size: 10px; }
+    .coubes-wrap .coube-item-inner-number {
+      font-size: 16px; }
+      .coubes-wrap .coube-item-inner-number span {
+        font-size: 12px; }
+    .coubes-wrap .coube-item {
+      width: 90px;
+      height: 90px; }
+      .coubes-wrap .coube-item:nth-child(1) {
+        margin-left: 62px; }
+      .coubes-wrap .coube-item:nth-child(2) {
+        margin-top: -28px;
+        margin-left: 0; }
+      .coubes-wrap .coube-item:nth-child(3) {
+        margin-top: -26px;
+        margin-left: 63px; }
+      .coubes-wrap .coube-item:nth-child(4) {
+        margin-top: -26px;
+        margin-left: 0; }
+      .coubes-wrap .coube-item:nth-child(5) {
+        margin-top: -26px;
+        margin-left: 63px; }
+      .coubes-wrap .coube-item:nth-child(6) {
+        margin-top: -27px;
+        margin-left: 0; } }
 
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */
