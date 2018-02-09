@@ -32,7 +32,14 @@ body
 			display: inline-block
 			margin-left: 10px
 			&:first-child
+				position: relative
 				margin-left: 0
+				i
+					color: #fff
+					background-color: $blue
+					padding: 4px
+					border-radius: 50%
+					margin-right: 5px
 			a
 				color: #fff
 				background-color: $blue
@@ -59,6 +66,8 @@ body
 	font-weight: 600
 	padding-top: 30px
 	padding-bottom: 450px
+	background: transparent
+	overflow: hidden
 	background-image: url(../img/building.png)
 	background-position: center bottom
 	background-size: cover
@@ -75,10 +84,11 @@ body
 		line-height: 32px
 
 .filter
+	z-index: 1
 	&-top-line
 		margin-bottom: 10px	
 	padding: 25px 0
-	margin-top: -170px
+	margin-top: -175px
 	background-image: linear-gradient(rgba(#fff,.7) 0%, rgba(#fff,1) 100%)
 	&-title
 		display: inline-block
@@ -92,14 +102,21 @@ body
 		color: $default
 		background-color: #fff
 		border-radius: 15px
-		padding: 8px 20px
+		padding: 9px 20px
 		line-height: 1
 		font-weight: 500
-		box-shadow: 0 4px 5px rgba(0,0,0,.15)
-		transition: color .25s ease
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.05)
+		margin-top: 10px
+		transition: color,background-color .25s ease
+		i
+			color: $blue
+			transition: color .25s ease
 		&:hover,&:focus
 			text-decoration: none
-			color: $blue
+			background-color: $blue
+			color: #fff
+			i
+				color: #fff
 .home-filter-form
 	label
 		display: block
@@ -119,20 +136,23 @@ body
 	border-radius: 15px 15px 0 0 !important
 .jq-selectbox__dropdown
 	background-color: #fff
-	border: 1px solid #bebebe
 	left: -1px
 	right: -1px
 	top: 39px !important
 	border-radius: 0 0 15px 15px
-	// max-height: 200px
-	// overflow: hidden
-	// overflow-y: auto
-	// border-top: 0
 .jq-selectbox__dropdown ul li
 	cursor: pointer
+	background-color: #fff
+	border-right: 1px solid #bebebe
+	border-left: 1px solid #bebebe
+	border-bottom: 1px solid #bebebe
 	padding: 8px 10px
 	&:hover
 		background-color: darken(#fff, 4)
+	&:first-child
+		border-top: 1px solid #bebebe
+	&:last-child
+		border-radius: 0 0 15px 15px
 .sel
 	background-color: darken(#fff, 4) !important
 .jq-selectbox__select-text 
@@ -146,11 +166,17 @@ body
 	border-top: 5px solid #000
 .isto
 	width: 46% !important
+	float: left
+	&:last-child
+		float: right
 span.separator
-	display: inline-block
+	display: block
 	line-height: 43px
 	vertical-align: top
 	padding: 0 2px
+	float: left
+	width: 20px
+	text-align: center
 .btn.btn-form
 	display: block
 	background-image: linear-gradient(-54deg, #9e2328 0%, #1b4e9b 100%)
@@ -158,13 +184,522 @@ span.separator
 	color: #fff
 	padding: 8px 12px
 	border-radius: 15px
-	margin-top: 22px
+	margin-top: 28px
 	font-weight: 500
 	text-decoration: none
 	opacity: 1
 	transition: opacity .25s ease
 	&:hover, &:focus
-		opacity: .9
+		opacity: .95
+
+.objects
+	background-color: #fff
+	z-index: 1
+	padding: 20px 0 0
+	.object-item
+		position: relative
+		overflow: hidden
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-image: linear-gradient(rgba(#000,0.25) 30%,rgba(#000,0.65) 100%)
+		.txt
+			margin-bottom: 15px
+		a
+			color: #fff
+			text-decoration: none
+			&.count-house
+				background-color: #fff
+				color: $default
+				padding: 6px 15px
+				border-radius: 15px
+				margin-right: 10px
+				border: 1px solid transparent
+				transition: all .25s ease
+				&:hover
+					background-color: transparent
+					color: #fff
+					border: 1px solid #fff
+			&.call-btn
+				padding: 6px
+				border: 1px solid #fff
+				border-radius: 50%
+				transition: all .25s ease
+				&:hover
+					background-color: #fff
+					color: $default
+					border: 1px solid transparent
+	.labels-area
+		position: absolute
+		top: 15px
+		right: 15px
+		color: #fff
+		font-weight: 500
+		.obj-status
+			background-color: $blue
+			padding: 6px 30px
+			border-radius: 15px
+			margin-bottom: 10px
+			&.works
+				background-color: #783049
+		.obj-perc
+			float: right
+			width: 35px
+			height: 35px
+			right: 0
+			margin-bottom: 10px
+			&-icon
+				display: block
+				position: absolute
+				line-height: 35px
+				width: 100%
+				text-align: center
+				width: 35px
+				height: 35px
+				background-color: $red
+				border-radius: 50%
+				z-index: 1
+			&-desc
+				position: absolute
+				background-color: $red
+				border-radius: 18px
+				right: 0
+				line-height: 35px
+				padding-left: 15px
+				width: 35px
+				height: 35px
+				overflow: hidden
+				z-index: 0
+				transition: width .25s ease
+			&:hover
+				.obj-perc-desc
+					width: 260px
+		.obj-info
+			float: right
+			margin-bottom: 10px
+			// position: absolute
+			width: 35px
+			height: 35px
+			right: 0
+			&-icon
+				display: block
+				position: absolute
+				line-height: 35px
+				width: 100%
+				text-align: center
+				width: 35px
+				height: 35px
+				background-color: $green
+				border-radius: 50%
+				z-index: 1
+			&-desc
+				position: absolute
+				background-color: $green
+				border-radius: 18px
+				right: 0
+				line-height: 35px
+				padding-left: 15px
+				width: 35px
+				height: 35px
+				overflow: hidden
+				z-index: 0
+				transition: width .25s ease
+			&:hover
+				.obj-info-desc
+					width: 260px
+	.object-content
+		position: absolute
+		left: 15px
+		bottom: 15px
+		right: 15px
+		color: #fff
+		.obg-street
+			font-weight: 500
+			font-size: 24px
+		.obg-desc
+			margin-bottom: 10px
+		.hidden-content
+			display: none
+			
+.slider
+	padding-bottom: 10px
+	.slider-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 0
+		z-index: 1
+		width: 40px
+		height: 76px
+		overflow: hidden
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -38px
+			background-color: rgba(#fff,.5)
+			width: 76px
+			height: 76px
+			border-radius: 50%
+			transition: background-color .25s ease
+		i
+			display: block
+			color: $default
+			position: absolute
+			top: 50%
+			left: 0px
+			transform: translateY(-50%)
+			font-size: 18px
+			transition: color .25s ease
+		&:hover
+			&:before
+				background-color: rgba(#fff,1)
+			i
+				color: #000
+	.slider-next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		z-index: 1
+		width: 40px
+		height: 76px
+		overflow: hidden
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: -38px
+			background-color: rgba(#fff,.5)
+			width: 76px
+			height: 76px
+			border-radius: 50%
+			transition: background-color .25s ease
+		i
+			display: block
+			color: $default
+			position: absolute
+			top: 50%
+			right: 0px
+			transform: translateY(-50%) rotate(180deg)
+			font-size: 18px
+			transition: color .25s ease
+		&:hover
+			&:before
+				background-color: rgba(#fff,1)
+			i
+				color: #000
+
+.buyers
+	padding: 30px 0
+	h2
+		text-align: center
+	.coube-box-wrap
+		margin: 150px auto
+		width: 465px
+		.coube-box-item
+			display: block
+			width: 150px
+			height: 150px
+			border: 1px solid #eee
+			transform: rotate(45deg)
+			position: relative
+			background-color: #fff
+			transition: transform,box-shadow .25s ease
+			img
+				display: block
+				margin: 0 auto 10px
+			p
+				text-align: center
+				color: $default
+				line-height: 18px
+			&-inner
+				position: absolute
+				transform: translate(-50%, -50%) rotate(-45deg)
+				width: 100%
+				top: 50%
+				left: 50%
+			&:hover
+				box-shadow: 0 0 25px 0 rgba(#000,.07)
+				transform: scale(1.05) rotate(45deg)
+				z-index: 1
+			&:nth-child(2)
+				margin-top: -150px
+				margin-left: 211px
+			&:nth-child(3)
+				margin-top: -45px
+				margin-left: 106px
+			&:nth-child(4)
+				margin-top: -150px
+				margin-left: 316px
+.fly-romb
+	position: absolute
+#romb1
+	top: -30%
+	left: -32%
+#romb2
+	top: 34%
+	left: -12%
+#romb3
+	top: -29%
+	right: -49%
+#romb4
+	top: 27%
+	right: -17%
+#romb5
+	top: 14%
+	right: -16%
+#romb6
+	top: 14%
+	right: -34%
+
+.about
+	padding: 20px
+	h2
+		text-align: right
+		margin-bottom: 20px
+
+.coubes-wrap
+	position: relative
+	margin-left: 50px
+	.coube-item
+		display: block
+		width: 110px
+		height: 110px
+		border: 1px solid #eee
+		position: relative
+		color: $default
+		text-decoration: none
+		transform: rotate(45deg)
+		background-color: #fff
+		&-inner
+			position: absolute
+			transform: translate(-50%,-50%) rotate(-45deg)
+			top: 50%
+			left: 50%
+			width: 100%
+			&-number
+				font-size: 24px
+				font-weight: 500
+				text-align: center
+				span
+					font-size: 14px
+					vertical-align: middle
+			&-desc
+				text-align: center
+				line-height: 14px
+				font-size: 12px
+		&:hover
+			box-shadow: 0 0 25px 0 rgba(#000,.07)
+		&:nth-child(1)
+			margin-left: 76px
+		&:nth-child(2)
+			margin-top: -32px
+		&:nth-child(3)
+			margin-top: -34px
+			margin-left: 76px
+		&:nth-child(4)
+			margin-top: -32px
+		&:nth-child(5)
+			margin-top: -34px
+			margin-left: 76px
+		&:nth-child(6)
+			margin-top: -32px
+
+.partners
+	padding: 40px 0
+	.h2
+		margin-bottom: 20px
+	img
+		display: block
+		margin: 0 auto
+		padding: 10px
+		filter: contrast(0%)
+		opacity: .6
+		transition: filter,opacity .25s ease
+		&:hover
+			filter: contrast(100%)
+			opacity: 1
+a.more-partners
+	display: block
+	width: 180px
+	margin: 0 auto
+	border: 1px solid #bebebe
+	text-align: center
+	line-height: 2.5
+	border-radius: 15px
+	color: $default
+	text-decoration: none
+	font-weight: 500
+	margin-top: 40px
+	transition: border,color .25s ease
+	&:hover
+		border-color: $blue
+		color: $blue
+
+.news-reviews
+	padding: 40px 0 60px
+
+.news-item
+	a
+		color: $default
+		text-decoration: none
+		transition: color .25s ease
+		&:hover
+			color: $blue
+	&-title
+		text-transform: uppercase
+		font-weight: 600
+		margin-top: 35px
+	&-published
+		display: block
+		margin-top: 5px
+a.more-news
+	display: block
+	width: 180px
+	border: 1px solid #bebebe
+	text-align: center
+	line-height: 2.5
+	border-radius: 15px
+	color: $default
+	text-decoration: none
+	font-weight: 500
+	margin-top: 30px
+	transition: border,color .25s ease
+	&:hover
+		border-color: $blue
+		color: $blue
+.reviews-slider
+	overflow: hidden
+	background-color: #fbfbfb
+	width: 500px
+	height: 500px
+	transform: rotate(-45deg)
+	z-index: -1
+	margin-top: 50px
+	margin-left: 100px
+	.reviews-slider-inner
+		transform: rotate(-45deg)
+	.swiper-slide
+		// background-color: #fbfbfb
+		transform: rotate(45deg)
+		.person
+			&-img
+				width: 62px
+				height: 62px
+				overflow: hidden
+				margin: 30px auto 0
+				position: relative
+				transform: rotate(45deg)
+				img
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%) rotate(-45deg)
+			&-name
+				padding: 0 15px
+				display: block
+				text-align: center
+				margin-top: 40px
+				font-weight: 600
+			&-place
+				padding: 0 15px
+				display: block
+				text-align: center
+				margin-bottom: 20px
+			&-message
+				display: block
+				text-align: center
+				padding: 0 15px
 
 
+
+
+
+.footer-home
+	color: #fefefe
+	background-color: #464a4c
+	hr
+		border-color: #6d7071
+	.top-footer
+		padding-top: 45px
+		.footer-list-title
+			text-transform: uppercase
+			font-weight: 500
+			border-bottom: 1px solid #6d7071
+			padding-bottom: 15px
+			margin-bottom: 15px
+	.footer-list
+		a
+			color: #fefefe
+			line-height: 1.9
+	.footer-bottom
+		padding: 0 0 20px
+.footer-social-list
+	display: block
+	width: 90px
+	margin: 20px auto 0
+	a
+		display: block
+		font-size: 18px
+		width: 40px
+		height: 40px
+		border: 1px solid #fefefe
+		border-radius: 50%
+		text-align: center
+		text-decoration: none
+		color: #fefefe
+		transition: all .5s ease
+		i
+			margin-top: 10px
+			transition: all .9s ease
+		&:nth-child(2)
+			margin-top: -40px
+			margin-left: 50px
+		&:nth-child(3)
+			margin-top: 10px
+		&:nth-child(4)
+			margin-top: -40px
+			margin-left: 50px
+		&:hover
+			border: 1px solid transparent
+			&:nth-child(1)
+				background-color: #4a76a8
+			&:nth-child(2)
+				background-color: #df3a66
+			&:nth-child(3)
+				background-color: #3e5b9a
+			&:nth-child(4)
+				background-color: #ee8208
+			i
+				color: #fff
+				transform: rotateY(360deg)
+.logo-footer
+	display: block
+	margin: 0 auto
+	transition: opacity .25s
+	&:hover
+		opacity: .8
+a.scheme
+	display: block
+	background-color: $blue
+	background-image: linear-gradient(-13deg, #9E2328 0%, #1B4E9B 100%)
+	margin-top: 20px
+	text-align: center
+	color: #fff
+	text-decoration: none
+	line-height: 2.4
+	border-radius: 15px
+a.polic
+	text-align: center
+	color: #fefefe
+.sitecreative
+	text-align: right
+	a
+		color: #ff8400
 @import "media"
