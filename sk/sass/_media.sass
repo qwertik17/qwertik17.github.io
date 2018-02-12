@@ -3,6 +3,9 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px)
+	#romb7,	#romb8,	#romb9,	#romb10, #romb11, #romb12
+		display: none
 @media only screen and (max-width : 1200px)
 	.header-home .main-menu li
 		margin-left: 14px
@@ -44,6 +47,32 @@
 		right: -25%
 	#romb6
 		right: -47%
+	.partners
+		padding-bottom: 0
+	.reviews-slider-wrap
+		background: none
+		margin-top: 0
+		.reviews-slider
+			.swiper-slide
+				margin: 0
+				height: auto
+			.reviews-slider-inner
+				.rotate-back
+					margin-top: 0
+	.reviews-button-next,
+	.reviews-button-prev
+		top: 50%
+		margin-top: -17px
+	.reviews-button-next
+		right: 0
+	.reviews-button-prev
+		left: 0
+	a.more-reviews
+		position: relative
+		margin-top: 30px
+		margin-bottom: 30px
+	.reviews-heading
+		display: block
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -128,6 +157,29 @@
 			&:nth-child(6)
 				margin-top: 46px
 				margin-left: 154px
+	.copyright
+		text-align: center
+	.sitecreative, .polic
+		text-align: center
+		margin-bottom: 10px
+		margin-top: 10px
+	.sitecreative 
+		margin-top: 15px
+	.logo-footer
+		display: none
+	.footer-social-list
+		width: 202px
+		a
+			margin: 0 !important
+			display: inline-block
+			margin-left: 10px !important
+			&:first-child
+				margin-left: 0 !important
+	a.scheme
+		margin-top: 23px
+		width: 200px
+		margin-right: auto
+		margin-left: auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -175,6 +227,18 @@
 			&:nth-child(6)
 				margin-top: -32px
 				margin-left: 0
+	.footer-home .top-footer .footer-list-title
+		border-bottom: 0
+		padding-bottom: 0
+		text-align: center
+	.footer-list
+		margin-bottom: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid #6d7071
+		text-align: center
+		li
+			display: inline-block
+			margin-right: 15px
 
 @media only screen and (max-width : 600px)
 	.buyers
@@ -196,7 +260,9 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
+@media only screen and (max-width : 479px)
+	.reviews-slider .swiper-slide .person-message
+		padding: 0 40px
 	.header-home
 		.main-menu
 			column-count: 1
@@ -273,6 +339,9 @@
 			&:nth-child(6)
 				margin-top: -27px
 				margin-left: 0
+	.logo-footer
+		display: block
+		margin-top: 15px
 
 
 @media only screen and (max-width : 400px)

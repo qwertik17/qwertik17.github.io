@@ -335,6 +335,7 @@ span.separator
 			display: none
 			
 .slider
+	position: relative
 	padding-bottom: 10px
 	.slider-prev
 		position: absolute
@@ -442,7 +443,7 @@ span.separator
 				margin-top: -150px
 				margin-left: 211px
 			&:nth-child(3)
-				margin-top: -45px
+				margin-top: -44px
 				margin-left: 106px
 			&:nth-child(4)
 				margin-top: -150px
@@ -467,6 +468,24 @@ span.separator
 #romb6
 	top: 14%
 	right: -34%
+#romb7
+	top: -68%
+	left: -10%
+#romb8
+	top: -68%
+	left: -13%
+#romb9
+	top: 54%
+	left: -11%
+#romb10
+	top: -8%
+	left: -11%
+#romb11
+	bottom: -62%
+	right: -6%
+#romb12
+	bottom: -11%
+	right: -6%
 
 .about
 	padding: 20px
@@ -509,17 +528,17 @@ span.separator
 		&:nth-child(1)
 			margin-left: 76px
 		&:nth-child(2)
-			margin-top: -32px
+			margin-top: -34px
 		&:nth-child(3)
-			margin-top: -34px
-			margin-left: 76px
+			margin-top: -33px
+			margin-left: 77px
 		&:nth-child(4)
-			margin-top: -32px
+			margin-top: -33px
 		&:nth-child(5)
-			margin-top: -34px
-			margin-left: 76px
+			margin-top: -33px
+			margin-left: 77px
 		&:nth-child(6)
-			margin-top: -32px
+			margin-top: -33px
 
 .partners
 	padding: 40px 0
@@ -553,7 +572,8 @@ a.more-partners
 		color: $blue
 
 .news-reviews
-	padding: 40px 0 60px
+	padding: 40px 0 0px
+	position: relative
 
 .news-item
 	a
@@ -584,20 +604,23 @@ a.more-news
 	&:hover
 		border-color: $blue
 		color: $blue
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right
+	display: none
+
+.reviews-slider-wrap
+	background-image: url(../img/reviews-bg.png)
+	background-size: cover
+	margin-top: -110px
 .reviews-slider
 	overflow: hidden
-	background-color: #fbfbfb
-	width: 500px
-	height: 500px
-	transform: rotate(-45deg)
-	z-index: -1
-	margin-top: 50px
-	margin-left: 100px
 	.reviews-slider-inner
-		transform: rotate(-45deg)
+		.rotate-back
+			margin-top: 90px
 	.swiper-slide
-		// background-color: #fbfbfb
-		transform: rotate(45deg)
+		height: 555px
+		margin-bottom: -70px
 		.person
 			&-img
 				width: 62px
@@ -617,19 +640,59 @@ a.more-news
 				text-align: center
 				margin-top: 40px
 				font-weight: 600
+				font-size: 16px
+				font-size: 14px
 			&-place
 				padding: 0 15px
 				display: block
 				text-align: center
 				margin-bottom: 20px
+				font-size: 14px
 			&-message
 				display: block
 				text-align: center
-				padding: 0 15px
-
-
-
-
+				padding: 0 60px
+				font-size: 16px
+				font-size: 12px
+.reviews-button-next
+	position: absolute
+	top: 310px
+	right: 25px
+	z-index: 1
+	font-size: 20px
+	transform: rotate(180deg)
+	cursor: pointer
+	color: $default
+.reviews-button-prev
+	position: absolute
+	top: 310px
+	left: 25px
+	z-index: 1
+	font-size: 20px
+	cursor: pointer
+	color: $default
+a.more-reviews
+	position: absolute
+	left: 50%
+	display: block
+	width: 180px
+	border: 1px solid #bebebe
+	text-align: center
+	line-height: 2.5
+	border-radius: 15px
+	color: $default
+	text-decoration: none
+	font-weight: 500
+	transition: border,color .25s ease
+	margin: -88px auto 0
+	margin-left: -90px
+	z-index: 1
+	&:hover
+		border-color: $blue
+		color: $blue
+.reviews-heading
+	margin-top: 30px
+	display: none
 
 .footer-home
 	color: #fefefe
@@ -708,6 +771,7 @@ a.scheme
 a.polic
 	text-align: center
 	color: #fefefe
+	display: block
 .sitecreative
 	text-align: right
 	a
