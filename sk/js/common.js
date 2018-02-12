@@ -40,7 +40,8 @@ jQuery(document).ready(function($) {
 	});	
 
 	$(".main-view").paroller({ factor: '0.3', type: 'background' });
-	setTimeout(fuction(){
+
+	setTimeout(function(){
 		$("#romb1").paroller({ factor: '0.4', type: 'foreground' });
 		$("#romb2").paroller({ factor: '-0.1', type: 'foreground' });
 		$("#romb3").paroller({ factor: '-0.1', type: 'foreground' });
