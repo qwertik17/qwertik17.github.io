@@ -40,12 +40,14 @@ jQuery(document).ready(function($) {
 	});	
 
 	$(".main-view").paroller({ factor: '0.3', type: 'background' });
-	$("#romb1").paroller({ factor: '0.4', type: 'foreground' });
-	$("#romb2").paroller({ factor: '-0.1', type: 'foreground' });
-	$("#romb3").paroller({ factor: '-0.1', type: 'foreground' });
-	$("#romb4").paroller({ factor: '0.4', type: 'foreground' });
-	// $("#romb5").paroller({ factor: '0.3', type: 'foreground' });
-	// $("#romb6").paroller({ factor: '-0.1', type: 'foreground' });
+	setTimeout(fuction(){
+		$("#romb1").paroller({ factor: '0.4', type: 'foreground' });
+		$("#romb2").paroller({ factor: '-0.1', type: 'foreground' });
+		$("#romb3").paroller({ factor: '-0.1', type: 'foreground' });
+		$("#romb4").paroller({ factor: '0.4', type: 'foreground' });
+		$("#romb5").paroller({ factor: '0.3', type: 'foreground' });
+		$("#romb6").paroller({ factor: '-0.1', type: 'foreground' });
+	},1500);
 	// $("#romb7").paroller({ factor: '-0.4', type: 'foreground' });
 	// $("#romb8").paroller({ factor: '0.2', type: 'foreground' });
 	// $("#romb9").paroller({ factor: '-0.4', type: 'foreground' });
