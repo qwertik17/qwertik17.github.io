@@ -48,13 +48,13 @@ jQuery(document).ready(function($) {
 		$("#romb4").paroller({ factor: '0.4', type: 'foreground' });
 		$("#romb5").paroller({ factor: '0.3', type: 'foreground' });
 		$("#romb6").paroller({ factor: '-0.1', type: 'foreground' });
+		$("#romb7").paroller({ factor: '-0.4', type: 'foreground' });
+		$("#romb8").paroller({ factor: '0.2', type: 'foreground' });
+		$("#romb9").paroller({ factor: '-0.4', type: 'foreground' });
+		$("#romb10").paroller({ factor: '0.2', type: 'foreground' });
+		$("#romb11").paroller({ factor: '-0.4', type: 'foreground' });
+		$("#romb12").paroller({ factor: '0.2', type: 'foreground' });
 	},1500);
-	// $("#romb7").paroller({ factor: '-0.4', type: 'foreground' });
-	// $("#romb8").paroller({ factor: '0.2', type: 'foreground' });
-	// $("#romb9").paroller({ factor: '-0.4', type: 'foreground' });
-	// $("#romb10").paroller({ factor: '0.2', type: 'foreground' });
-	// $("#romb11").paroller({ factor: '-0.4', type: 'foreground' });
-	// $("#romb12").paroller({ factor: '0.2', type: 'foreground' });
 
 	$(".object-item").hover(function() {
 		if ($(window).width() > 992) {
