@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 		$("#romb10").paroller({ factor: '0.2', type: 'foreground' });
 		$("#romb11").paroller({ factor: '-0.4', type: 'foreground' });
 		$("#romb12").paroller({ factor: '0.2', type: 'foreground' });
-	},1500);
+	},100);
 
 	$(".object-item").hover(function() {
 		if ($(window).width() > 992) {
