@@ -945,6 +945,8 @@ a.polic {
     display: none; } }
 
 @media only screen and (max-width: 1200px) {
+  a.polic, .sitecreative, .copyright {
+    text-align: center; }
   .header-home .main-menu li {
     margin-left: 14px; }
     .header-home .main-menu li a {
@@ -1191,6 +1193,8 @@ a.polic {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
+  a.polic, .sitecreative, .copyright {
+    line-height: 1.2; }
   .reviews-slider .swiper-slide .person-message {
     padding: 0 40px; }
   .header-home .main-menu {
