@@ -1,6 +1,18 @@
 jQuery(document).ready(function($) {
 
-	
+	$(document).on('click', '.menu-btn', function() {
+		var status = $(this).attr('data-status');
+		if( status == 'close') {
+			$(this).attr('data-status', 'open');
+			$(this).children('i').removeClass('icon-menu-of-three-lines').addClass('icon-close');
+			$('.main-menu').slideDown(300);
+		} else {
+			$(this).attr('data-status', 'close');
+			$(this).children('i').removeClass('icon-close').addClass('icon-menu-of-three-lines');
+			$('.main-menu').slideUp(300);
+		}
+	});
+
 	$('.hamburger').on('click', function(event) {
 		event.preventDefault();
 		if ($(this).attr('data-show') == 'close') {
@@ -66,5 +78,52 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-});
+	$.fn.extend({
+	  animateCss: function(animationName, callback) {
+	    var animationEnd = (function(el) {
+	      var animations = {
+	        animation: 'animationend',
+	        OAnimation: 'oAnimationEnd',
+	        MozAnimation: 'mozAnimationEnd',
+	        WebkitAnimation: 'webkitAnimationEnd',
+	      };
 
+	      for (var t in animations) {
+	        if (el.style[t] !== undefined) {
+	          return animations[t];
+	        }
+	      }
+	    })(document.createElement('div'));
+
+	    this.addClass('animated ' + animationName).one(animationEnd, function() {
+	      $(this).removeClass('animated ' + animationName);
+
+	      if (typeof callback === 'function') callback();
+	    });
+
+	    return this;
+	  },
+	});
+	//Фильтрация объектов
+	$(document).on('click', '.filter', function(event) {
+		event.preventDefault();
+		var speed_a = 800;
+		if ($(this).hasClass('active')) return;
+		if ($(this).attr('data-filter') == "all") {
+			$(".objects .object-item-wr").show(speed_a);
+			$(".filter").removeClass('active');
+			$(this).addClass('active');
+			return;
+		}
+		var data_cat = $(this).attr('data-filter');
+		$(".objects .object-item-wr").each(function(index, el) {
+			if ($(el).attr('data-cat') !== data_cat) {
+				$(el).hide(speed_a);
+			};
+		});
+		$("[data-cat='"+data_cat+"']").show(speed_a);
+		$(".filter").removeClass('active');
+		$(this).addClass('active');
+		
+	});
+});
