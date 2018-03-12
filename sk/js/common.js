@@ -26,9 +26,34 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('.popup-video').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
+
+	$('.image-popup').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom',
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300
+		}
+	});
+
 	$('.home-filter-form select').styler();
 
-	var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('.slider .swiper-container', {
 		loop: true,
 		autoplay: {
 			delay: 3500,
@@ -37,6 +62,44 @@ jQuery(document).ready(function($) {
 			nextEl: '.slider-next',
 			prevEl: '.slider-prev',
 		},
+	});
+
+	var swiper_plan = new Swiper('#plan-slider .swiper-container', {
+		loop: false,
+		autoplay: {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: '.slider-next',
+			prevEl: '.slider-prev',
+		}
+	});
+
+	var build_plan = new Swiper('.build-process .swiper-container', {
+		loop: false,
+	  spaceBetween: 7,
+		slidesPerView: 5,
+		autoplay: {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: '.slider-next',
+			prevEl: '.slider-prev',
+		},
+		breakpoints: {
+			390: {
+				slidesPerView: 1
+			},
+			800: {
+				slidesPerView: 2
+			},
+			1200: {
+				slidesPerView: 3
+			},
+			1400: {
+				slidesPerView: 4
+			}
+		}
 	});	
 
 	var reviews_slider = new Swiper('.reviews-slider', {
@@ -79,30 +142,30 @@ jQuery(document).ready(function($) {
 	});
 
 	$.fn.extend({
-	  animateCss: function(animationName, callback) {
-	    var animationEnd = (function(el) {
-	      var animations = {
-	        animation: 'animationend',
-	        OAnimation: 'oAnimationEnd',
-	        MozAnimation: 'mozAnimationEnd',
-	        WebkitAnimation: 'webkitAnimationEnd',
-	      };
+		animateCss: function(animationName, callback) {
+			var animationEnd = (function(el) {
+				var animations = {
+					animation: 'animationend',
+					OAnimation: 'oAnimationEnd',
+					MozAnimation: 'mozAnimationEnd',
+					WebkitAnimation: 'webkitAnimationEnd',
+				};
 
-	      for (var t in animations) {
-	        if (el.style[t] !== undefined) {
-	          return animations[t];
-	        }
-	      }
-	    })(document.createElement('div'));
+				for (var t in animations) {
+					if (el.style[t] !== undefined) {
+						return animations[t];
+					}
+				}
+			})(document.createElement('div'));
 
-	    this.addClass('animated ' + animationName).one(animationEnd, function() {
-	      $(this).removeClass('animated ' + animationName);
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
 
-	      if (typeof callback === 'function') callback();
-	    });
+				if (typeof callback === 'function') callback();
+			});
 
-	    return this;
-	  },
+			return this;
+		},
 	});
 	//Фильтрация объектов
 	$(document).on('click', '.filter', function(event) {

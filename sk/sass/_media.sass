@@ -1,8 +1,25 @@
 @media only screen and (max-width : 1200px)
 	.filter-list
 		text-align: center
+	.video .popup-video
+		max-width: 500px
+		margin: 0 auto
+	.about-obj::after
+		display: none
+	.obj-map .shared-social
+		text-align: center
+		margin-bottom: 30px
+	.obj-map .big-btn-callback
+		float: none
+		text-align: center
+	.complex-header .title-wrap h1
+		font-size: 32px
+	.complex-header .title-wrap span
+		font-size: 22px
 
 @media only screen and (max-width : 992px)
+	.complex-header
+		margin-left: 0
 	.navigation
 		position: relative
 		background-image: none
@@ -50,7 +67,8 @@
 	.menu-btn
 		display: block
 	.wrapper
-		padding-left: 15px !important
+		padding-left: 0 !important
+		padding-right: 0 !important
 	.footer
 		margin-left: 0
 		text-align: center
@@ -58,6 +76,114 @@
 			text-align: center
 		.polic
 			margin: 10px 0
+	.objects .object-content .obg-desc, .objects .object-item .txt
+	.objects .object-item .txt
+		display: none
+	.hidden-content
+		display: block !important
+	.objects .object-content .obg-street
+		font-size: 18px
+	.filter-map
+		margin-left: 10px
+		font-size: 12px
+		float: right
+		margin-top: 15px
+
+@media only screen and (max-width : 768px)
+	.mb-30
+		margin-bottom: 15px !important
+	.complex-header .phones-list li
+		display: inline-block
+		margin-bottom: 10px
+	.complex-header .phones-list li a
+		font-size: 14px
+	.complex-header .back-btn
+		font-size: 14px
+	.complex-header .title-wrap h1
+		font-size: 28px
+	.complex-header .title-wrap span
+		font-size: 20px
+	.complex-header .title-wrap
+		padding: 30px 0
+	.title-sec .h2
+		font-size: 24px
+	.sub-title-sec
+		font-size: 21px
+	.table
+		thead
+			display: none
+		tbody
+			tr
+				border: 1px solid #ededed
+				margin-bottom: 10px
+				display: block
+				&:nth-child(even)
+					background-color: transparent
+				&:nth-child(odd)
+					background-color: #ededed
+				td
+					display: block
+					text-align: left
+					padding-left: 15px
+					padding-right: 15px
+					&:before
+						content: attr(data-label)
+						font-weight: 600
+	.plan-slider .plan-caption
+		text-align: center
+		padding-right: 20px
+		padding-left: 20px
+		font-size: 14px
+	.plan-slider .slider-prev
+		right: auto
+		left: 19px
+	.plan-slider .swiper-slide a
+		box-shadow: none
+	.plan-slider .swiper-slide
+		padding: 20px 0 0
+	.obj-map 
+		.big-btn-callback
+			background-image: none
+			background-color: transparent
+			span
+				display: block
+				padding: 0
+				font-size: 16px
+				color: $default
+				font-weight: 600
+				margin-bottom: 10px
+			a
+				background-image: linear-gradient(-90deg, #9e2328 25%, #1b4e9b 75%)
+				padding: 7px 20px
+				border-radius: 20px
+
+
+@media only screen and (max-width : 480px)
+	.filter-map
+		float: none
+		display: block
+		margin-left: 0
+		width: 110px
+		margin: 0 auto
+	.complex-header .phones-list
+		text-align: center
+		margin-right: 0
+	.complex-header .phones-list li
+		display: block
+		margin-left: 0
+	.complex-header .back-btn
+		margin-left: 15px
+	.obj-map 
+		.big-btn-callback
+			a
+				display: block
+				margin-bottom: 10px
+				margin-right: 0
+				&:last-child
+					margin: 0
+
+
+
 
 @media only screen and (min-width : 992px)
 	.navigation
