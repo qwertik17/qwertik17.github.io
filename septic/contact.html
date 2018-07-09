@@ -202,7 +202,6 @@
 			<div class="row">
 				<div class="col-md-7">
 					<div id="map"></div>
-					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_7noLMCvuTbZQgG9Rdp_cS-NY4tub69U&callback=initMap"></script>
 					<script>
 						function initMap() {
 							var myLatLng = {lat: 55.8315568, lng: 37.6482226};
@@ -215,10 +214,11 @@
 							var marker = new google.maps.Marker({
 								position: myLatLng,
 								map: map,
-								title: 'Hello World!'
+								title: 'Септик топас плюс'
 							});
 						}
 					</script>
+					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_7noLMCvuTbZQgG9Rdp_cS-NY4tub69U&callback=initMap"></script>
 				</div>
 				<div class="col-md-5">
 					<div class="contact-list">
