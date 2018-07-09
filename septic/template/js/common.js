@@ -1,6 +1,21 @@
 jQuery(document).ready(function($) {
 	$("input[type=tel]").mask("+7(999) 999-99-99");
 	
+	$(".dropdown-menu").hover(function() {
+		$(".super-menu").show();
+		$(this).parent().addClass('hover');
+	}, function() {
+		$(".super-menu").hide();
+		$(this).parent().removeClass('hover');
+	});
+	$(".super-menu").hover(function() {
+		$(".super-menu").show();
+		$(".dropdown-menu").parent().addClass('hover');
+	}, function() {
+		$(".super-menu").hide();
+		$(".dropdown-menu").parent().removeClass('hover');
+	});
+
 	$('.image-popup').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,

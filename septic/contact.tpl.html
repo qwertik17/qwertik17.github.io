@@ -1,0 +1,110 @@
+//= chunk.head.html
+<body>
+	
+	<div class="page-container">
+
+		//= chunk.header.html
+		<div class="container">
+			<section class="sec-breadcrumbs">
+				<ul class="breadcrumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li>Контакты</li>
+				</ul>
+				<a href="javascript:window.print();" class="print-btn"><div class="bg-print"></div></a>
+			</section>
+
+			<div class="col-md-12">
+				<h1 class="h2">Контакты</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-md-7">
+					<div id="map"></div>
+					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_7noLMCvuTbZQgG9Rdp_cS-NY4tub69U&callback=initMap"></script>
+					<script>
+						function initMap() {
+							var myLatLng = {lat: 55.8315568, lng: 37.6482226};
+
+							var map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 16,
+								center: myLatLng
+							});
+
+							var marker = new google.maps.Marker({
+								position: myLatLng,
+								map: map,
+								title: 'Hello World!'
+							});
+						}
+					</script>
+				</div>
+				<div class="col-md-5">
+					<div class="contact-list">
+						<div class="contact-item">
+							<div class="bg-contesto"></div>
+							<div class="txt">г.Москва, проспект Мира,<br> д.129, оф. 45</div>
+						</div>
+						<div class="contact-item">
+							<div class="bg-conthone"></div>
+							<div class="txt">
+								<a href="tel:8495885796">8 495 88 57 96</a>
+								<span class="separ">/</span>
+								<a href="tel:89261235566">8 926 123 55 66</a></div>
+							</div>
+							<div class="contact-item">
+								<div class="bg-contime"></div>
+								<div class="txt">работаем ежедневно<br> с 8:00 до 22:00</div>
+							</div>
+							<div class="contact-item">
+								<div class="bg-contal"></div>
+								<div class="txt"><a href="mailto:septiktopasplus@mail.ru">septiktopasplus@mail.ru</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="sec-contact-callback">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="h2">Обратная связь</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-10">
+							<form action="" class="form-contact">
+								<textarea name="" id="" placeholder="Текст сообщения"></textarea>
+								<div class="row">
+									<div class="col-md-7">
+										<div class="row">
+											<div class="col-md-6 col-sm-6">
+												<input type="text" placeholder="Ваше имя">
+											</div>
+											<div class="col-md-6 col-sm-6">
+												<div class="required-field">
+													<input type="tel" placeholder="Номер телефона">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<button type="submit">Отправить сообщение</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			//= chunk.footer.html
+
+		</div>
+
+		<div class="scroll-down"></div>
+		<div class="scroll-top"></div>	
+
+		//= chunk.scripts.html
+	</body>
+	</html>
