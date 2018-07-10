@@ -1,19 +1,69 @@
 jQuery(document).ready(function($) {
 	$("input[type=tel]").mask("+7(999) 999-99-99");
+
+	$(".count-regulator").on('click', function(event) {
+		event.preventDefault();
+		var action = $(this).data('action'),
+		form   = $(this).parent(),
+		input  = $(form).children('input'),
+		value  = parseInt($(form).children('input').val());
+		switch(action) {
+			case 'minus':
+				if (value !== 1) {
+					input.val(value-1).change();
+				}
+				break;
+			case 'plus':
+					input.val(value+1).change();
+				break;
+			default:
+				break;
+		}	
+
+});
 	
 	$(".dropdown-menu").hover(function() {
-		$(".super-menu").show();
-		$(this).parent().addClass('hover');
+		if($(window).width() > 1200) {
+			$(this).attr('data-state', 'on');
+			$(".super-menu").show();
+			$(this).parent().addClass('hover');
+		}
 	}, function() {
-		$(".super-menu").hide();
-		$(this).parent().removeClass('hover');
+		if($(window).width() > 1200) {
+			$(this).attr('data-state', 'off');
+			$(".super-menu").hide();
+			$(this).parent().removeClass('hover');
+		}
 	});
 	$(".super-menu").hover(function() {
-		$(".super-menu").show();
-		$(".dropdown-menu").parent().addClass('hover');
+		if($(window).width() > 1200) {
+			$(".dropdown-menu").attr('data-state', 'on');
+			$(".super-menu").show();
+			$(".dropdown-menu").parent().addClass('hover');
+		}
 	}, function() {
-		$(".super-menu").hide();
-		$(".dropdown-menu").parent().removeClass('hover');
+		if($(window).width() > 1200) {
+			$(".dropdown-menu").attr('data-state', 'off');
+			$(".super-menu").hide();
+			$(".dropdown-menu").parent().removeClass('hover');
+		}
+	});
+	$(".dropdown-menu").on('click', function(event) {
+		if($(window).width() > 1200) {
+			return true
+		} else {
+			event.preventDefault();
+			var state = $(this).attr('data-state');
+			if(state == 'off') {
+				$(this).attr('data-state', 'on');
+				$(".super-menu").show();
+				$(this).parent().addClass('hover');
+			} else {
+				$(this).attr('data-state', 'off');
+				$(".super-menu").hide();
+				$(this).parent().removeClass('hover');
+			}
+		}
 	});
 
 	$('.image-popup').magnificPopup({
