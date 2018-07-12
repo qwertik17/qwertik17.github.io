@@ -1,5 +1,56 @@
 jQuery(document).ready(function($) {
+
 	$("input[type=tel]").mask("+7(999) 999-99-99");
+
+	var check_drop_filters = $(".dropdown-filter-container");
+	if (check_drop_filters.length > 0) {
+		dropFilters();
+	}
+	$(window).resize(function(event) {
+		var check_drop_filters = $(".dropdown-filter-container");
+		if (check_drop_filters.length > 0) {
+			dropFilters();
+		}
+	});
+
+	$('.bottom-open').on('click', function(event) {
+		event.preventDefault();
+		$(this).prop("disabled", true);
+		var item = $(this).parent().parent();
+		if (item.hasClass('open')) {
+			item.next('.filter-item-detail').slideUp(150);
+			setTimeout(function() {
+				item.removeClass('open');
+			},150);
+		} else {
+			$('.filter-item').next('.filter-item-detail').slideUp(150);
+			setTimeout(function() {
+				$('.filter-item').removeClass('open');
+			},150);
+			setTimeout(function() {
+				item.addClass('open');
+			},300);
+			setTimeout(function() {
+				item.next('.filter-item-detail').slideDown(150);
+			},450);
+		}
+	});
+
+	function dropFilters() {
+		var i = 0,
+			window_width = $(window).width();
+		$('.filter-item').each(function(index, el) {
+			$(el).css('order', i);
+			if (window_width > 319) var step = 1;
+			if (window_width > 479) var step = 2;
+			if (window_width > 767) var step = 3;
+			if (window_width > 991) var step = 5;
+			if (window_width > 1199) var step = 6;
+			var level = Math.floor(i/step)+1;
+			$(el).next('.filter-item-detail').css('order', step * level);
+			i++;
+		});
+	}
 
 	$(".count-regulator").on('click', function(event) {
 		event.preventDefault();
@@ -18,9 +69,8 @@ jQuery(document).ready(function($) {
 				break;
 			default:
 				break;
-		}	
-
-});
+		}
+	});
 	
 	$(".dropdown-menu").hover(function() {
 		if($(window).width() > 1200) {
