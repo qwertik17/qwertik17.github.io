@@ -19,20 +19,20 @@ jQuery(document).ready(function($) {
 		var item = $(this).parent().parent();
 		if (item.hasClass('open')) {
 			item.next('.filter-item-detail').slideUp(150);
-			setTimeout(function() {
+			// setTimeout(function() {
 				item.removeClass('open');
-			},150);
+			// },150);
 		} else {
 			$('.filter-item').next('.filter-item-detail').slideUp(150);
-			setTimeout(function() {
+			// setTimeout(function() {
 				$('.filter-item').removeClass('open');
-			},150);
-			setTimeout(function() {
+			// },150);
+			// setTimeout(function() {
 				item.addClass('open');
-			},300);
-			setTimeout(function() {
+			// },300);
+			// setTimeout(function() {
 				item.next('.filter-item-detail').slideDown(150);
-			},450);
+			// },450);
 		}
 	});
 
@@ -179,10 +179,10 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.scroll-down').on('click', function(){
-		$('html,body').animate({scrollTop: $('html,body').height()+'px'},2000);
+		$('html,body').animate({scrollTop: $('html,body').height()+'px'},1000);
 	});
 	$('.scroll-top').on('click', function(){
-		$('html,body').animate({scrollTop: 0 + 'px'},2000);
+		$('html,body').animate({scrollTop: 0 + 'px'},1000);
 	});
 
 });
