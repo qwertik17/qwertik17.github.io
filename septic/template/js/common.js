@@ -2,6 +2,12 @@ jQuery(document).ready(function($) {
 
 	$("input[type=tel]").mask("+7(999) 999-99-99");
 
+
+	$(document).on('click', '.dismiss, .close-modal', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+
 	var check_drop_filters = $(".dropdown-filter-container");
 	if (check_drop_filters.length > 0) {
 		dropFilters();
@@ -38,7 +44,7 @@ jQuery(document).ready(function($) {
 
 	function dropFilters() {
 		var i = 0,
-			window_width = $(window).width();
+		window_width = $(window).width();
 		$('.filter-item').each(function(index, el) {
 			$(el).css('order', i);
 			if (window_width > 319) var step = 1;
@@ -60,15 +66,15 @@ jQuery(document).ready(function($) {
 		value  = parseInt($(form).children('input').val());
 		switch(action) {
 			case 'minus':
-				if (value !== 1) {
-					input.val(value-1).change();
-				}
-				break;
+			if (value !== 1) {
+				input.val(value-1).change();
+			}
+			break;
 			case 'plus':
-					input.val(value+1).change();
-				break;
+			input.val(value+1).change();
+			break;
 			default:
-				break;
+			break;
 		}
 	});
 	
@@ -131,6 +137,27 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('.zoom-gallery-cart').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			tPrev: '', // title for left button
+			tNext: '', // title for right button
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
 	$('.zoom-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -154,7 +181,7 @@ jQuery(document).ready(function($) {
 	});
 
 
-	var swiper = new Swiper('.sec-gallery .swiper-container', {
+	var swiper_gallery = new Swiper('.sec-gallery .swiper-container', {
 		slidesPerView: 3,
 		spaceBetween: 44,
 		scrollbar: {
@@ -173,6 +200,35 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	var swiper_products = new Swiper('.sec-relation-products .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 15,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			hide: false,
+			draggable: true
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			500: {
+				slidesPerView: 1,
+			}
+		}
+	});
+
+	var swiper_product = new Swiper('.product-slider .swiper-container', {
+		loop: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
 	$('.menu-button').on('click', function(){
 		$(this).toggleClass('menu-open');
 		$('.header .top-nav').slideToggle(400);
@@ -183,6 +239,46 @@ jQuery(document).ready(function($) {
 	});
 	$('.scroll-top').on('click', function(){
 		$('html,body').animate({scrollTop: 0 + 'px'},1000);
+	});
+
+
+	$(".tabs a").on('click', function(event) {
+		event.preventDefault();
+		var id = $(this).attr('href');
+		$(".tabs a").removeClass('active');
+		$(".tab-content").removeClass('show');
+		$(this).addClass('active');
+		$(id).addClass('show');
+	});
+
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		removalDelay: 250,
+		overflowY: 'auto',
+		mainClass: 'mfp-fade',
+		showCloseBtn: false,
+		modal: false
+	});
+
+	$('.quick-popup-modal').magnificPopup({
+		type: 'inline',
+		removalDelay: 250,
+		overflowY: 'auto',
+		mainClass: 'mfp-fade',
+		showCloseBtn: false,
+		modal: false,
+		callbacks: {
+			open: function() {
+
+				var swiper_product = new Swiper('.product-slider .swiper-container', {
+					loop: false,
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+				});
+			}
+		}
 	});
 
 });

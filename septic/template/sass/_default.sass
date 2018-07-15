@@ -1,0 +1,569 @@
+*, *:focus
+	outline: 0 !important
+
+body
+	font-size: 16px
+	min-width: 320px
+	width: 100vw
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	color: $default
+	overflow-x: hidden
+	background-image: url(../img/septik-topas_bg.jpg)
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0%
+		height: 803px
+		width: 15.6%
+		background-image: url(../img/left_header_bg.jpg)
+		background-size: cover
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0%
+		height: 803px
+		width: 15.6%
+		overflow: hidden
+		background-image: url(../img/right_header_bg.jpg)
+		background-size: cover
+input:not([type=checkbox]):not([type=radio]),
+textarea, 
+select
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	border-radius: 0
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.p0
+	padding-right: 0
+	padding-left: 0
+.pl0
+	padding-left: 0
+.pr0
+	padding-right: 0
+.pl25
+	padding-left: 25px
+.mb15
+	margin-bottom: 15px
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
+	font-family: $intro
+h2, .h2
+	font-size: 30px
+	text-transform: uppercase
+	text-align: center
+	line-height: 1.2
+	padding: 31px 0 22px
+	margin: 0
+	padding-right: 15px
+	padding-left: 15px
+a
+	transition: $trans
+.ma
+	margin-right: auto
+	margin-left: auto
+.d_flex
+	display: flex
+	flex-wrap: nowrap
+.jsfc
+	flex-flow: row wrap
+	justify-content: center
+.aic
+	align-items: center
+.jsfb
+	flex-flow: row wrap
+	justify-content: space-between
+.jsfs
+	flex-flow: row wrap
+	justify-content: flex-start
+.label
+	position: absolute
+	bottom: 0
+	left: 10px
+	font-family: $intro
+	font-size: 12px
+	line-height: 1
+	padding: 2px 15px
+	border: 2px solid
+	border-radius: 9px
+	letter-spacing: 1px
+	&.hit
+		color: #ff8400
+	&.stock
+		color: $light-green
+	&.new
+		color: $blue
+input[type=tel]
+	letter-spacing: 1px
+	&::placeholder
+		letter-spacing: 0
+input
+	&::placeholder
+		color: #858585
+button
+	padding-right: 30px
+	padding-left: 30px
+	transition: $trans
+  
+
+
+
+
+.bg-adv9
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -170px -240px
+.bg-adv10
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -90px -240px
+.bg-adv11
+	width: 60px
+	height: 56px
+	background: url('../img/sprites.png') -10px -320px
+.bg-aqua
+	width: 13px
+	height: 13px
+	background: url('../img/sprites.png') -212px -396px
+.bg-badabadam
+	width: 122px
+	height: 22px
+	background: url('../img/sprites.png') -90px -320px
+.bg-batarea
+	width: 37px
+	height: 28px
+	background: url('../img/sprites.png') -456px -163px
+.bg-brands
+	width: 20px
+	height: 20px
+	background: url('../img/sprites.png') -456px -307px
+.bg-cart
+	width: 37px
+	height: 33px
+	background: url('../img/sprites.png') -456px -10px
+.bg-catalog
+	width: 29px
+	height: 28px
+	background: url('../img/sprites.png') -456px -259px
+.bg-check
+	width: 15px
+	height: 11px
+	background: url('../img/sprites.png') -158px -362px
+.bg-dots1
+	width: 279px
+	height: 3px
+	background: url('../img/sprites.png') -10px -217px
+.bg-dots2
+	width: 182px
+	height: 187px
+	background: url('../img/sprites.png') -10px -10px
+.bg-flag
+	width: 13px
+	height: 14px
+	background: url('../img/sprites.png') -405px -320px
+.bg-footer_phone
+	width: 13px
+	height: 14px
+	background: url('../img/sprites.png') -90px -362px
+.bg-info
+	width: 20px
+	height: 20px
+	background: url('../img/sprites.png') -456px -347px
+.bg-kanal
+	width: 33px
+	height: 28px
+	background: url('../img/sprites.png') -456px -211px
+.bg-kran
+	width: 37px
+	height: 28px
+	background: url('../img/sprites.png') -456px -115px
+.bg-letter
+	width: 15px
+	height: 12px
+	background: url('../img/sprites.png') -123px -362px
+.bg-master
+	width: 50px
+	height: 30px
+	background: url('../img/sprites.png') -10px -396px
+.bg-pererabotka
+	width: 13px
+	height: 13px
+	background: url('../img/sprites.png') -146px -396px
+.bg-phone
+	width: 33px
+	height: 32px
+	background: url('../img/sprites.png') -456px -63px
+.bg-ques
+	width: 53px
+	height: 34px
+	background: url('../img/sprites.png') -378px -168px
+.bg-rub
+	width: 20px
+	height: 20px
+	background: url('../img/sprites.png') -292px -170px
+.bg-scroll
+	width: 85px
+	height: 17px
+	background: url('../img/sprites.png') -232px -320px
+.bg-search
+	width: 14px
+	height: 15px
+	background: url('../img/sprites.png') -337px -320px
+.bg-sep
+	width: 58px
+	height: 12px
+	background: url('../img/sprites.png') -378px -272px
+.bg-sep1
+	width: 37px
+	height: 3px
+	background: url('../img/sprites.png') -212px -178px
+.bg-separator
+	width: 2px
+	height: 46px
+	background: url('../img/sprites.png') -330px -240px
+.bg-setting
+	width: 20px
+	height: 20px
+	background: url('../img/sprites.png') -456px -387px
+.bg-time
+	width: 14px
+	height: 14px
+	background: url('../img/sprites.png') -371px -320px
+.bg-up
+	width: 13px
+	height: 13px
+	background: url('../img/sprites.png') -245px -396px
+.bg-up_btn
+	width: 23px
+	height: 15px
+	background: url('../img/sprites.png') -332px -170px
+.bg-user
+	width: 13px
+	height: 13px
+	background: url('../img/sprites.png') -113px -396px
+.bg-visa
+	width: 50px
+	height: 30px
+	background: url('../img/sprites.png') -378px -222px
+.bg-weight
+	width: 13px
+	height: 13px
+	background: url('../img/sprites.png') -179px -396px
+.bg-white_message
+	width: 13px
+	height: 11px
+	background: url('../img/sprites.png') -193px -362px
+.bg-white_time
+	width: 13px
+	height: 15px
+	background: url('../img/sprites.png') -80px -396px
+.bg-adv1
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -10px -240px
+.bg-adv2
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -212px -98px
+.bg-adv3
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -292px -90px
+.bg-adv4
+	width: 53px
+	height: 60px
+	background: url('../img/sprites.png') -378px -88px
+.bg-adv5
+	width: 60px
+	height: 60px
+	background: url('../img/sprites.png') -250px -240px
+.bg-adv6
+	width: 66px
+	height: 60px
+	background: url('../img/sprites.png') -292px -10px
+.bg-adv7
+	width: 58px
+	height: 58px
+	background: url('../img/sprites.png') -378px -10px
+.bg-adv8
+	width: 60px
+	height: 68px
+	background: url('../img/sprites.png') -212px -10px
+
+
+
+
+
+
+
+
+.bg-cat3
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -431px -330px
+.bg-cat4
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -398px -330px
+.bg-cat5
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -370px
+.bg-cat6
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -403px
+.bg-cat7
+    width: 11px
+    height: 13px
+    background: url('../img/sprites2.png') -661px -370px
+.bg-char1
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -469px
+.bg-char2
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -502px
+.bg-char3
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -535px
+.bg-char4
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -568px
+.bg-cont_mail
+    width: 68px
+    height: 68px
+    background: url('../img/sprites2.png') -202px -210px
+.bg-cont_mesto
+    width: 68px
+    height: 68px
+    background: url('../img/sprites2.png') -310px -10px
+.bg-cont_phone
+    width: 68px
+    height: 68px
+    background: url('../img/sprites2.png') -210px -110px
+.bg-cont_time
+    width: 68px
+    height: 68px
+    background: url('../img/sprites2.png') -114px -210px
+.bg-crumbs_sep
+    width: 6px
+    height: 9px
+    background: url('../img/sprites2.png') -661px -403px
+.bg-ddf1
+    width: 41px
+    height: 50px
+    background: url('../img/sprites2.png') -558px -268px
+.bg-ddf2
+    width: 44px
+    height: 45px
+    background: url('../img/sprites2.png') -628px -75px
+.bg-ddf3
+    width: 50px
+    height: 43px
+    background: url('../img/sprites2.png') -558px -10px
+.bg-ddf4
+    width: 38px
+    height: 45px
+    background: url('../img/sprites2.png') -628px -270px
+.bg-ddf5
+    width: 50px
+    height: 43px
+    background: url('../img/sprites2.png') -558px -73px
+.bg-ddf6
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -558px -468px
+.bg-ddf7
+    width: 65px
+    height: 37px
+    background: url('../img/sprites2.png') -10px -487px
+.bg-ddf8
+    width: 46px
+    height: 50px
+    background: url('../img/sprites2.png') -410px -380px
+.bg-ddf9
+    width: 45px
+    height: 44px
+    background: url('../img/sprites2.png') -205px -544px
+.bg-ddf10
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -558px -403px
+.bg-ddf11
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -75px -544px
+.bg-ddf12
+    width: 58px
+    height: 40px
+    background: url('../img/sprites2.png') -478px -320px
+.bg-ddf13
+    width: 46px
+    height: 50px
+    background: url('../img/sprites2.png') -332px -300px
+.bg-ddf14
+    width: 52px
+    height: 52px
+    background: url('../img/sprites2.png') -478px -248px
+.bg-ddf15
+    width: 45px
+    height: 46px
+    background: url('../img/sprites2.png') -558px -136px
+.bg-ddf16
+    width: 52px
+    height: 45px
+    background: url('../img/sprites2.png') -478px -380px
+.bg-ddf17
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -10px -544px
+.bg-mont_par1
+    width: 64px
+    height: 60px
+    background: url('../img/sprites2.png') -310px -98px
+.bg-mont_par2
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -330px -380px
+.bg-mont_par3
+    width: 61px
+    height: 60px
+    background: url('../img/sprites2.png') -91px -300px
+.bg-mont_par4
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -478px -10px
+.bg-mont_par5
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -478px -90px
+.bg-mont_par6
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -90px -380px
+.bg-mont_par7
+    width: 58px
+    height: 58px
+    background: url('../img/sprites2.png') -478px -170px
+.bg-mont_step1
+    width: 84px
+    height: 70px
+    background: url('../img/sprites2.png') -10px -210px
+.bg-mont_step2
+    width: 80px
+    height: 80px
+    background: url('../img/sprites2.png') -210px -10px
+.bg-mont_step3
+    width: 80px
+    height: 80px
+    background: url('../img/sprites2.png') -110px -110px
+.bg-mont_step4
+    width: 80px
+    height: 80px
+    background: url('../img/sprites2.png') -10px -110px
+.bg-mont_step5
+    width: 80px
+    height: 80px
+    background: url('../img/sprites2.png') -10px -10px
+.bg-mont_step6
+    width: 80px
+    height: 80px
+    background: url('../img/sprites2.png') -110px -10px
+.bg-print
+    width: 15px
+    height: 15px
+    background: url('../img/sprites2.png') -628px -335px
+.bg-prod_c1
+    width: 42px
+    height: 45px
+    background: url('../img/sprites2.png') -628px -140px
+.bg-prod_c2
+    width: 44px
+    height: 45px
+    background: url('../img/sprites2.png') -628px -10px
+.bg-prod_c3
+    width: 45px
+    height: 46px
+    background: url('../img/sprites2.png') -558px -202px
+.bg-prod_c4
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -140px -544px
+.bg-prod_c5
+    width: 45px
+    height: 45px
+    background: url('../img/sprites2.png') -558px -338px
+.bg-prod_c6
+    width: 38px
+    height: 45px
+    background: url('../img/sprites2.png') -628px -205px
+.bg-right
+    width: 6px
+    height: 9px
+    background: url('../img/sprites2.png') -663px -335px
+.bg-scheme1
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -250px -380px
+.bg-scheme2
+    width: 61px
+    height: 61px
+    background: url('../img/sprites2.png') -310px -178px
+.bg-scheme3
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -10px -380px
+.bg-scheme4
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -398px -250px
+.bg-scheme5
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -398px -170px
+.bg-scheme6
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -398px -90px
+.bg-adv_kanal_1
+    width: 61px
+    height: 60px
+    background: url('../img/sprites2.png') -10px -300px
+.bg-adv_kanal_2
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -252px -300px
+.bg-adv_kanal_3
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -170px -380px
+.bg-adv_kanal_4
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -398px -10px
+.bg-adv_kanal_5
+    width: 60px
+    height: 60px
+    background: url('../img/sprites2.png') -172px -300px
+.bg-bottom
+    width: 204px
+    height: 7px
+    background: url('../img/sprites2.png') -10px -460px
+.bg-cat1
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -628px -436px
+.bg-cat2
+    width: 13px
+    height: 13px
+    background: url('../img/sprites2.png') -310px -259px

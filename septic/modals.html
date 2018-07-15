@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="template/css/main.css">
 
 </head>
-<body class="page-text">
+<body class="page-category">
 	
 	<div class="page-container">
 
@@ -188,139 +188,205 @@
 				</header>
 
 		<div class="container">
-						<section class="sec-breadcrumbs">
-							<ul class="breadcrumbs">
-								<li><a href="index.html">Главная</a></li>
-								<li>Контакты</li>
-							</ul>
-							<a href="javascript:window.print();" class="print-btn"><div class="bg-print"></div></a>
-						</section>
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="h2">Модальные окна</h1>
+					<ul>
+						<li><a href="#thank_you" class="popup-modal"><strong>Спасибо за заявку</strong></a></li>
+						<li><a href="#add_product" class="popup-modal"><strong>Товар добавлен в корзину</strong></a></li>
+						<li><a href="#quick_view" class="quick-popup-modal"><strong>Быстрый просмотр</strong></a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 
-		<section class="sec-text">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="d_flex jsfs">
-							<div class="image-wrap">
-								<img src="template/img/image.jpg" alt="" class="imd-responsive">
+		<div id="thank_you" class="thank-you-modal mfp-hide">
+			<div class="title">Спасибо</div>
+			<p>Наш менеджер перезвонит вам <br> в ближайше время</p>
+			<img src="template/img/deva-small.png" alt="" class="img-responsive">
+			<a class="dismiss" href="#"></a>
+		</div>
+		<div id="add_product" class="add-product-modal mfp-hide">
+			<div class="title">Товар добавлен в корзину</div>
+			<div class="cart-item">
+				<div class="d_flex jsfs">
+					<div class="prod-image">
+						<div class="image-wrap">
+							<img src="template/img/goods/1.jpg" class="img-responsive ma" alt="">
+							<div class="label hit">Хит</div>
+						</div>
+					</div>
+					<div class="prod-desc">
+						<h4 class="prod-title">Евролос Био 5</h4>
+						<ul class="product-options">
+							<li><div class="bg-user"></div><span>Проживание:</span> до 5 человек</li>
+							<li><div class="bg-pererabotka"></div><span>Переработка:</span> до 1 м<sup>3</sup>/сутки</li>
+							<li><div class="bg-aqua"></div><span>Залповый сброс:</span> 210 л</li>
+							<li><div class="bg-up"></div><span>Высота:</span> 2,5 мм</li>
+							<li><div class="bg-weight"></div><span>Вес:</span> 280 кг</li>
+						</ul>
+					</div>
+					<div class="prod-actions">
+						<form class="form-change-count" action="">
+							<button type="button" class="count-regulator minus" data-action="minus">−</button>
+							<input type="text" value="1">
+							<button type="button" class="count-regulator plus" data-action="plus">+</button>
+						</form>
+						<div class="price">25 000 <small>руб.</small></div>
+						<div class="product-montage">Монтаж: 16 000 руб.</div>
+					</div>
+				</div>
+			</div>
+			<div class="well-block">
+				В корзине 1 товар на сумму: <span class="price">25 000 <span>руб.</span></span>
+				<a href="#" class="btn btn-to-cart">В корзину</a>
+				<a href="#" class="btn btn-continue close-modal">Продолжить</a>
+			</div>
+			<a class="dismiss" href="#"></a>
+		</div>
+
+		<div id="quick_view" class="quick-view-modal mfp-hide">
+			<div class="product-card">
+
+				<div class="product-card-top-info">
+					<div class="product-slider zoom-gallery-cart">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="template/img/goods/1-full.jpg">
+										<div class="img-wrap">
+											<img src="template/img/goods/1-full.jpg" class="img-responsive" alt="">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="template/img/goods/1-full.jpg">
+										<div class="img-wrap">
+											<img src="template/img/goods/1-full.jpg" class="img-responsive" alt="">
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="template/img/goods/1-full.jpg">
+										<div class="img-wrap">
+											<img src="template/img/goods/1-full.jpg" class="img-responsive" alt="">
+										</div>
+									</a>
+								</div>
 							</div>
-							<div class="text-content">
-								<h1 class="h2">Принцип работы септика</h2>
-								<p>Наши специалисты помогут вам выбрать лучший септик, в зависимости от размера участка, количества проживающих человек и требований к качеству очистки. Когда выбор сделан, останется только оформить заказ, и ваша автономная канализация приедет прямо к вам домой. Установка септика производится опытными мастерами, которые прошли специальное обучение и имеют соответствующие сертификаты.</p>
-								<div class="ul-title">Вот что мы предлагаем:</div>
-								<ul class="check-list">
-									<li>Комплексное решение проблемы очистки стоков по лучшим ценам на рынке</li>
-									<li>Широкий ассортимент септиков от таких известных брендов, как ТОПАС. БиоДека, Юнилос</li>
-									<li>Индивидуальный подбор системы канализации для вашего загородного дома или дачи</li>
-									<li>Профессиональный монтаж септика любого типа в кратчайшие сроки</li>
-									<li>Гарантию качества, подтвержденную сертификатими</li>
-									<li>Выгодные условия сотрудничества для партнеров</li>
-									<li>Доступные цены на всю продукцию</li>
-								</ul>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+						<div class="label hit">Хит</div>
+					</div>
+					<div class="product-info">
+						<h1 class="h2">Евролос био 5</h1>
+						<form class="form-buy" action="">
+							<div class="roww">
+								<button type="button" class="count-regulator minus" data-action="minus">−</button>
+								<input type="text" value="1">
+								<button type="button" class="count-regulator plus" data-action="plus">+</button>
+								<div class="product-price">25 000 <small>руб.</small></div>
+							</div>
+							<div class="roww">
+								<button class="btn btn-buy">Купить</button>
+								<a href="" class="btn btn-rassrochka">В рассрочку</a>
+							</div>
+						</form>
+						<form action="" class="form-fast-order">
+							<input type="tel" placeholder="Номер телефона">
+							<button class="btn btn-fast">Быстрый заказ</button>
+						</form>
+						<div class="delivery-block">
+							<div class="line">
+								<div class="title">
+									<div class="bg-char1"></div> Доставка:
+								</div>
+								<div class="desc">от 9 000 руб.</div>
+							</div>
+							<div class="line">
+								<div class="title">
+									<div class="bg-char2"></div> Монтаж:
+								</div>
+								<div class="desc">16 000 руб.</div>
+							</div>
+							<div class="line">
+								<div class="title">
+									<div class="bg-char3"></div> Оплата:
+								</div>
+								<div class="desc">наличный и безналичный расчет, банковские карты</div>
+							</div>
+							<div class="line">
+								<div class="title">
+									<div class="bg-char4"></div> Гарантия:
+								</div>
+								<div class="desc">3 года + 1 год на монтаж</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<h2 class="h2">Очистка истоков по лучшим ценам</h2>
-						<p>Наличие двух компрессоров дает удвоенную надежность и увеличенный срок службы, поскольку компрессора работают попеременно и мембраны в них меньше изнашиваются.</p>
-						<p>Кроме того, в случае выхода из строя одного из компрессоров, станция может продолжить работать на другом. Он устанавливается в режим прямой перекачки, и станция продолжает работать и выполнять свои функции - принимать стоки, перерабатывать и отводить очищенную воду из станции. Так он может работать до 2-х недель, пока не будет произведена замена или ремонт второго компрессора.</p>
-						<p>В плане надежности также предпочтительна модель Топас с 2 компрессорами, а не с электромагнитным клапаном. Клапан более чувствителен к перебоям в напряжении и может залипнуть в одном из положений, если напряжение в сети упадет меньше 220В. Компрессор же в таком случае.</p>
-						<p>Помимо эксплуатационныз характеристик имеет смысл обратить внимание также на гарантию. Тем более что на основные узлы и элементы в модели Топас производитель дает расширенную гарантию. Сравните сами.</p>
-					</div>
-				</div>	
-			</div>
-		</section>
 
-		<section class="sec-articles">
-			<div class="container">
-				<div class="row">
-					<div class="sec-title">
-						<h2 class="h2">Другие статьи</h2>
-					</div>
-					<div class="d_flex jsfb">
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Какие септики лучше для загородного дома</span></a>
-							</div>
-						</div>
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Принцип работы септика</span></a>
-							</div>
-						</div>
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Сколько стоит септик</span></a>
-							</div>
-						</div>
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Устройство септика</span></a>
-							</div>
-						</div>
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Плюсы и минусы септиков</span></a>
-							</div>
-						</div>
-						<div class="article-item">
-							<div class="img-wrap">
-								<a href="/article.html">
-									<img src="template/img/article.jpg" alt="" class="img-responsive">
-								</a>
-								<a href="/article.html" class="article-item-title"><span>Бактерии для септика</span></a>
-							</div>
+				<div class="product-card-middle-info">
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c1"></div>
+						<div class="cont">
+							<div class="title">Бренд:</div>
+							<div class="desc">Евролос</div>
 						</div>
 					</div>
-					<a href="/articles.html" class="btn-toright">Все статьи</a>
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c2"></div>
+						<div class="cont">
+							<div class="title">Проживание:</div>
+							<div class="desc">до 5 человек</div>
+						</div>
+					</div>
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c3"></div>
+						<div class="cont">
+							<div class="title">Переработка:</div>
+							<div class="desc">до 1м<sup>3</sup>/сутки</div>
+						</div>
+					</div>
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c4"></div>
+						<div class="cont">
+							<div class="title">Залповый сброс:</div>
+							<div class="desc">210 л</div>
+						</div>
+					</div>
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c5"></div>
+						<div class="cont">
+							<div class="title">Высота:</div>
+							<div class="desc">2,5 м</div>
+						</div>
+					</div>
+					<div class="middle-info-item">
+						<div class="icon bg-prod_c6"></div>
+						<div class="cont">
+							<div class="title">Вес:</div>
+							<div class="desc">280 кг</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
+			<div class="well-block">
+				<a href="#" class="btn">Подробная информация</a>
+			</div>
+			<a class="dismiss" href="#"></a>
+		</div>
 
-				<section class="sec-callback">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4 hidden-sm hidden-xs">
-								<img src="template/img/deva.png" class="img-responsive" alt="">
-							</div>
-							<div class="col-md-8 callback-wrap">
-								<div class="sec-callback-title">Не знаете, <br><span>какой септик выбрать?</span></div>
-								<form action="" class="form-callback">
-									<div class="form-callback-title">Обратитесь к нам</div>
-									<div class="row">
-										<div class="col-md-6 col-sm-6 col-ms-6">
-											<input type="text" placeholder="Ваше имя">
-										</div>
-										<div class="col-md-6 col-sm-6 col-ms-6">
-											<input type="tel" placeholder="Номер телефона">
-										</div>
-										<div class="col-md-12 col-xs-12">
-											<button type="submit">Получить косультацию бесплатно</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</section>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 
 		
 				<footer class="footer">
