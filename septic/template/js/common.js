@@ -19,10 +19,30 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('.bottom-open').on('click', function(event) {
+	// $('.bottom-open').on('click', function(event) {
+	// 	event.preventDefault();
+	// 	var item = $(this).parent().parent();
+	// 	if (item.hasClass('open')) {
+	// 		item.next('.filter-item-detail').slideUp(150);
+	// 		// setTimeout(function() {
+	// 			item.removeClass('open');
+	// 		// },150);
+	// 	} else {
+	// 		$('.filter-item').next('.filter-item-detail').slideUp(150);
+	// 		// setTimeout(function() {
+	// 			$('.filter-item').removeClass('open');
+	// 		// },150);
+	// 		// setTimeout(function() {
+	// 			item.addClass('open');
+	// 		// },300);
+	// 		// setTimeout(function() {
+	// 			item.next('.filter-item-detail').slideDown(150);
+	// 		// },450);
+	// 	}
+	// });
+	$('.filter-item').on('click', function(event) {
 		event.preventDefault();
-		$(this).prop("disabled", true);
-		var item = $(this).parent().parent();
+		var item = $(this);
 		if (item.hasClass('open')) {
 			item.next('.filter-item-detail').slideUp(150);
 			// setTimeout(function() {

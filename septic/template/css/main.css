@@ -4680,6 +4680,7 @@ div.sisea-result h3 a
     margin-left: 7px;
     padding: 10px;
 
+    cursor: pointer;
     text-align: center;
 
     -webkit-border-radius: 8px;
@@ -7198,9 +7199,9 @@ form.form-buy .product-price small
 
 .sec-reviews .reviews-item-content
 {
-    width: -webkit-calc(100% - 290px);
-    width:         calc(100% - 290px);
+    width: 100%;
     padding-right: 30px;
+    padding-left: 30px;
 }
 
 .sec-reviews .reviews-item-content-title
